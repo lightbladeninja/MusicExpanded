@@ -16,6 +16,7 @@ m.nextTrackTime = 0
 m.inCustomArea = false
 m.pendingMusic = nil
 m.pendingStart = nil
+m.lastTracks = nil
 
 local function NormalizeFolderName(name)
     if type(name) ~= "string" then return "" end
@@ -49,7 +50,7 @@ local function PlayCustomTrack(zoneKey, subzoneKey)
 
     local chosen = tracks[math.random(table.getn(tracks))]
 
-    -- Store the music to play after delay
+    -- Store for delayed playback
     m.pendingMusic = {
         path = MUSIC_ROOT .. folderName .. "\\" .. chosen.file,
         file = chosen.file,
@@ -64,8 +65,12 @@ end
 
 --
 local function GetEffectiveMusicData(zone, subzone)
+    
     local zoneEntry = MusicExpanded_Data.Zones[zone]
-    if not zoneEntry then return nil end
+    if not zoneEntry then 
+        print("[MusicExpanded] Zone not found: " .. zone)
+        return nil 
+    end
 
     if subzone and zoneEntry.subzones and zoneEntry.subzones[subzone] then
         local subData = zoneEntry.subzones[subzone]
@@ -88,9 +93,7 @@ local function UpdateMusicState()
     local zone = GetZoneText() or ""
     local subzone = GetSubZoneText() or ""
 
-    local subzoneChanged = (subzone ~= m.lastSubzone)
-    if subzoneChanged then
-        print("[MusicExpanded] Subzone changed → " .. subzone)
+    if subzone ~= m.lastSubzone then
         m.lastSubzone = subzone
     end
 
@@ -98,19 +101,24 @@ local function UpdateMusicState()
     local hasCustomData = effectiveData ~= nil
 
     if hasCustomData then
-        -- Restart music on ANY subzone change while in a custom area
-        if subzoneChanged or not m.inCustomArea or m.currentZone ~= zone then
-            print("[MusicExpanded] Starting/Changing music for: " .. zone .. " (" .. subzone .. ")")
+        -- Restart only when music set actually changes or we enter custom area
+        if not m.inCustomArea 
+           or m.currentZone ~= zone 
+           or m.lastTracks ~= effectiveData.tracks then
+
+            print("[MusicExpanded] Changing music for: " .. zone .. " (" .. subzone .. ")")
             m.inCustomArea = true
             m.currentZone = zone
+            m.lastTracks = effectiveData.tracks
             PlayCustomTrack(zone, subzone)
-            m.pendingStart = GetTime() + 2
+            m.pendingStart = GetTime() + 2   -- 2 second delay
         end
     else
         if m.inCustomArea then
             print("[MusicExpanded] Left custom area → returning to default music")
             m.inCustomArea = false
             m.currentZone = nil
+            m.lastTracks = nil
             m.pendingMusic = nil
             m.pendingStart = nil
             StopMusic()
