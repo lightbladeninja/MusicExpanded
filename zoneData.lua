@@ -31,6 +31,14 @@ MusicExpanded_Data.Zones = {
                 { file = "mystery05-zone.mp3", weight = 1, duration = 81 },
                 { file = "mystery07-zone.mp3", weight = 1, duration = 83 }
                 }
+            },
+            ["Cliffspring Falls"] = {
+                tracks = {
+                {file = "fromthedepths_1_a.mp3", weight = 5, duration = 95 },
+                {file = "fromthedepths_1_c.mp3", weight = 5, duration = 68 },
+                {file = "fromthedepths_1_d.mp3", weight = 5, duration = 89 },
+                {file = "fromthedepths_1_e.mp3", weight = 5, duration = 75 }
+                }   
             }
         }
     },
