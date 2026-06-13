@@ -12,8 +12,9 @@ Extends the default music system with additional tracks for specific zones and s
 <details>
 <summary><strong>Darkshore (unfinished)</strong></summary>
 
-- **Main zone** (most of Darkshore) — expanded with Night Warrior & Forsaken Flame tracks
-- **Tower of Althalaxx** — dedicated subzone music (different atmosphere)
+- **Main zone** (most of Darkshore) — expanded with "Night Warrior" & "Forsaken Flame" tracks
+- **Tower of Althalaxx** — "Mystery" tracks and more intense "Forsaken Flame" variants
+- **Cliffspring Falls** — unique naga cave music ("From The Depths")
 
 **Excluded subzones (uses default game music):**
 - Auberdine
