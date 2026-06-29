@@ -29,3 +29,5 @@ Extends the default music system with additional tracks for specific zones and s
 ## TODO
 - Add music to Remtravel's Excavation (Iron Dwarf tracks from Northrend)
 - Verify the default music behavior and track selection, to prevent overwriting existing music and zone events
+- Intro-sound functionality
+- Non-looped music option
