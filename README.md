@@ -7,7 +7,7 @@ Extends the default music system with additional tracks for specific zones and s
 - Custom music player in the background that emulates the default music behavior in Loop Music mode. NOTE: This means disabling Loop Music in the settings will NOT affect the music in addon-controlled areas
 - No UI, fully background addon with basic slash command options /mex
 
-## Currently Supported Zones
+## Modified Zones
 
 <details>
 <summary><strong>Darkshore (unfinished)</strong></summary>
@@ -21,3 +21,11 @@ Extends the default music system with additional tracks for specific zones and s
 - Ruins of Mathystra
 
 </details>
+
+## Special Events
+  
+- **UBRS Gauntlet Event** (Rend Blackhand) - Added protectthethrone_h1/2/3 to various stages of the event
+
+## TODO
+- Add music to Remtravel's Excavation (Iron Dwarf tracks from Northrend)
+- Verify the default music behavior and track selection, to prevent overwriting existing music and zone events
