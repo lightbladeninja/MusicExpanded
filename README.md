@@ -7,12 +7,11 @@ Extends the default music system with additional tracks for specific zones and s
 - Custom music player in the background that emulates the default music behavior in Loop Music mode. NOTE: This means disabling Loop Music in the settings will NOT affect the music in addon-controlled areas
 - No UI, fully background addon with basic slash command options /mex
 
-<<<<<<< HEAD
+
 ## Video Showcase
 https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
-=======
->>>>>>> 47dcf34ba9fb97ce112e8059a9f5713a71231060
+
 ## Modified Zones
 
 <details>
@@ -29,7 +28,6 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
 </details>
 
-<<<<<<< HEAD
 <details>
 <summary><strong>Feralas </strong></summary>
 
@@ -84,14 +82,3 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - Add music to dark iron digsites (including Turtle custom zones)
 - Intro-sound functionality
 - Non-looped music option
-=======
-## Special Events
-  
-- **UBRS Gauntlet Event** (Rend Blackhand) - Added protectthethrone_h1/2/3 to various stages of the event
-
-## TODO
-- Add music to Remtravel's Excavation (Iron Dwarf tracks from Northrend)
-- Verify the default music behavior and track selection, to prevent overwriting existing music and zone events
-- Intro-sound functionality
-- Non-looped music option
->>>>>>> 47dcf34ba9fb97ce112e8059a9f5713a71231060
