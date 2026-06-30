@@ -142,7 +142,7 @@ local function UpdateMusicState()
             m.inCustomArea = true
             m.previousTrack = chosen.file          -- store filename as string
             PlayCustomTrack(chosen.file)
-            m.nextTrackTime = GetTime() + (chosen.duration or 180)
+            m.nextTrackTime = GetTime() + (chosen.duration -2 or 180)
         end
 
     else
