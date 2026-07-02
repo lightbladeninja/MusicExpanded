@@ -1,11 +1,13 @@
 MusicExpanded = MusicExpanded or {}
 local m = MusicExpanded
 
+local silenceFile = "Interface\\AddOns\\MusicExpanded\\music\\silence.mp3"
 local MUSIC_ROOT = "Interface\\AddOns\\MusicExpanded\\music\\"
 local currentSubzone = ""
 
 m.inCustomArea = false
 m.previousTrack = nil
+m.loopMusic = true
 
 -- Print doesn't exist in 1.12, so we add a print function through the addon
 if not print then
@@ -15,6 +17,8 @@ if not print then
 end
 
 -- IsIndoors() doesn't exist in 1.12. SOLUTION?! Detect if the minimap changed shape, like usually happens inside buildings and caves.
+
+-- Check for loop music?
 
 
 -- Compare music content between zones
@@ -81,12 +85,10 @@ local function ChooseRandomTrack(musicData)
     local tracks = musicData.tracks
     local trackCount = table.getn(tracks)
 
-    -- Pick a random index
     local randomIndex = math.random(trackCount)
     local chosenTrack = tracks[randomIndex]
     m.previousTrack = chosenTrack.file -- store the track to compare later
 
-    -- Return the full track entry (contains file, weight, and duration)
     return chosenTrack
 end
 
@@ -120,6 +122,10 @@ end
 
 -- Respond to zonechange, check current zone/subzone
 local function UpdateMusicState()
+    if m.isIntroTrack or m.isEventTrack then
+        return
+    end
+    
     local zone = GetZoneText() or ""
     local subzone = GetSubZoneText() or ""
     m.currentSubzone = subzone
@@ -142,9 +148,16 @@ local function UpdateMusicState()
             m.inCustomArea = true
             m.previousTrack = chosen.file          -- store filename as string
             PlayCustomTrack(chosen.file)
-            m.nextTrackTime = GetTime() + (chosen.duration -2 or 180)
-        end
 
+            local duration = chosen.duration - 2 or 180
+            
+            if m.loopMusic == true then
+                m.nextTrackTime = GetTime() + duration
+            else
+                m.nextTrackTime = GetTime() + duration + math.random(180, 300)
+                m.nextsilenceTime = GetTime() + duration
+            end
+        end
     else
         -- No custom music for this area
         if m.inCustomArea then
@@ -171,6 +184,16 @@ local function OnUpdate()
         return   -- Don't run normal music logic while an event track is playing
     end
 
+    if m.isIntroTrack and m.introTrackEndTime then
+        if GetTime() >= m.introTrackEndTime then
+            StopMusic()
+
+            m.isIntroTrack = nil
+            m.introTrackEndTime = nil
+        end
+        return   -- Block everything else while intro is playing
+    end
+
     if not m.inCustomArea then 
         return 
     end
@@ -180,7 +203,16 @@ local function OnUpdate()
         m.previousTrack = nil
         UpdateMusicState()
     end
+
+    -- Priority 3: Silence timer
+    if m.nextsilenceTime then
+        if GetTime() >= m.nextsilenceTime then
+            PlayMusic(silenceFile)
+            m.nextsilenceTime = nil
+        end
+    end
 end
+
 
 -- Find event based on target
 
@@ -195,7 +227,7 @@ local function CheckForEvent(target, targettarget, subzone)
     end
 
     -- Try target first, then targettarget
-    local possibleNPCs = { target, targettarget }
+    local possibleNPCs = {target, targettarget}
 
     for _, npcName in ipairs(possibleNPCs) do
         if npcName and subzoneEvents[npcName] then
@@ -233,14 +265,80 @@ local function CheckForEvent(target, targettarget, subzone)
 end
 
 
+-- Intro Music
+
+local function CheckForIntroMusic()
+    local zone = zone or GetZoneText() or ""
+    local subzone = subzone or GetSubZoneText() or ""
+
+    if not zone or zone == "" then
+        return false
+    end
+
+    local zoneEntry = MusicExpanded_Data.Zones[zone]
+    if not zoneEntry then
+        return false
+    end
+
+    -- Priority: Subzone intro > Zone intro
+    local introData = nil
+
+    if subzone and zoneEntry.subzones and zoneEntry.subzones[subzone] then
+        local sub = zoneEntry.subzones[subzone]
+        if sub.intro and table.getn(sub.intro) > 0 then
+            introData = sub.intro
+        end
+    end
+
+    -- Fallback to zone-level intro
+    if not introData and zoneEntry.intro and table.getn(zoneEntry.intro) > 0 then
+        introData = zoneEntry.intro
+    end
+
+    if not introData then
+        return false
+    end
+
+    -- Cooldown check (separate system from events)
+    local cooldownKey = zone .. "_" .. (subzone or "zone")
+    m.introCooldowns = m.introCooldowns or {}
+
+    if m.introCooldowns[cooldownKey] then
+        if GetTime() < m.introCooldowns[cooldownKey] then
+            return false -- Still on cooldown
+        end
+    end
+
+    -- Pick random intro track
+    local chosen = introData[math.random(table.getn(introData))]
+    if not chosen or not chosen.file then
+        return false
+    end
+
+    -- Play the intro
+    PlayCustomTrack(chosen.file)
+
+    -- Set 10 minute cooldown (separate from eventCooldowns)
+    m.introCooldowns[cooldownKey] = GetTime() + 600
+
+    -- Mark as intro track (so OnUpdate protects it)
+    m.isIntroTrack = true
+    m.introTrackEndTime = GetTime() + (chosen.duration or 30) - 2.5
+
+    return true
+end
+
+
 -- Detect zonechange and creature event
 local zoneFrame = CreateFrame("Frame")
 
 zoneFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
 zoneFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 zoneFrame:RegisterEvent("ZONE_CHANGED")
+zoneFrame:RegisterEvent("ZONE_CHANGED_INDOORS")
 
 zoneFrame:SetScript("OnEvent", function(self, event)
+    CheckForIntroMusic()
     UpdateMusicState()
 end)
 
@@ -292,8 +390,21 @@ function SlashCmdList.MEX(msg)
     elseif command == "stop" then
         StopMusic() -- Only works on custom music, not the default zone music.
         print("|cFF00FF00[MusicExpanded]|r Custom music stopped. Returning to default.")
+        m.isIntroTrack = nil
+        m.introTrackEndTime = nil
 
+    elseif command == "loop" then
+        if m.loopMusic == true then
+            m.loopMusic = false
+            print("|cFF00FF00[MusicExpanded]|r Music looping disabled. Does not affect base game music, check your Interface Music settings.")
+            UpdateMusicState()
+            
+        else
+            m.loopMusic = true
+            print("|cFF00FF00[MusicExpanded]|r Looping enabled (default). Does not affect base game music, check your Interface Music settings.")
+            UpdateMusicState()
+        end
     else
-        print("|cFF00FF00[MusicExpanded]|r Commands: /mex play | stop")
+        print("|cFF00FF00[MusicExpanded]|r Commands: /mex play | stop | loop")
     end
 end
