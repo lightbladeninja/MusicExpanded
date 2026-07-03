@@ -15,7 +15,7 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 ## Modified Zones
 
 <details>
-<summary><strong>Darkshore (major changes)</strong></summary>
+<summary><strong>Darkshore </strong></summary>
 
 - **Main zone** (most of Darkshore) — expanded with "Night Warrior" & "Forsaken Flame" tracks
 - **Tower of Althalaxx** & **The Master's Glaive** — "Mystery" tracks and more intense "Forsaken Flame" variants
