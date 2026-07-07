@@ -15,12 +15,40 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 ## Modified Zones
 
 <details>
-<summary><strong>Darkshore (major changes)</strong></summary>
+<summary><strong>Tirisfal Glades </strong></summary>
+
+- **Deathknell** — expanded with ghostly tracks
+- **Agamand Mills** — expanded with ghostly tracks
+- **Agamand Family Crypt** — expanded with ghostly tracks
+- **Brill** — expanded with ghostly tracks
+- **Balnir Farmstead** — expanded with ghostly tracks
+- **Whispering Gardens** — Intro music for Scarlet Monastery outskirts
+
+</details>
+
+<details>
+<summary><strong>Undercity </strong></summary>
+
+- **Royal Quarter** - Sylvanas music
+
+</details>
+
+<details>
+<summary><strong>Silverpine Forest </strong></summary>
+
+- **The Sepulcher** - ghostly tracks
+
+</details>
+
+
+<details>
+<summary><strong>Darkshore </strong></summary>
 
 - **Main zone** (most of Darkshore) — expanded with "Night Warrior" & "Forsaken Flame" tracks
 - **Tower of Althalaxx** & **The Master's Glaive** — "Mystery" tracks and more intense "Forsaken Flame" variants
 - **Cliffspring Falls** — unique naga cave music ("From The Depths")
 - **Remtravel's Excavation** - dwarf digsite music (Northrend dwarf/iron dwarf)
+- **Ameth'Aran** - ghostly music
 
 **Excluded subzones (uses default game music):**
 - **Auberdine**
@@ -42,9 +70,20 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 </details>
 
 <details>
+<summary><strong>Duskwood </strong></summary>
+
+- **Tranquil Gardens Cemetery** - ghostly tracks
+- **Raven Hill Cemetery** - ghostly tracks
+- **Forlorn Rowe** - added haunted02 spooky intro
+
+</details>
+
+<details>
 <summary><strong>Wetlands </strong></summary>
 
 - **Whelgar's Excavation Site** - dwarf digsite music
+- **Dun Algaz** - Event music for Dragonmaw Orcs
+- **Angerfang Encampment** - Intro music for Dragonmaw Orcs
 </details>
 
 <details>
@@ -78,6 +117,21 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 </details>
 
 <details>
+<summary><strong>Western Plaguelands </strong></summary>
+  
+- **Ruins of Andorhal** - ghostly tracks and intro track haunted02
+- **Uther's Tomb** - ghostly tracks
+
+</details>
+
+<details>
+<summary><strong>Eastern Plaguelands </strong></summary>
+  
+- **Light's Hope Chapel** - arathi memorial music
+
+</details>
+
+<details>
 <summary><strong>Azshara </strong></summary>
 
 - **Temple of Zin-Malor** - highborne music
@@ -94,7 +148,13 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 <details>
 <summary><strong>Scarlet Monastery </strong></summary>
   
-- **Forlorn Cloister** (Graveyard) - Added shadow_death_h as Intro Music for SM Grave courtyard
+- **Main zone** (Scarlet Monastery) - added cataclysm SM music
+- **Forlorn Cloister** (Graveyard) - Added shadow_death_h as Intro Music, and ghostly tracks as zone music
+- **Scarlet Prison** (Graveyard) - changed from ghostly to mystery_zone tracks.
+- **Athenaeum** (Library) - moved battle04 music from Arcanist Doan's chamber to Intro music for the subzone
+- **Crusader's Chapel** (Cathedral) - sacred02 intro music
+- Added intro music to Cathedral and Library
+
 </details>
 
 <details>
@@ -109,11 +169,29 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
 </details>
 
-
 <details>
 <summary><strong>Blackrock Depths </strong></summary>
   
 - **Shadowforge City** - Added the main version of darkironforge_1
+</details>
+
+<details>
+<summary><strong>Stratholme </strong></summary>
+  
+- **Crusaders' Square** - Added cata SM music, and intro music.
+- **The Scarlet Bastion** - Added cata SM music.
+- **The Hall of Lights** - Added cata SM music. Moved battle03 boss room music to main hall intro music.
+- **The Hoard** - Moved battle04 boss room music to main hall intro music.
+- **The Crimson Throne** - Added ebon hold assault music. 
+
+</details>
+
+<details>
+<summary><strong>Scholomance (unfinished) </strong></summary>
+  
+- **Main Zone** - Added ghostly music and intro haunted02
+- **The Reliquary** - Added intro music, shadow_death_h
+
 </details>
 
 <details>
@@ -127,6 +205,7 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
 
 ## TODO
-- Add music to dark iron digsites (including Turtle custom zones)
-- Redo music in Tower of Althalaxx either through Intro Music or Event Music functionality.
-- Add a log for music played {zone, subzone, track} displayable ingame through a button or chat command - SavedVariables.
+
+- Test 1.18.1 turtle wow content (there are "ghost" changes to these zones but currently untested)
+- Add a log for music played {zone, subzone, track} displayable ingame through a button or chat command. Maybe a toggle for seeing "currently playing:X" messages.
+- Change random track selection to shuffle play

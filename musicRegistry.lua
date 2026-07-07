@@ -1,13 +1,18 @@
 MusicExpanded_Registry = MusicExpanded_Registry or {}
 
 MusicExpanded_Registry.Files = {
+    -- === Mystery ===
+    ["mystery_1.mp3"]                   = "mystery\\mystery_1.mp3",
+    ["mystery_5.mp3"]                   = "mystery\\mystery_5.mp3",
+    ["mystery_6.mp3"]                   = "mystery\\mystery_6.mp3",
+    ["mystery_7.mp3"]                   = "mystery\\mystery_7.mp3",
+    ["mystery_8.mp3"]                   = "mystery\\mystery_8.mp3",
+    ["mystery_9.mp3"]                   = "mystery\\mystery_9.mp3",
+    ["mystery_10.mp3"]                  = "mystery\\mystery_10.mp3",
 
     -- === Darkshore Cult (Tower of Althalaxx + The Master's Glaive) ===
     ["forsakenflame_e.mp3"]           = "darkshore\\darkshore_cult\\forsakenflame_e.mp3",
     ["forsakenflame_a.mp3"]           = "darkshore\\darkshore_cult\\forsakenflame_a.mp3",
-    ["mystery01-zone.mp3"]            = "darkshore\\darkshore_cult\\mystery01-zone.mp3",
-    ["mystery05-zone.mp3"]            = "darkshore\\darkshore_cult\\mystery05-zone.mp3",
-    ["mystery07-zone.mp3"]            = "darkshore\\darkshore_cult\\mystery07-zone.mp3",
 
     -- === Naga Cave / Cliffspring Falls ===
     ["fromthedepths_1_a.mp3"]         = "darkshore\\naga_cave\\fromthedepths_1_a.mp3",
@@ -67,6 +72,14 @@ MusicExpanded_Registry.Files = {
 
     -- === Graveyard (ghosts) ===
     ["shadow_death_h.mp3"]            = "graveyard\\shadow_death_h.mp3",
+    ["shadow_death_a.mp3"]            = "graveyard\\shadow_death_a.mp3",
+    ["shadow_death_b.mp3"]            = "graveyard\\shadow_death_b.mp3",
+    ["haunted01.mp3"]                 = "graveyard\\haunted01.mp3",
+    ["haunted02.mp3"]                 = "graveyard\\haunted02.mp3",
+    ["haunted_uu02.mp3"]              = "graveyard\\haunted_uu02.mp3",
+    ["ghosts_1.mp3"]                  = "graveyard\\ghosts_1.mp3",
+    ["ghosts_2.mp3"]                  = "graveyard\\ghosts_2.mp3",
+    ["ghosts_3.mp3"]                  = "graveyard\\ghosts_3.mp3",
 
     -- === Uldaman ===
     ["lightningintro.mp3"]              = "uldaman\\lightningintro.mp3",
@@ -74,4 +87,42 @@ MusicExpanded_Registry.Files = {
     ["lightningbattlewalk.mp3"]         = "uldaman\\lightningbattlewalk.mp3",
     ["preserver_h1.mp3"]                = "uldaman\\preserver_h1.mp3",
     ["preserver_h2end.mp3"]             = "uldaman\\preserver_h2end.mp3",
+
+    -- === Sylvanas ===
+    ["windrunner_h.mp3"]         = "faction_leader\\sylvanas\\windrunner_h.mp3",
+    ["sylvanas_freewill_h.mp3"]  = "faction_leader\\sylvanas\\sylvanas_freewill_h.mp3",
+    
+    -- === Light's Hope Chapel ===
+    ["arathi_memorial_h.mp3"]           = "chapel\\arathi_memorial_h.mp3",
+
+    -- === Scarlet Monastery ===
+    ["haunted_1.mp3"]                   = "scarlet\\haunted_1.mp3",
+    ["haunted_3.mp3"]                   = "scarlet\\haunted_3.mp3",
+    ["cursedland04.mp3"]                = "scarlet\\cursedland04.mp3",
+    ["cursedland05.mp3"]                = "scarlet\\cursedland05.mp3",
+    ["cursedland06.mp3"]                = "scarlet\\cursedland06.mp3",
+    ["sacred01.mp3"]                    = "scarlet\\sacred01.mp3",
+    ["sacred02.mp3"]                    = "scarlet\\sacred02.mp3",
+    ["gloomy02.mp3"]                    = "scarlet\\gloomy02.mp3",
+    ["scarletmonastery_h1.mp3"]         = "scarlet\\scarletmonastery_h1.mp3",
+    ["scarletmonastery_h2.mp3"]         = "scarlet\\scarletmonastery_h2.mp3",
+    ["scarletmonastery_h3.mp3"]         = "scarlet\\scarletmonastery_h3.mp3",
+    
+    ["eh_assault_6.mp3"]                = "scarlet\\eh_assault_6.mp3",
+    ["eh_assault_7.mp3"]                = "scarlet\\eh_assault_7.mp3",
+
+    -- === Battle Music ===
+    ["battle01.mp3"]                    = "battle\\battle01.mp3",
+    ["battle02.mp3"]                    = "battle\\battle02.mp3",
+    ["battle03.mp3"]                    = "battle\\battle03.mp3",
+    ["battle04.mp3"]                    = "battle\\battle04.mp3",
+    ["battle05.mp3"]                    = "battle\\battle05.mp3",
+    ["battle06.mp3"]                    = "battle\\battle06.mp3",
+
+    -- === Orc Intro ===
+    ["orcintro_1.mp3"]                  = "orc\\orcintro_1.mp3",
+    ["orcintro_2.mp3"]                  = "orc\\orcintro_2.mp3",
+    ["orcintro_3.mp3"]                  = "orc\\orcintro_3.mp3",
+    ["orcintro_4.mp3"]                  = "orc\\orcintro_4.mp3",
 }
+

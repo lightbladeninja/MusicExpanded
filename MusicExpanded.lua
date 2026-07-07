@@ -7,7 +7,12 @@ local currentSubzone = ""
 
 m.inCustomArea = false
 m.previousTrack = nil
-m.loopMusic = true
+m.nextTrackTime = nil
+m.nextsilenceTime = nil
+
+MusicExpandedDB = MusicExpandedDB or {}
+MusicExpandedDB.loopMusic = MusicExpandedDB.loopMusic or 1
+m.loopMusic = MusicExpandedDB.loopMusic
 
 -- Print doesn't exist in 1.12, so we add a print function through the addon
 if not print then
@@ -15,11 +20,6 @@ if not print then
         DEFAULT_CHAT_FRAME:AddMessage(msg)
     end
 end
-
--- IsIndoors() doesn't exist in 1.12. SOLUTION?! Detect if the minimap changed shape, like usually happens inside buildings and caves.
-
--- Check for loop music?
-
 
 -- Compare music content between zones
 local function CompareZoneData(filename, musicData)
@@ -34,7 +34,6 @@ local function CompareZoneData(filename, musicData)
     end
     return false
 end
-
 
 -- Find the full path for a music file based on the registry
 local function GetMusicPath(trackName)
@@ -149,9 +148,9 @@ local function UpdateMusicState()
             m.previousTrack = chosen.file          -- store filename as string
             PlayCustomTrack(chosen.file)
 
-            local duration = chosen.duration - 2 or 180
+            local duration = chosen.duration - 2 or 5
             
-            if m.loopMusic == true then
+            if m.loopMusic == 1 then
                 m.nextTrackTime = GetTime() + duration
             else
                 m.nextTrackTime = GetTime() + duration + math.random(180, 300)
@@ -169,29 +168,30 @@ local function UpdateMusicState()
 end
 
 -- Timer
-
 local function OnUpdate()
-    -- Priority 1: Check if an event track should end
+    -- Check if Event is playing
     if m.isEventTrack and m.eventTrackEndTime then
         if GetTime() >= m.eventTrackEndTime then
             StopMusic()
 
-            -- Clean up
-            m.eventTrackEndTime = nil
             m.isEventTrack = nil
+            m.eventTrackEndTime = nil
             m.previousTrack = nil
         end
         return   -- Don't run normal music logic while an event track is playing
     end
 
+    -- Check if Intro is playing
     if m.isIntroTrack and m.introTrackEndTime then
         if GetTime() >= m.introTrackEndTime then
-            StopMusic()
-
+            
             m.isIntroTrack = nil
             m.introTrackEndTime = nil
+            m.previousTrack = nil
+
+            m.nextTrackTime = GetTime() + 2
         end
-        return   -- Block everything else while intro is playing
+        return
     end
 
     if not m.inCustomArea then 
@@ -215,7 +215,6 @@ end
 
 
 -- Find event based on target
-
 local function CheckForEvent(target, targettarget, subzone)
     if not subzone or subzone == "" then
         return false
@@ -226,35 +225,39 @@ local function CheckForEvent(target, targettarget, subzone)
         return false
     end
 
-    -- Try target first, then targettarget
     local possibleNPCs = {target, targettarget}
 
     for _, npcName in ipairs(possibleNPCs) do
         if npcName and subzoneEvents[npcName] then
-            -- Found a match!
+            local eventData = subzoneEvents[npcName]
 
             -- Cooldown check
             local cooldownKey = subzone .. "_" .. npcName
             if m.eventCooldowns and m.eventCooldowns[cooldownKey] then
                 if GetTime() < m.eventCooldowns[cooldownKey] then
-                    return false -- Still on cooldown
+                    return false
                 end
             end
 
-            -- Get the track filename
-            local musicfile = subzoneEvents[npcName].file
-            local duration = subzoneEvents[npcName].duration or 180
+            local chosenTrack = nil
 
-            if musicfile then
-                PlayCustomTrack(musicfile)
+            if eventData.tracks then
+                local tracks = eventData.tracks
+                chosenTrack = tracks[math.random(table.getn(tracks))]
+            end
 
-                -- Set 10 minute cooldown
+            if chosenTrack and chosenTrack.file then
+                PlayCustomTrack(chosenTrack.file)
+
+                local duration = chosenTrack.duration or 180
+
+                -- Set cooldown
                 m.eventCooldowns = m.eventCooldowns or {}
                 m.eventCooldowns[cooldownKey] = GetTime() + 600
 
-                -- Set end time for this event track (used in OnUpdate)
+                -- Set protection timer
                 m.eventTrackEndTime = GetTime() + duration - 2.5
-                m.isEventTrack = true   -- Flag so OnUpdate knows it's an event track
+                m.isEventTrack = true
 
                 return true
             end
@@ -266,14 +269,9 @@ end
 
 
 -- Intro Music
-
 local function CheckForIntroMusic()
     local zone = zone or GetZoneText() or ""
     local subzone = subzone or GetSubZoneText() or ""
-
-    if not zone or zone == "" then
-        return false
-    end
 
     local zoneEntry = MusicExpanded_Data.Zones[zone]
     if not zoneEntry then
@@ -323,7 +321,8 @@ local function CheckForIntroMusic()
 
     -- Mark as intro track (so OnUpdate protects it)
     m.isIntroTrack = true
-    m.introTrackEndTime = GetTime() + (chosen.duration or 30) - 2.5
+    m.introTrackEndTime = GetTime() + chosen.duration - 2.5
+    m.inCustomArea = true
 
     return true
 end
@@ -339,12 +338,16 @@ zoneFrame:RegisterEvent("ZONE_CHANGED_INDOORS")
 
 zoneFrame:SetScript("OnEvent", function(self, event)
     CheckForIntroMusic()
+
+    if m.previousTrack == nil then
+        m.nextTrackTime = GetTime() + 1.5
+    end 
     UpdateMusicState()
 end)
 
 zoneFrame:SetScript("OnUpdate", OnUpdate) -- OnUpdate means when the frame is updated (many times every second)
 
---
+-- Event detection for creature events
 local eventFrame = CreateFrame("Frame")
 
 eventFrame:RegisterEvent("PLAYER_TARGET_CHANGED")
@@ -357,9 +360,7 @@ eventFrame:SetScript("OnEvent", function(self, event)
     CheckForEvent(target, targettarget, subzone)
 end)
 
-
 -- slash commands
-
 SLASH_MEX1 = "/musicexpanded"
 SLASH_MEX2 = "/mex"
 
@@ -392,19 +393,42 @@ function SlashCmdList.MEX(msg)
         print("|cFF00FF00[MusicExpanded]|r Custom music stopped. Returning to default.")
         m.isIntroTrack = nil
         m.introTrackEndTime = nil
+        m.eventTrackEndTime = nil
+        m.isEventTrack = nil
+        m.previousTrack = nil
 
     elseif command == "loop" then
-        if m.loopMusic == true then
-            m.loopMusic = false
+        if m.loopMusic == 1 then
+            m.loopMusic = 0
             print("|cFF00FF00[MusicExpanded]|r Music looping disabled. Does not affect base game music, check your Interface Music settings.")
-            UpdateMusicState()
-            
         else
-            m.loopMusic = true
-            print("|cFF00FF00[MusicExpanded]|r Looping enabled (default). Does not affect base game music, check your Interface Music settings.")
-            UpdateMusicState()
+            m.loopMusic = 1
+            print("|cFF00FF00[MusicExpanded]|r Music looping enabled (default). Does not affect base game music, check your Interface Music settings.")
+        end
+
+        MusicExpandedDB.loopMusic = m.loopMusic
+
+        m.previousTrack = nil
+        UpdateMusicState()
+
+    elseif command == "status" then
+        print("|cFF00FF00[MusicExpanded]|r Status:")
+        print("  Current Zone: " .. (GetZoneText() or "Unknown"))
+        print("  Current Subzone: " .. (GetSubZoneText() or "Unknown"))
+        print("  In Custom Area: " .. tostring(m.inCustomArea))
+        print("  Loop Music: " .. (m.loopMusic == 1 and "Enabled" or "Disabled"))
+        print("  Previous Track: " .. (m.previousTrack or "None"))
+        if m.isIntroTrack then
+            print("  Intro Track Active: Yes")
+        else
+            print("  Intro Track Active: No")
+        end
+        if m.isEventTrack then
+            print("  Event Track Active: Yes")
+        else
+            print("  Event Track Active: No")
         end
     else
-        print("|cFF00FF00[MusicExpanded]|r Commands: /mex play | stop | loop")
+        print("|cFF00FF00[MusicExpanded]|r Commands: /mex play | stop | loop | status")
     end
 end
