@@ -3,7 +3,8 @@
 ## Title: Music Expanded
 ## Notes: Adds music to vanilla and custom zones from later expansions, TBC and onwards
 ## Author: Lightblade
-## Version: 1.2
+## Version: 1.3
+## SavedVariables: MusicExpandedDB
 
 musicRegistry.lua
 eventData.lua

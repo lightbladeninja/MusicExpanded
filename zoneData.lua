@@ -4,9 +4,9 @@ MusicExpanded_Data = MusicExpanded_Data or {}
 local cultMusic = {
     { file = "forsakenflame_e.mp3", duration = 77 },
     { file = "forsakenflame_a.mp3", duration = 87 },
-    { file = "mystery01-zone.mp3", duration = 60 },
-    { file = "mystery05-zone.mp3", duration = 81 },
-    { file = "mystery07-zone.mp3", duration = 83 }
+    { file = "mystery_1.mp3", duration = 60 },
+    { file = "mystery_5.mp3", duration = 81 },
+    { file = "mystery_7.mp3", duration = 83 }
 }
 
 local nagaCave = {
@@ -36,7 +36,6 @@ local darkironDigsite = {
 }
 
 local highborne = {
-    { file = "ruinsofzinazshari_a.mp3", duration = 167 },
     { file = "ruinsofzinazshari_b.mp3", duration = 172 },
     { file = "ruinsofzinazshari_c.mp3", duration = 75 },
     { file = "zinazshari_h1.mp3", duration = 177 },
@@ -47,8 +46,103 @@ local highborne = {
     { file = "zinazshari_6.mp3", duration = 113 },
 }
 
+local haunted = {
+    { file = "shadow_death_b.mp3", duration = 129 },
+    { file = "haunted01.mp3", duration = 62 },
+    { file = "haunted_uu02.mp3", duration = 127 },
+    { file = "ghosts_1.mp3", duration = 84 },
+    { file = "ghosts_2.mp3", duration = 84 },
+    { file = "ghosts_3.mp3", duration = 91 },
+}
+
+local spookyIntro = {
+    { file = "haunted02.mp3", duration = 60 },
+}
+
+local mysteryEvil = {
+    { file = "mystery_5.mp3", duration = 81 },
+    { file = "mystery_8.mp3", duration = 83 },
+    { file = "mystery_9.mp3", duration = 82 },
+    { file = "mystery_10.mp3", duration = 82 }
+}
+
+local scarletMonastery = {
+    { file = "haunted_1.mp3", duration = 111 },
+    { file = "haunted_3.mp3", duration = 109 },
+    { file = "cursedland04.mp3", duration = 79 },
+    { file = "cursedland05.mp3", duration = 82 },
+    { file = "cursedland06.mp3", duration = 74 },
+    { file = "scarletmonastery_h1.mp3", duration = 83 },
+    { file = "scarletmonastery_h2.mp3", duration = 54 },
+    { file = "scarletmonastery_h3.mp3", duration = 117 },
+}
+
+local scarletIntro = {
+    { file = "sacred01.mp3", duration = 16 - 1 },
+    { file = "gloomy02.mp3", duration = 39 },
+}
+
+local orcIntro = {
+    { file = "orcintro_1.mp3", duration = 11 },
+    { file = "orcintro_2.mp3", duration = 17 },
+    { file = "orcintro_3.mp3", duration = 11 },
+    { file = "orcintro_4.mp3", duration = 13 },
+}
+
 MusicExpanded_Data.Zones = {
 
+    ["Tirisfal Glades"] = {
+        tracks = {},
+        subzones = {
+            ["Deathknell"] = {
+                intro = {},
+                tracks = haunted
+            },
+            ["Agamand Mills"] = {
+                tracks = haunted,
+                intro = {}
+            },
+            ["Agamand Family Crypt"] = {
+                tracks = haunted,
+                intro = {}
+            },
+            ["Brill"] = {
+                tracks = haunted,
+                intro = {}
+            },
+            ["Balnir Farmstead"] = {
+                intro = {},
+                tracks = haunted
+            },
+            ["Whispering Gardens"] = {
+                intro = {
+                    { file = "shadow_death_a.mp3", duration = 92 },
+                },
+                tracks = {}
+            },
+        }
+    },
+    ["Undercity"] = {
+        tracks = {},
+        subzones = {
+            ["Royal Quarter"] = {
+                intro = {
+                    { file = "windrunner_h.mp3", duration = 129 },
+                    { file = "sylvanas_freewill_h.mp3", duration = 172 }
+                },
+                tracks = {}
+            }
+        }
+    },
+    ["Silverpine Forest"] = {
+        tracks = {},
+        subzones = {
+            ["The Sepulcher"] = {
+                tracks = haunted,
+                intro = {}
+            }
+        }
+    },
     ["Darkshore"] = {
         tracks = {
             { file = "nightwarrior_a.mp3", duration = 88 },
@@ -61,7 +155,6 @@ MusicExpanded_Data.Zones = {
             { file = "nightforest03.mp3", duration = 59 },
             { file = "nightforest04.mp3", duration = 53 }
         },
-
         subzones = {
             ["Auberdine"] = {
                 tracks = {}
@@ -73,7 +166,8 @@ MusicExpanded_Data.Zones = {
                 tracks = {}
             },
             ["Ameth'Aran"] = {
-                tracks = {}
+                tracks = haunted,
+                intro = {}
             },
             ["Tower of Althalaxx"] = {
                 tracks = cultMusic
@@ -89,7 +183,6 @@ MusicExpanded_Data.Zones = {
             }
         }
     },
-
     ["Loch Modan"] = {
         tracks = {},
         subzones = {
@@ -113,11 +206,32 @@ MusicExpanded_Data.Zones = {
                 tracks = dwarfDigsite
             },
             ["Direforge Hill"] = {
-                tracks = {} -- something dark iron
+                tracks = {}
             },
             ["Dun Modr"] = {
-                tracks = {} -- something dark iron
+                tracks = {} 
+            },
+            ["Angerfang Encampment"] = { -- Add for Grim Reaches dragonmaw orcs
+                intro = orcIntro,
+                tracks = {}
             }
+        }
+    },
+    ["Duskwood"] = {
+        tracks = {},
+        subzones = {
+            ["Tranquil Gardens Cemetery"] = {
+                tracks = haunted,
+                intro = {}
+            },
+            ["Raven Hill Cemetery"] = {
+                intro = {},
+                tracks = haunted
+            },
+            ["Forlorn Rowe"] = {
+                intro = spookyIntro,
+                tracks = {}
+            },
         }
     },
     ["Grim Reaches"] = {
@@ -125,7 +239,11 @@ MusicExpanded_Data.Zones = {
         subzones = {
             ["Darkbeard Digsite"] = {
                 tracks = darkironDigsite
-            }
+            },
+            ["The Grim Batol Memorial"] = {
+                tracks = haunted,
+                intro = {}
+            },
         }
     },
     ["Northwind"] = {
@@ -150,6 +268,20 @@ MusicExpanded_Data.Zones = {
             }
         }
     },
+    ["Feralas"] = {
+        tracks = {},
+        subzones = {
+            ["Lariss Pavilion"] = {
+                tracks = highborne,
+                intro = {
+                    { file = "ruinsofzinazshari_a.mp3", duration = 167 },
+                }
+            },
+            ["Shalzaru's Lair"] = {
+                tracks = nagaCave
+            }
+        }
+    },
     ["Searing Gorge"] = {
         tracks = {},
         subzones = {
@@ -171,17 +303,6 @@ MusicExpanded_Data.Zones = {
             }
         }
     },
-    ["Winterspring"] = {
-        tracks = {},
-        subzones = {
-            ["Lake Kel'Theril"] = {
-                tracks = {}
-            },
-            ["The Ruins of Kel'Theril"] = {
-                tracks = highborne
-            }
-        }
-    },
     ["Azshara"] = {
         tracks = {},
         subzones = {
@@ -189,34 +310,134 @@ MusicExpanded_Data.Zones = {
                 tracks = {}
             },
             ["Temple of Zin-Malor"] = {
-                tracks = highborne
-            }
-        }
-    },
-    ["Feralas"] = {
-        tracks = {},
-        subzones = {
-            ["Lariss Pavilion"] = {
-                tracks = highborne
-            },
-            ["Shalzaru's Lair"] = {
-                tracks = nagaCave
-            }
-        }
-    },
---============================================================  Dungeons  ============================================================
-
-    ["Scarlet Monastery Graveyard"] = {
-        tracks = {},
-        subzones = {
-            ["Forlorn Cloister"] = {
-                tracks = {},
-
+                tracks = highborne,
                 intro = {
-                    { file = "shadow_death_h.mp3", duration = 154 },
+                    { file = "ruinsofzinazshari_a.mp3", duration = 167 },
+                }
+            },
+            ["Shadowsong Shrine"] = {
+                tracks = highborne,
+                intro = {
+                    { file = "ruinsofzinazshari_a.mp3", duration = 167 },
+                }
+            },
+        }
+    },
+    ["Western Plaguelands"] = {
+        tracks = {},
+        subzones = {
+            ["Ruins of Andorhal"] = {
+                intro = spookyIntro,
+                tracks = haunted
+            },
+            ["Uther's Tomb"] = {
+                tracks = haunted,
+                intro = {}
+            },
+        }
+    },
+    ["Eastern Plaguelands"] = {
+        tracks = {},
+        subzones = {
+            ["Light's Hope Chapel"] = {
+                tracks = {
+                    { file = "arathi_memorial_h.mp3", duration = 279 }
+                },
+                intro = {}
+            }
+        }
+    },
+    ["Winterspring"] = {
+        tracks = {},
+        subzones = {
+            ["Lake Kel'Theril"] = {
+                tracks = {}
+            },
+            ["The Ruins of Kel'Theril"] = {
+                tracks = highborne,
+                intro = {
+                    { file = "ruinsofzinazshari_a.mp3", duration = 167 },
                 }
             }
         }
+    },
+
+    --============================================================  Dungeons  ============================================================
+
+    ["Scarlet Monastery"] = { -- Armory uses this
+        intro = {},
+        tracks = scarletMonastery,
+        subzones = {
+            [""] = {
+                intro = {},
+                tracks = scarletMonastery
+            },
+            ["The Grand Vestibule"] = {
+                intro = {},
+                tracks = scarletMonastery
+            },
+        }
+    },
+    ["Scarlet Monastery Graveyard"] = {
+        intro = {},
+        tracks = scarletMonastery,
+        subzones = {
+            [""] = {
+                intro = {},
+                tracks = scarletMonastery
+            },
+            ["Forlorn Cloister"] = {
+                intro = {
+                    { file = "shadow_death_h.mp3", duration = 154 },
+                },
+                tracks = haunted
+            },
+            ["Scarlet Prison"] = {
+                tracks = mysteryEvil,
+                intro = {}
+            }
+        }
+    },
+    ["Scarlet Monastery Library"] = {
+        intro = {},
+        tracks = scarletMonastery,
+        subzones = {
+            [""] = {
+                intro = scarletIntro,
+                tracks = scarletMonastery,
+            },
+            ["Huntsman's Cloister"] = {
+                intro = {},
+                tracks = scarletMonastery,
+            },
+            ["Athenaeum"] = {
+                intro = {
+                    { file = "battle04.mp3", duration = 36 - 1 } 
+                },
+                tracks = scarletMonastery
+            }
+        }
+    },
+    ["Scarlet Monastery Cathedral"] = {
+        tracks = scarletMonastery,
+        intro = {},
+        subzones = {
+            [""] = {
+                intro = scarletIntro,
+                tracks = scarletMonastery
+            },
+            ["Chapel Gardens"] = {
+                intro = {},
+                tracks = scarletMonastery
+            },
+            ["Crusader's Chapel"] = {
+                intro = {
+                    { file = "sacred02.mp3", duration = 19 },
+                },
+                tracks = scarletMonastery
+            },
+        },
+        intro = scarletIntro
     },
     ["Uldaman"] = {
         tracks = {},
@@ -277,17 +498,53 @@ MusicExpanded_Data.Zones = {
             }
         }
     },
-    ["Blackrock Spire"] = { -- NOT USED, see eventData.lua for Blackrock Stadium
+    ["Stratholme"] = {
+        intro = {},
         tracks = {},
         subzones = {
-            ["Blackrock Stadium"] = {
-                tracks = {},
-                event = {
-                    { file = "protectthethrone_h1.mp3", duration = 67 },
-                    { file = "protectthethrone_h2.mp3",  weight = 3, duration = 98 },
-                    { file = "protectthethrone_h3.mp3", duration = 92 }
+            ["Crusaders' Square"] = {
+                tracks = scarletMonastery,
+                intro = scarletIntro
+            },
+            ["The Scarlet Bastion"] = {
+                tracks = scarletMonastery,
+                intro = {}
+            },
+            ["The Hall of Lights"] = {
+                tracks = scarletMonastery,
+                intro = { 
+                    { file = "battle04.mp3", duration = 36 }
                 }
+            },
+            ["The Hoard"] = {
+                tracks = scarletMonastery,
+                intro = {
+                    { file = "battle03.mp3", duration = 27 }
+                }
+            },
+            ["The Crimson Throne"] = {
+                tracks = {
+                    { file = "eh_assault_6.mp3", duration = 93 },
+                    { file = "eh_assault_7.mp3", duration = 95 }
+                },
+                intro = {}
+            },
+        },
+    },
+    ["Scholomance"] = {
+        intro = {},
+        tracks = haunted,
+        subzones = {
+            [""] = {
+                intro = spookyIntro,
+                tracks = haunted
+            },
+            ["The Reliquary"] = {
+                intro = {
+                    { file = "shadow_death_h.mp3", duration = 154 }
+                },
+                tracks = haunted
             }
         }
-    }
+    },
 }
