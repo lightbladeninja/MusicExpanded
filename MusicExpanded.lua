@@ -3,16 +3,15 @@ local m = MusicExpanded
 
 local silenceFile = "Interface\\AddOns\\MusicExpanded\\music\\silence.mp3"
 local MUSIC_ROOT = "Interface\\AddOns\\MusicExpanded\\music\\"
-local currentSubzone = ""
-
-m.inCustomArea = false
-m.previousTrack = nil
-m.nextTrackTime = nil
-m.nextsilenceTime = nil
 
 MusicExpandedDB = MusicExpandedDB or {}
 MusicExpandedDB.loopMusic = MusicExpandedDB.loopMusic or 1
 m.loopMusic = MusicExpandedDB.loopMusic
+
+m.nextTrackTime = GetTime() + 1 -- Hardcode delay on startup to improve consistency of PlayMusic
+m.introTrackEndTime = nil
+m.eventTrackEndTime = nil
+m.previousTrack = nil
 
 -- Print doesn't exist in 1.12, so we add a print function through the addon
 if not print then
@@ -21,36 +20,16 @@ if not print then
     end
 end
 
--- Compare music content between zones
-local function CompareZoneData(filename, musicData)
-    if not musicData or not musicData.tracks then
-        return false
-    end
-
-    for i = 1, table.getn(musicData.tracks) do
-        if musicData.tracks[i].file == filename then
-            return true
-        end
-    end
-    return false
-end
-
 -- Find the full path for a music file based on the registry
 local function GetMusicPath(trackName)
-    -- Safety check: make sure the registry exists
-    if not MusicExpanded_Registry or not MusicExpanded_Registry.Files then
+
+    local subPath = MusicExpanded_Registry.Files[trackName]
+
+    if not subPath then
         return nil
     end
 
-    -- Look up the file in the registry
-    local relativePath = MusicExpanded_Registry.Files[trackName]
-
-    if not relativePath then
-        return nil
-    end
-
-    -- Return the full path
-    return MUSIC_ROOT .. relativePath
+    return MUSIC_ROOT .. subPath
 end
 
 -- PlayMusic function
@@ -77,6 +56,19 @@ local function PlayCustomTrack(trackName)
     return true
 end
 
+-- Compare music content between zones
+local function CompareZoneData(filename, musicData)
+    if not musicData or not musicData.tracks then
+        return false
+    end
+
+    for i = 1, table.getn(musicData.tracks) do
+        if musicData.tracks[i].file == filename then
+            return true
+        end
+    end
+    return false
+end
 
 -- Choose a random track from the provided music data
 local function ChooseRandomTrack(musicData)
@@ -84,129 +76,128 @@ local function ChooseRandomTrack(musicData)
     local tracks = musicData.tracks
     local trackCount = table.getn(tracks)
 
-    local randomIndex = math.random(trackCount)
-    local chosenTrack = tracks[randomIndex]
-    m.previousTrack = chosenTrack.file -- store the track to compare later
+    if trackCount == 1 then     -- If only one track, just play it
+        local chosenTrack = tracks[1]
+        return chosenTrack
+    end
+
+    local chosenTrack = nil
+    local attempts = 0
+    -- Multiple tracks → avoid playing the same one twice in a row
+    repeat
+        local randomIndex = math.random(trackCount)
+        chosenTrack = tracks[randomIndex]
+        attempts = attempts + 1
+    until chosenTrack.file ~= m.previousTrack or attempts == 5
 
     return chosenTrack
 end
 
 -- Get zone music data from zoneData.lua
 local function GetZoneMusicData(zone, subzone)
-    -- 1. Check if this zone exists in our data
+    
     local zoneEntry = MusicExpanded_Data.Zones[zone]
     if not zoneEntry then
+        m.inCustomArea = false
         return nil -- Not a custom zone → use vanilla music
     end
 
-    -- 2. Check if the current subzone has its own music data
     if subzone and zoneEntry.subzones and zoneEntry.subzones[subzone] then
-        local subzoneData = zoneEntry.subzones[subzone]
+        local subzoneEntry = zoneEntry.subzones[subzone]
 
-        -- If the subzone has tracks (even if empty), return it
-        if subzoneData.tracks then
-            return subzoneData
-        end
+        if subzoneEntry.tracks then
+            m.inCustomArea = true
+            return subzoneEntry -- if tracks = {} then vanilla music plays
+        end                     -- if tracks = {track1, track2} then custom music plays
     end
 
-    -- 3. No specific subzone data → use the main zone tracks (if any)
-    if zoneEntry.tracks and table.getn(zoneEntry.tracks) > 0 then
+    if zoneEntry.tracks and table.getn(zoneEntry.tracks) > 0 then -- No specific subzone data → use the main zone tracks
+        m.inCustomArea = true
         return zoneEntry
     end
 
-    -- 4. Zone exists but has no music defined → use vanilla
-    return nil
+    m.inCustomArea = false
+    return nil -- Zone exists but has no music defined → use vanilla
 end
 
-
 -- Respond to zonechange, check current zone/subzone
-local function UpdateMusicState()
-    if m.isIntroTrack or m.isEventTrack then
+local function ZoneMusicTrigger(source) -- Change behavior based on the source of the trigger
+    -- sources; zoneChanged, command, event, intro, update
+
+    if source == "update" and m.nextTrackTime >= GetTime() then -- If timer isn't ready, don't trigger new music
+        return
+    end
+
+    if (m.introTrackEndTime and m.introTrackEndTime >= GetTime()) 
+    or (m.eventTrackEndTime and m.eventTrackEndTime >= GetTime()) then -- Check if intro or event music is playing, if so, don't change the music
         return
     end
     
-    local zone = GetZoneText() or ""
-    local subzone = GetSubZoneText() or ""
-    m.currentSubzone = subzone
-
+    local zone = m.currentZone 
+    local subzone = m.currentSubzone
     local musicData = GetZoneMusicData(zone, subzone)
 
-    if musicData and musicData.tracks and table.getn(musicData.tracks) > 0 then
-        -- We have custom music for this zone/subzone
-
-        if m.previousTrack and CompareZoneData(m.previousTrack, musicData) then
-            -- The previous track still exists in this new subzone → do nothing
-            m.inCustomArea = true
-            return
+    if musicData and musicData.tracks and table.getn(musicData.tracks) > 0 then -- If music data is valid, continue
+        if source == "zoneChanged" and CompareZoneData(m.previousTrack, musicData) then
+            return -- Zone change triggered music, but the previous track is still valid for this zone, so don't interrupt it.
         end
-
-        -- Either no previous track, or the previous track is not in this music set
+    
         local chosen = ChooseRandomTrack(musicData)
 
-        if chosen then
-            m.inCustomArea = true
-            m.previousTrack = chosen.file          -- store filename as string
-            PlayCustomTrack(chosen.file)
+        PlayCustomTrack(chosen.file)
+        m.previousTrack = chosen.file
 
-            local duration = chosen.duration - 2 or 5
+        local duration = chosen.duration - 2 or 4 -- Fallback duration 4 seconds, to ensure quick retry
             
-            if m.loopMusic == 1 then
-                m.nextTrackTime = GetTime() + duration
-            else
-                m.nextTrackTime = GetTime() + duration + math.random(180, 300)
-                m.nextsilenceTime = GetTime() + duration
-            end
+        if m.loopMusic == 1 then
+            m.nextTrackTime = GetTime() + duration
+        else
+            m.nextTrackTime = GetTime() + duration + math.random(180, 300)
+            m.nextsilenceTime = GetTime() + duration
         end
-    else
-        -- No custom music for this area
-        if m.inCustomArea then
-            StopMusic()
-        end
-        m.inCustomArea = false
-        m.previousTrack = nil
+    elseif source == "zoneChanged" then
+        StopMusic()
+        m.nextTrackTime = GetTime()
     end
 end
 
--- Timer
-local function OnUpdate()
-    -- Check if Event is playing
-    if m.isEventTrack and m.eventTrackEndTime then
-        if GetTime() >= m.eventTrackEndTime then
-            StopMusic()
+-- Timer based on OnUpdate frame update event.
+local function CheckTimer()
 
-            m.isEventTrack = nil
+    if m.eventTrackEndTime then -- event track has played recently
+        if m.eventTrackEndTime <= GetTime() then -- event track has ended
+            
+            StopMusic()
             m.eventTrackEndTime = nil
-            m.previousTrack = nil
+            return 
+        else
+            return
         end
-        return   -- Don't run normal music logic while an event track is playing
     end
 
-    -- Check if Intro is playing
-    if m.isIntroTrack and m.introTrackEndTime then
-        if GetTime() >= m.introTrackEndTime then
+    if m.introTrackEndTime then -- intro track has played recently
+        if m.introTrackEndTime <= GetTime() then -- intro track has ended
             
-            m.isIntroTrack = nil
+            StopMusic()
             m.introTrackEndTime = nil
-            m.previousTrack = nil
-
-            m.nextTrackTime = GetTime() + 2
+            return 
+        else
+            return
         end
-        return
     end
 
     if not m.inCustomArea then 
         return 
     end
-
-    -- Priority 2: Normal music timer
+    
     if GetTime() >= m.nextTrackTime then
-        m.previousTrack = nil
-        UpdateMusicState()
+        ZoneMusicTrigger("update")
+        return
     end
 
-    -- Priority 3: Silence timer
     if m.nextsilenceTime then
-        if GetTime() >= m.nextsilenceTime then
+        if GetTime() <= m.nextsilenceTime then
+
             PlayMusic(silenceFile)
             m.nextsilenceTime = nil
         end
@@ -216,79 +207,71 @@ end
 
 -- Find event based on target
 local function CheckForEvent(target, targettarget, subzone)
-    if not subzone or subzone == "" then
-        return false
-    end
-
+    
     local subzoneEvents = MusicExpanded_Events[subzone]
     if not subzoneEvents then
         return false
     end
 
     local possibleNPCs = {target, targettarget}
+    local eventData = nil
+    local matchedNPC = nil 
 
-    for _, npcName in ipairs(possibleNPCs) do
-        if npcName and subzoneEvents[npcName] then
-            local eventData = subzoneEvents[npcName]
+    for _, name in ipairs(possibleNPCs) do
+        if name and subzoneEvents[name] then
+            matchedNPC = name
+            eventData = subzoneEvents[name]
+            break
+        end
+    end
+        
+    local cooldownKey = nil
 
-            -- Cooldown check
-            local cooldownKey = subzone .. "_" .. npcName
-            if m.eventCooldowns and m.eventCooldowns[cooldownKey] then
-                if GetTime() < m.eventCooldowns[cooldownKey] then
-                    return false
-                end
-            end
+    if matchedNPC then
+        cooldownKey = subzone .. "_" .. matchedNPC
+    else
+        return false
+    end
 
-            local chosenTrack = nil
-
-            if eventData.tracks then
-                local tracks = eventData.tracks
-                chosenTrack = tracks[math.random(table.getn(tracks))]
-            end
-
-            if chosenTrack and chosenTrack.file then
-                PlayCustomTrack(chosenTrack.file)
-
-                local duration = chosenTrack.duration or 180
-
-                -- Set cooldown
-                m.eventCooldowns = m.eventCooldowns or {}
-                m.eventCooldowns[cooldownKey] = GetTime() + 600
-
-                -- Set protection timer
-                m.eventTrackEndTime = GetTime() + duration - 2.5
-                m.isEventTrack = true
-
-                return true
-            end
+    if m.eventCooldowns and m.eventCooldowns[cooldownKey] then
+        if GetTime() < m.eventCooldowns[cooldownKey] then
+            return false
         end
     end
 
-    return false
+    local tracks = eventData.tracks
+    local chosenTrack = tracks[math.random(table.getn(tracks))]
+                
+    PlayCustomTrack(chosenTrack.file)
+
+    local duration = chosenTrack.duration or 180
+
+    m.eventCooldowns = m.eventCooldowns or {}
+    m.eventCooldowns[cooldownKey] = GetTime() + 600
+
+    m.eventTrackEndTime = GetTime() + duration - 2.5
+    return true
 end
 
 
 -- Intro Music
 local function CheckForIntroMusic()
-    local zone = zone or GetZoneText() or ""
-    local subzone = subzone or GetSubZoneText() or ""
-
-    local zoneEntry = MusicExpanded_Data.Zones[zone]
+    
+    local zoneEntry = MusicExpanded_Data.Zones[m.currentZone]
     if not zoneEntry then
         return false
     end
 
-    -- Priority: Subzone intro > Zone intro
     local introData = nil
 
-    if subzone and zoneEntry.subzones and zoneEntry.subzones[subzone] then
-        local sub = zoneEntry.subzones[subzone]
+    if zoneEntry.subzones and zoneEntry.subzones[m.currentSubzone] then
+
+        local sub = zoneEntry.subzones[m.currentSubzone]
         if sub.intro and table.getn(sub.intro) > 0 then
             introData = sub.intro
         end
     end
 
-    -- Fallback to zone-level intro
     if not introData and zoneEntry.intro and table.getn(zoneEntry.intro) > 0 then
         introData = zoneEntry.intro
     end
@@ -297,30 +280,20 @@ local function CheckForIntroMusic()
         return false
     end
 
-    -- Cooldown check (separate system from events)
-    local cooldownKey = zone .. "_" .. (subzone or "zone")
+    local cooldownKey = m.currentZone .. "_" .. (m.currentSubzone or "zone")
     m.introCooldowns = m.introCooldowns or {}
 
     if m.introCooldowns[cooldownKey] then
         if GetTime() < m.introCooldowns[cooldownKey] then
-            return false -- Still on cooldown
+            return false
         end
     end
 
-    -- Pick random intro track
     local chosen = introData[math.random(table.getn(introData))]
-    if not chosen or not chosen.file then
-        return false
-    end
 
-    -- Play the intro
     PlayCustomTrack(chosen.file)
 
-    -- Set 10 minute cooldown (separate from eventCooldowns)
     m.introCooldowns[cooldownKey] = GetTime() + 600
-
-    -- Mark as intro track (so OnUpdate protects it)
-    m.isIntroTrack = true
     m.introTrackEndTime = GetTime() + chosen.duration - 2.5
     m.inCustomArea = true
 
@@ -328,26 +301,28 @@ local function CheckForIntroMusic()
 end
 
 
--- Detect zonechange and creature event
+-- Zonechange trigger
 local zoneFrame = CreateFrame("Frame")
 
-zoneFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
-zoneFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
-zoneFrame:RegisterEvent("ZONE_CHANGED")
-zoneFrame:RegisterEvent("ZONE_CHANGED_INDOORS")
+zoneFrame:RegisterEvent("PLAYER_ENTERING_WORLD") -- Login or reload
+zoneFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA") -- Zone change
+zoneFrame:RegisterEvent("ZONE_CHANGED") -- Subzone change
+zoneFrame:RegisterEvent("ZONE_CHANGED_INDOORS") -- Subzone change in dungeon
 
 zoneFrame:SetScript("OnEvent", function(self, event)
-    CheckForIntroMusic()
+    m.currentZone = GetZoneText() or ""
+    m.currentSubzone = GetSubZoneText() or ""
 
-    if m.previousTrack == nil then
-        m.nextTrackTime = GetTime() + 1.5
-    end 
-    UpdateMusicState()
+    CheckForIntroMusic()
+    ZoneMusicTrigger("zoneChanged")
 end)
 
-zoneFrame:SetScript("OnUpdate", OnUpdate) -- OnUpdate means when the frame is updated (many times every second)
+-- Timer trigger
+local timerFrame = CreateFrame("Frame")
 
--- Event detection for creature events
+timerFrame:SetScript("OnUpdate", CheckTimer) -- OnUpdate means when the frame is updated (many times every second)
+
+-- Event trigger for target changes, to check for event music
 local eventFrame = CreateFrame("Frame")
 
 eventFrame:RegisterEvent("PLAYER_TARGET_CHANGED")
@@ -378,8 +353,7 @@ function SlashCmdList.MEX(msg)
     if command == "play" then
         if argument == "random" then
             print("|cFF00FF00[MusicExpanded]|r Rerolling music.")
-            m.previousTrack = nil
-            UpdateMusicState()
+            ZoneMusicTrigger("command")
 
         elseif argument and argument ~= "" then
             PlayCustomTrack(argument)
@@ -389,13 +363,8 @@ function SlashCmdList.MEX(msg)
         end
         
     elseif command == "stop" then
-        StopMusic() -- Only works on custom music, not the default zone music.
+        StopMusic()
         print("|cFF00FF00[MusicExpanded]|r Custom music stopped. Returning to default.")
-        m.isIntroTrack = nil
-        m.introTrackEndTime = nil
-        m.eventTrackEndTime = nil
-        m.isEventTrack = nil
-        m.previousTrack = nil
 
     elseif command == "loop" then
         if m.loopMusic == 1 then
@@ -407,9 +376,7 @@ function SlashCmdList.MEX(msg)
         end
 
         MusicExpandedDB.loopMusic = m.loopMusic
-
-        m.previousTrack = nil
-        UpdateMusicState()
+        ZoneMusicTrigger("command")
 
     elseif command == "status" then
         print("|cFF00FF00[MusicExpanded]|r Status:")
@@ -418,16 +385,7 @@ function SlashCmdList.MEX(msg)
         print("  In Custom Area: " .. tostring(m.inCustomArea))
         print("  Loop Music: " .. (m.loopMusic == 1 and "Enabled" or "Disabled"))
         print("  Previous Track: " .. (m.previousTrack or "None"))
-        if m.isIntroTrack then
-            print("  Intro Track Active: Yes")
-        else
-            print("  Intro Track Active: No")
-        end
-        if m.isEventTrack then
-            print("  Event Track Active: Yes")
-        else
-            print("  Event Track Active: No")
-        end
+
     else
         print("|cFF00FF00[MusicExpanded]|r Commands: /mex play | stop | loop | status")
     end

@@ -21,10 +21,10 @@ MusicExpanded_Events["Blackrock Stadium"] = {
 MusicExpanded_Events["Dun Algaz"] = {
     ["Dragonmaw Grunt"] = {
         tracks = {
-            { file = "orcintro_1.mp3", duration = 11 },
-            { file = "orcintro_2.mp3", duration = 17 },
-            { file = "orcintro_3.mp3", duration = 11 },
-            { file = "orcintro_4.mp3", duration = 13 },
+            { file = "orcintro_1.mp3", duration = 11 - 0.5},
+            { file = "orcintro_2.mp3", duration = 17 - 0.5},
+            { file = "orcintro_3.mp3", duration = 11 - 0.5},
+            { file = "orcintro_4.mp3", duration = 13 - 0.5},
         }
     }
 }

@@ -46,10 +46,25 @@ local highborne = {
     { file = "zinazshari_6.mp3", duration = 113 },
 }
 
+local scholomance = {
+    { file = "scholomance_1.mp3", duration = 59 },
+    { file = "scholomance_3.mp3", duration = 61 },
+    { file = "scholomance_4.mp3", duration = 78 },
+    { file = "scholomance_6.mp3", duration = 81 },
+    { file = "scholomance_8.mp3", duration = 78 },
+    { file = "scholomance_9.mp3", duration = 91 },
+    { file = "scholomance_10.mp3", duration = 84 },
+    { file = "scholomance_11.mp3", duration = 58 },
+    { file = "scholomance_12.mp3", duration = 103 },
+    { file = "haunted01.mp3", duration = 62 },
+    { file = "ghosts_1.mp3", duration = 84 },
+    { file = "ghosts_2.mp3", duration = 84 },
+    { file = "ghosts_3.mp3", duration = 91 },
+}
+
 local haunted = {
     { file = "shadow_death_b.mp3", duration = 129 },
     { file = "haunted01.mp3", duration = 62 },
-    { file = "haunted_uu02.mp3", duration = 127 },
     { file = "ghosts_1.mp3", duration = 84 },
     { file = "ghosts_2.mp3", duration = 84 },
     { file = "ghosts_3.mp3", duration = 91 },
@@ -83,10 +98,10 @@ local scarletIntro = {
 }
 
 local orcIntro = {
-    { file = "orcintro_1.mp3", duration = 11 },
-    { file = "orcintro_2.mp3", duration = 17 },
-    { file = "orcintro_3.mp3", duration = 11 },
-    { file = "orcintro_4.mp3", duration = 13 },
+    { file = "orcintro_1.mp3", duration = 11 - 0.5},
+    { file = "orcintro_2.mp3", duration = 17 - 0.5},
+    { file = "orcintro_3.mp3", duration = 11 - 0.5},
+    { file = "orcintro_4.mp3", duration = 13 - 0.5},
 }
 
 MusicExpanded_Data.Zones = {
@@ -251,6 +266,19 @@ MusicExpanded_Data.Zones = {
         subzones = {
             ["Hammerfoe's Quarry"] = {
                 tracks = darkironDigsite
+            }
+        }
+    },
+    ["Desolace"] = {
+        tracks = {},
+        subzones = {
+            ["Valley of Bones"] = {
+                tracks = {
+                    { file = "bonewalk_1.mp3", duration = 65 },
+                    { file = "bonewalk_2.mp3", duration = 63 },
+                    { file = "bonewalk_3.mp3", duration = 56 },
+                    { file = "bonewalk_4.mp3", duration = 189 },
+                }
             }
         }
     },
@@ -533,17 +561,17 @@ MusicExpanded_Data.Zones = {
     },
     ["Scholomance"] = {
         intro = {},
-        tracks = haunted,
+        tracks = scholomance,
         subzones = {
             [""] = {
                 intro = spookyIntro,
-                tracks = haunted
+                tracks = scholomance
             },
             ["The Reliquary"] = {
                 intro = {
                     { file = "shadow_death_h.mp3", duration = 154 }
                 },
-                tracks = haunted
+                tracks = scholomance
             }
         }
     },

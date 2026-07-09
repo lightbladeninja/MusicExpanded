@@ -37,12 +37,12 @@ MusicExpanded_Registry.Files = {
     ["protectthethrone_h3.mp3"] = "blackrock_spire\\event\\protectthethrone_h3.mp3",
 
     -- === Dwarven Digsite (Normal) ===
-    ["dwarf_b_day02.mp3"]                 = "dwarf\\dwarf_b_day02.mp3",
+    ["dwarf_b_day2.mp3"]                 = "dwarf\\dwarf_b_day2.mp3",
     ["dwarf_b_night2.mp3"]                = "dwarf\\dwarf_b_night2.mp3",
-    ["dwarf_c_day03.mp3"]                 = "dwarf\\dwarf_c_day03.mp3",
-    ["dwarf_c_night03.mp3"]               = "dwarf\\dwarf_c_night03.mp3",
+    ["dwarf_c_day3.mp3"]                 = "dwarf\\dwarf_c_day3.mp3",
+    ["dwarf_c_night3.mp3"]               = "dwarf\\dwarf_c_night3.mp3",
     ["dwarf_c_uni3.mp3"]                  = "dwarf\\dwarf_c_uni3.mp3",
-    ["dwarf_d_day04.mp3"]                 = "dwarf\\dwarf_d_day04.mp3",
+    ["dwarf_d_day4.mp3"]                 = "dwarf\\dwarf_d_day4.mp3",
 
     -- === Dark Iron Digsite ===
     ["dwarf_a_day1.mp3"]                  = "dwarf\\darkiron_digsite\\dwarf_a_day1.mp3",
@@ -93,7 +93,7 @@ MusicExpanded_Registry.Files = {
     ["sylvanas_freewill_h.mp3"]  = "faction_leader\\sylvanas\\sylvanas_freewill_h.mp3",
     
     -- === Light's Hope Chapel ===
-    ["arathi_memorial_h.mp3"]           = "chapel\\arathi_memorial_h.mp3",
+    ["arathi_memorial_h.mp3"]            = "chapel\\arathi_memorial_h.mp3",
 
     -- === Scarlet Monastery ===
     ["haunted_1.mp3"]                   = "scarlet\\haunted_1.mp3",
@@ -107,22 +107,38 @@ MusicExpanded_Registry.Files = {
     ["scarletmonastery_h1.mp3"]         = "scarlet\\scarletmonastery_h1.mp3",
     ["scarletmonastery_h2.mp3"]         = "scarlet\\scarletmonastery_h2.mp3",
     ["scarletmonastery_h3.mp3"]         = "scarlet\\scarletmonastery_h3.mp3",
-    
     ["eh_assault_6.mp3"]                = "scarlet\\eh_assault_6.mp3",
     ["eh_assault_7.mp3"]                = "scarlet\\eh_assault_7.mp3",
 
     -- === Battle Music ===
-    ["battle01.mp3"]                    = "battle\\battle01.mp3",
-    ["battle02.mp3"]                    = "battle\\battle02.mp3",
-    ["battle03.mp3"]                    = "battle\\battle03.mp3",
-    ["battle04.mp3"]                    = "battle\\battle04.mp3",
-    ["battle05.mp3"]                    = "battle\\battle05.mp3",
-    ["battle06.mp3"]                    = "battle\\battle06.mp3",
+    ["battle01.mp3"]                     = "battle\\battle01.mp3",
+    ["battle02.mp3"]                     = "battle\\battle02.mp3",
+    ["battle03.mp3"]                     = "battle\\battle03.mp3",
+    ["battle04.mp3"]                     = "battle\\battle04.mp3",
+    ["battle05.mp3"]                     = "battle\\battle05.mp3",
+    ["battle06.mp3"]                     = "battle\\battle06.mp3",
 
     -- === Orc Intro ===
-    ["orcintro_1.mp3"]                  = "orc\\orcintro_1.mp3",
-    ["orcintro_2.mp3"]                  = "orc\\orcintro_2.mp3",
-    ["orcintro_3.mp3"]                  = "orc\\orcintro_3.mp3",
-    ["orcintro_4.mp3"]                  = "orc\\orcintro_4.mp3",
+    ["orcintro_1.mp3"]                      = "orc\\orcintro_1.mp3",
+    ["orcintro_2.mp3"]                      = "orc\\orcintro_2.mp3",
+    ["orcintro_3.mp3"]                      = "orc\\orcintro_3.mp3",
+    ["orcintro_4.mp3"]                      = "orc\\orcintro_4.mp3",
+
+    -- === Centaur Necromancer ===
+    ["bonewalk_1.mp3"]                  = "centaur\\necromancer\\bonewalk_1.mp3",
+    ["bonewalk_2.mp3"]                  = "centaur\\necromancer\\bonewalk_2.mp3",
+    ["bonewalk_3.mp3"]                  = "centaur\\necromancer\\bonewalk_3.mp3",
+    ["bonewalk_4.mp3"]                  = "centaur\\necromancer\\bonewalk_4.mp3",
+
+    -- === Scholomance ===
+    ["scholomance_1.mp3"]           = "scholomance\\scholomance_1.mp3",
+    ["scholomance_3.mp3"]           = "scholomance\\scholomance_3.mp3",
+    ["scholomance_4.mp3"]           = "scholomance\\scholomance_4.mp3",
+    ["scholomance_6.mp3"]           = "scholomance\\scholomance_6.mp3",
+    ["scholomance_8.mp3"]           = "scholomance\\scholomance_8.mp3",
+    ["scholomance_9.mp3"]           = "scholomance\\scholomance_9.mp3",
+    ["scholomance_10.mp3"]          = "scholomance\\scholomance_10.mp3",
+    ["scholomance_11.mp3"]          = "scholomance\\scholomance_11.mp3",
+    ["scholomance_12.mp3"]          = "scholomance\\scholomance_12.mp3",
 }
 
