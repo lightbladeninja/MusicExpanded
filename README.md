@@ -96,6 +96,13 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 </details>
 
 <details>
+<summary><strong>Desolace </strong></summary>
+  
+- **Valley of Bones** - Terokkar Bone Wastes music
+
+</details>
+
+<details>
 <summary><strong>Feralas </strong></summary>
 
 - **Lariss Pavilion** - highborne music
@@ -187,10 +194,10 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 </details>
 
 <details>
-<summary><strong>Scholomance (unfinished) </strong></summary>
+<summary><strong>Scholomance </strong></summary>
   
-- **Main Zone** - Added ghostly music and intro haunted02
-- **The Reliquary** - Added intro music, shadow_death_h
+- **Main Zone** - Added ghostly and cata scholomance music. Added intro music; haunted02
+- **The Reliquary** - Added intro music; shadow_death_h
 
 </details>
 
@@ -208,4 +215,3 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
 - Test 1.18.1 turtle wow content (there are "ghost" changes to these zones but currently untested)
 - Add a log for music played {zone, subzone, track} displayable ingame through a button or chat command. Maybe a toggle for seeing "currently playing:X" messages.
-- Change random track selection to shuffle play
