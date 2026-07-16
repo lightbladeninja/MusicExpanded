@@ -97,12 +97,94 @@ local scarletIntro = {
     { file = "gloomy02.mp3", duration = 39 },
 }
 
+local scarletStronghold = {
+    { file = "Human1.mp3", duration = 273 },
+    { file = "Human2.mp3", duration = 236 },
+    { file = "Human3.mp3", duration = 288 },
+    { file = "HumanX1.mp3", duration = 284 }
+}
+
 local orcIntro = {
     { file = "orcintro_1.mp3", duration = 11 - 0.5},
     { file = "orcintro_2.mp3", duration = 17 - 0.5},
     { file = "orcintro_3.mp3", duration = 11 - 0.5},
     { file = "orcintro_4.mp3", duration = 13 - 0.5},
 }
+
+local silithus = {
+    { file = "daydesert01.mp3", duration = 65 },
+    { file = "daydesert02.mp3", duration = 81 },
+    { file = "daydesert03.mp3", duration = 54 },
+    { file = "nightdesert01.mp3", duration = 77 },
+    { file = "nightdesert02.mp3", duration = 62 },
+    { file = "nightdesert03.mp3", duration = 57 },
+    { file = "zereth_mortis_barren_a.mp3", duration = 203 },
+    { file = "zereth_mortis_barren_b.mp3", duration = 115 },
+    { file = "zereth_mortis_barren_c.mp3", duration = 135 },
+}
+
+local silithid = {
+    { file = "silithus_1.mp3", duration = 99 },
+    { file = "silithus_2.mp3", duration = 62 },
+    { file = "silithus_3.mp3", duration = 98 },
+    { file = "silithus_4.mp3", duration = 111 },
+    { file = "silithus_5.mp3", duration = 98 },
+    { file = "silithus_6.mp3", duration = 141 },
+}
+
+local twilightCalm = {
+    { file = "twilights_blade_f.mp3", duration = 77 },
+    { file = "twilights_blade_g.mp3", duration = 75 },
+    { file = "twilights_blade_i.mp3", duration = 76 },
+    { file = "twilighthighlands_1.mp3", duration = 68 },
+    { file = "twilighthighlands_2.mp3", duration = 67 },
+    { file = "twilighthighlands_4.mp3", duration = 78 },
+    { file = "twilightshammer_1.mp3", duration = 92 },
+    { file = "twilightshammer_2.mp3", duration = 48 },
+    { file = "twilightvale_1.mp3", duration = 110 },
+    { file = "twilightvale_3.mp3", duration = 80 },
+    { file = "twilightvale_5.mp3", duration = 46 },
+}
+
+local undeadStronghold = {
+    { file = "cursed_6.mp3", duration = 79 },
+    { file = "cursed_7.mp3", duration = 78 },
+    { file = "cursed_8.mp3", duration = 79 },
+}
+
+local undeadNightelf = {
+    { file = "ruinsofauberdine_1.mp3", duration = 100 },
+    { file = "ruinsofauberdine_2.mp3", duration = 83 },
+    { file = "ruinsofauberdine_3.mp3", duration = 83 },
+    { file = "ruinsofauberdine_4.mp3", duration = 77 },
+    { file = "ruinsofauberdine_5.mp3", duration = 77 },
+}
+
+local blackrockCalm = {
+    { file = "burningsteppes_1.mp3", duration = 133 },
+    { file = "burningsteppes_2.mp3", duration = 52 },
+    { file = "burningsteppes_3.mp3", duration = 80 },
+    { file = "burningsteppes_4.mp3", duration = 101 },
+    { file = "dayvolcanic01.mp3", duration = 72 },
+    { file = "dayvolcanic02.mp3", duration = 87 },
+    { file = "nightvolcanic01.mp3", duration = 71 },
+    { file = "nightvolcanic02.mp3", duration = 64 },
+}
+
+local blackrockDwarf = {
+    { file = "hateforgequarry_1.mp3", duration = 152 },
+    { file = "hateforgequarry_2.mp3", duration = 159 },
+    { file = "burningsteppes_1.mp3", duration = 133 },
+    { file = "burningsteppes_2.mp3", duration = 52 },
+    { file = "burningsteppes_3.mp3", duration = 80 },
+    { file = "burningsteppes_4.mp3", duration = 101 },
+    { file = "dayvolcanic01.mp3", duration = 72 },
+    { file = "dayvolcanic02.mp3", duration = 87 },
+    { file = "nightvolcanic01.mp3", duration = 71 },
+    { file = "nightvolcanic02.mp3", duration = 64 },
+}
+            
+
 
 MusicExpanded_Data.Zones = {
 
@@ -249,6 +331,14 @@ MusicExpanded_Data.Zones = {
             },
         }
     },
+    ["Thousand Needles"] = {
+        tracks = {},
+        subzones = {
+            ["The Rustmaul Dig Site"] = {
+                tracks = silithid
+            },
+        }
+    },
     ["Grim Reaches"] = {
         tracks = {},
         subzones = {
@@ -307,19 +397,48 @@ MusicExpanded_Data.Zones = {
             },
             ["Shalzaru's Lair"] = {
                 tracks = nagaCave
-            }
+            },
+            ["The Writhing Deep"] = {
+                tracks = silithid
+            },
+        }
+    },
+    ["Tanaris"] = {
+        tracks = {},
+        subzones = {
+            ["The Noxious Lair"] = {
+                tracks = silithid
+            },
+            ["The Gaping Chasm"] = {
+                tracks = silithid
+            },
         }
     },
     ["Searing Gorge"] = {
-        tracks = {},
+        tracks = blackrockCalm,
         subzones = {
             ["Grimesilt Dig Site"] = {
                 tracks = darkironDigsite
+            },
+            ["Firewatch Ridge"] = {
+                tracks = twilightCalm
+            }
+        }
+    },
+    ["Blackrock Mountain"] = {
+        intro = {},
+        tracks = blackrockCalm,
+        subzones = {
+            ["The Grinding Quarry"] = {
+                tracks = {}
+            },
+            ["The Masonary"] = {
+                tracks = {}
             }
         }
     },
     ["Burning Steppes"] = {
-        tracks = {},
+        tracks = blackrockCalm,
         subzones = {
             ["Ruins of Thaurissan"] = {
                 tracks = {
@@ -328,6 +447,18 @@ MusicExpanded_Data.Zones = {
                     { file = "darkironforge_4.mp3", duration = 102 },
                     { file = "darkironforge_5.mp3", duration = 45 }
                 }
+            },
+            ["Blackrock Stronghold"] = {
+                intro = {},
+                tracks = {}
+            },
+            ["Karfang Hold"] = {
+                intro = {},
+                tracks = {}
+            },
+            ["Dreadmaul Rock"] = {
+                intro = {},
+                tracks = {}
             }
         }
     },
@@ -351,6 +482,14 @@ MusicExpanded_Data.Zones = {
             },
         }
     },
+    ["Un'Goro Crater"] = {
+        tracks = {},
+        subzones = {
+            ["The Slithering Scar"] = {
+                tracks = silithid
+            },
+        }
+    },
     ["Western Plaguelands"] = {
         tracks = {},
         subzones = {
@@ -364,14 +503,55 @@ MusicExpanded_Data.Zones = {
             },
         }
     },
+    ["Crypt"] = { -- Sorrow Hill Crypt, used in Western Plaguelands
+        tracks = haunted,
+        subzones = {}
+    },
     ["Eastern Plaguelands"] = {
         tracks = {},
         subzones = {
             ["Light's Hope Chapel"] = {
+                intro = {},
                 tracks = {
                     { file = "arathi_memorial_h.mp3", duration = 279 }
-                },
-                intro = {}
+                }
+            },
+            ["Tyr's Hand"] = {
+                intro = {},
+                tracks = scarletStronghold
+            },
+            ["Plaguewood"] = {
+                intro = undeadStronghold,
+                tracks = {}
+            },
+            ["The Noxious Glade"] = {
+                intro = undeadStronghold,
+                tracks = {}
+            },
+            ["The Fungal Vale"] = {
+                intro = undeadStronghold,
+                tracks = {}
+            },
+            ["Forlorn Summit"] = {
+                intro = undeadStronghold,
+                tracks = {}
+            }
+        }
+    },
+    ["Tyr's Hand Abbey"] = {
+        tracks = scarletStronghold,
+        subzones = {}
+    },
+    ["Scarlet Enclave"] = {
+        tracks = scarletStronghold,
+        subzones = {
+            ["Gloom Hill"] = {
+                intro = {},
+                tracks = {}
+            },
+            ["Tyr's Hand"] = {
+                intro = {},
+                tracks = scarletStronghold
             }
         }
     },
@@ -389,9 +569,76 @@ MusicExpanded_Data.Zones = {
             }
         }
     },
+    ["Silithus"] = {
+        tracks = silithus,
+        subzones = {
+            ["Cenarion Hold"] = {
+                intro = {
+                    { file = "ahnqirajintro1.mp3", duration = 143 },
+                },
+                tracks = silithus
+            },
+            ["Hive'Ashi"] = {
+                intro = {},
+                tracks = silithid
+            },
+            ["Hive'Zora"] = {
+                intro = {},
+                tracks = silithid
+            },
+            ["Hive'Regal"] = {
+                intro = {},
+                tracks = silithid
+            },
+            ["The Crystal Vale"] = {
+                intro = {},
+                tracks = silithus -- Cata elemental, deathwing music?
+            },
+            ["Ravaged Twilight Camp"] = {
+                intro = {},
+                tracks = silithus -- Cata elemental, deathwing music?
+            },
+            ["Southwind Village"] = {
+                intro = {
+                    { file = "darnassusintro_h.mp3", duration = 52 },
+                },
+                tracks = undeadNightelf
+            },
+            ["Twilight's Run"] = {
+                intro = {},
+                tracks = twilightCalm
+            },
+            ["Staghelm Point"] = {
+                intro = {},
+                tracks = twilightCalm
+            },
+            ["Twilight Outpost"] = {
+                intro = {},
+                tracks = twilightCalm
+            },
+            ["Twilight Base Camp"] = {
+                intro = {},
+                tracks = twilightCalm
+            },
+        }
+    },
 
     --============================================================  Dungeons  ============================================================
 
+    ["Blackfathom Depths"] = {
+        intro = {},
+        tracks = {},
+        subzones = { -- Shrine of the storms music and Kthir, near Akumai
+            [""] = {
+                intro = {}, -- Naga music?
+                tracks = {}
+            },
+            ["The Grand Vestibule"] = { -- Twilight heavy music?
+                intro = {},
+                tracks = {}
+            },
+        }
+    },
     ["Scarlet Monastery"] = { -- Armory uses this
         intro = {},
         tracks = scarletMonastery,
@@ -510,10 +757,16 @@ MusicExpanded_Data.Zones = {
         }
     },
     ["Blackrock Depths"] = {
-        tracks = {},
+        tracks = blackrockDwarf,
         subzones = {
-            ["Shadowforge City"] = {
+            [""] = {
+                intro = {
+                    { file = "hateforgequarry_1.mp3", duration = 152 }
+                },
                 tracks = {},
+            },
+            ["Shadowforge City"] = {
+                tracks = blackrockDwarf,
                 intro = {
                     { file = "darkironforge_1.mp3", duration = 154 },
                 }
@@ -523,6 +776,10 @@ MusicExpanded_Data.Zones = {
                 intro = {
                     --{ file = "darkironforge_1.mp3", duration = 154 }, firebreach
                 }
+            },
+            ["The Imperial Seat"] = {
+                tracks = {},
+                intro = {}
             }
         }
     },
