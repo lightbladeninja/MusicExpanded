@@ -32,17 +32,27 @@ MusicExpanded_Registry.Files = {
     ["nightforest04.mp3"]             = "darkshore\\nightforest04.mp3",
 
     -- === Blackrock Spire (Rend Blackhand) ===
-    ["protectthethrone_h1.mp3"] = "blackrock_spire\\event\\protectthethrone_h1.mp3",
-    ["protectthethrone_h2.mp3"] = "blackrock_spire\\event\\protectthethrone_h2.mp3",
-    ["protectthethrone_h3.mp3"] = "blackrock_spire\\event\\protectthethrone_h3.mp3",
+    ["protectthethrone_h1.mp3"]       = "blackrock\\blackrock_spire\\event\\protectthethrone_h1.mp3",
+    ["protectthethrone_h2.mp3"]       = "blackrock\\blackrock_spire\\event\\protectthethrone_h2.mp3",
+    ["protectthethrone_h3.mp3"]       = "blackrock\\blackrock_spire\\event\\protectthethrone_h3.mp3",
+
+    -- === Burning Steppes ===
+    ["burningsteppes_1.mp3"]          = "blackrock\\burningsteppes_1.mp3",
+    ["burningsteppes_2.mp3"]          = "blackrock\\burningsteppes_2.mp3",
+    ["burningsteppes_3.mp3"]          = "blackrock\\burningsteppes_3.mp3",
+    ["burningsteppes_4.mp3"]          = "blackrock\\burningsteppes_4.mp3",
+    ["dayvolcanic01.mp3"]             = "blackrock\\dayvolcanic01.mp3",
+    ["dayvolcanic02.mp3"]             = "blackrock\\dayvolcanic02.mp3",
+    ["nightvolcanic01.mp3"]           = "blackrock\\nightvolcanic01.mp3",
+    ["nightvolcanic02.mp3"]           = "blackrock\\nightvolcanic02.mp3",
 
     -- === Dwarven Digsite (Normal) ===
-    ["dwarf_b_day2.mp3"]                 = "dwarf\\dwarf_b_day2.mp3",
+    ["dwarf_b_day2.mp3"]                  = "dwarf\\dwarf_b_day2.mp3",
     ["dwarf_b_night2.mp3"]                = "dwarf\\dwarf_b_night2.mp3",
-    ["dwarf_c_day3.mp3"]                 = "dwarf\\dwarf_c_day3.mp3",
-    ["dwarf_c_night3.mp3"]               = "dwarf\\dwarf_c_night3.mp3",
+    ["dwarf_c_day3.mp3"]                  = "dwarf\\dwarf_c_day3.mp3",
+    ["dwarf_c_night3.mp3"]                = "dwarf\\dwarf_c_night3.mp3",
     ["dwarf_c_uni3.mp3"]                  = "dwarf\\dwarf_c_uni3.mp3",
-    ["dwarf_d_day4.mp3"]                 = "dwarf\\dwarf_d_day4.mp3",
+    ["dwarf_d_day4.mp3"]                  = "dwarf\\dwarf_d_day4.mp3",
 
     -- === Dark Iron Digsite ===
     ["dwarf_a_day1.mp3"]                  = "dwarf\\darkiron_digsite\\dwarf_a_day1.mp3",
@@ -51,6 +61,10 @@ MusicExpanded_Registry.Files = {
     ["dwarf_b_uni2.mp3"]                  = "dwarf\\darkiron_digsite\\dwarf_b_uni2.mp3",
     ["dwarf_cdark_uni4.mp3"]              = "dwarf\\darkiron_digsite\\dwarf_cdark_uni4.mp3",
     ["dwarf_ddark_uni5.mp3"]              = "dwarf\\darkiron_digsite\\dwarf_ddark_uni5.mp3",
+
+    -- === Dark Iron City ===
+    ["hateforgequarry_1.mp3"]             = "dwarf\\darkiron_quarry\\hateforgequarry_1.mp3",
+    ["hateforgequarry_2.mp3"]             = "dwarf\\darkiron_quarry\\hateforgequarry_2.mp3",
 
     -- === Dark Iron City ===
     ["darkironforge_1.mp3"]               = "dwarf\\darkiron_city\\darkironforge_1.mp3",
@@ -140,5 +154,55 @@ MusicExpanded_Registry.Files = {
     ["scholomance_10.mp3"]          = "scholomance\\scholomance_10.mp3",
     ["scholomance_11.mp3"]          = "scholomance\\scholomance_11.mp3",
     ["scholomance_12.mp3"]          = "scholomance\\scholomance_12.mp3",
+
+    -- === Silithus ===
+    ["daydesert01.mp3"]                  = "desert\\daydesert01.mp3",
+    ["daydesert02.mp3"]                  = "desert\\daydesert02.mp3",
+    ["daydesert03.mp3"]                  = "desert\\daydesert03.mp3",
+    ["nightdesert01.mp3"]                = "desert\\nightdesert01.mp3",
+    ["nightdesert02.mp3"]                = "desert\\nightdesert02.mp3",
+    ["nightdesert03.mp3"]                = "desert\\nightdesert03.mp3",
+    ["ahnqirajintro1.mp3"]               = "desert\\silithus\\ahnqirajintro1.mp3",
+    ["zereth_mortis_barren_a.mp3"]       = "desert\\silithus\\zereth_mortis_barren_a.mp3",
+    ["zereth_mortis_barren_b.mp3"]       = "desert\\silithus\\zereth_mortis_barren_b.mp3",
+    ["zereth_mortis_barren_c.mp3"]       = "desert\\silithus\\zereth_mortis_barren_c.mp3",
+    ["silithus_1.mp3"]                   = "desert\\silithus\\silithus_1.mp3",
+    ["silithus_2.mp3"]                   = "desert\\silithus\\silithus_2.mp3",
+    ["silithus_3.mp3"]                   = "desert\\silithus\\silithus_3.mp3",
+    ["silithus_4.mp3"]                   = "desert\\silithus\\silithus_4.mp3",
+    ["silithus_5.mp3"]                   = "desert\\silithus\\silithus_5.mp3",
+    ["silithus_6.mp3"]                   = "desert\\silithus\\silithus_6.mp3",
+
+    -- === Twilight Hammer ===
+    ["twilightshammer_1.mp3"]          = "twilight\\calm\\twilightshammer_1.mp3",
+    ["twilightshammer_2.mp3"]          = "twilight\\calm\\twilightshammer_2.mp3",
+    ["twilights_blade_f.mp3"]          = "twilight\\calm\\twilights_blade_f.mp3",
+    ["twilights_blade_g.mp3"]          = "twilight\\calm\\twilights_blade_g.mp3",
+    ["twilights_blade_i.mp3"]          = "twilight\\calm\\twilights_blade_i.mp3",
+    ["twilighthighlands_1.mp3"]        = "twilight\\calm\\twilighthighlands_1.mp3",
+    ["twilighthighlands_2.mp3"]        = "twilight\\calm\\twilighthighlands_2.mp3",
+    ["twilighthighlands_4.mp3"]        = "twilight\\calm\\twilighthighlands_4.mp3",
+    ["twilightvale_1.mp3"]             = "twilight\\calm\\twilightvale_1.mp3",
+    ["twilightvale_3.mp3"]             = "twilight\\calm\\twilightvale_3.mp3",
+    ["twilightvale_5.mp3"]             = "twilight\\calm\\twilightvale_5.mp3",
+
+    -- === Undead Stronghold ===
+    ["cursed_6.mp3"]                     = "undead\\stronghold\\cursed_6.mp3",
+    ["cursed_7.mp3"]                     = "undead\\stronghold\\cursed_7.mp3",
+    ["cursed_8.mp3"]                     = "undead\\stronghold\\cursed_8.mp3",
+
+    -- === Tyr's Hand ===
+    ["Human1.mp3"]                      = "scarlet\\tyrs_hand\\Human1.mp3",
+    ["Human2.mp3"]                      = "scarlet\\tyrs_hand\\Human2.mp3",
+    ["Human3.mp3"]                      = "scarlet\\tyrs_hand\\Human3.mp3",
+    ["HumanX1.mp3"]                     = "scarlet\\tyrs_hand\\HumanX1.mp3",
+
+    --- === Undead Nightelf ===
+    ["darnassusintro_h.mp3"]             = "undead\\nightelf\\darnassusintro_h.mp3",
+    ["ruinsofauberdine_1.mp3"]           = "undead\\nightelf\\ruinsofauberdine_1.mp3",
+    ["ruinsofauberdine_2.mp3"]           = "undead\\nightelf\\ruinsofauberdine_2.mp3",
+    ["ruinsofauberdine_3.mp3"]           = "undead\\nightelf\\ruinsofauberdine_3.mp3",
+    ["ruinsofauberdine_4.mp3"]           = "undead\\nightelf\\ruinsofauberdine_4.mp3",
+    ["ruinsofauberdine_5.mp3"]           = "undead\\nightelf\\ruinsofauberdine_5.mp3",
 }
 

@@ -23,21 +23,18 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Brill** — expanded with ghostly tracks
 - **Balnir Farmstead** — expanded with ghostly tracks
 - **Whispering Gardens** — Intro music for Scarlet Monastery outskirts
-
 </details>
 
 <details>
 <summary><strong>Undercity </strong></summary>
 
 - **Royal Quarter** - Sylvanas music
-
 </details>
 
 <details>
 <summary><strong>Silverpine Forest </strong></summary>
 
 - **The Sepulcher** - ghostly tracks
-
 </details>
 
 
@@ -54,7 +51,6 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Auberdine**
 - **Ruins of Mathystra**
 - **Grove of the Ancients**
-
 </details>
 
 <details>
@@ -75,7 +71,6 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Tranquil Gardens Cemetery** - ghostly tracks
 - **Raven Hill Cemetery** - ghostly tracks
 - **Forlorn Rowe** - added haunted02 spooky intro
-
 </details>
 
 <details>
@@ -92,14 +87,12 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Hammertoe's Digsite** - Dark iron digsite music (Northrend dwarf/iron dwarf DARK variant)
 - **Angor Digsite** -       Dark iron digsite music 
 - **The Maker's Terrace** - Dark iron digsite music 
-
 </details>
 
 <details>
 <summary><strong>Desolace </strong></summary>
   
 - **Valley of Bones** - Terokkar Bone Wastes music
-
 </details>
 
 <details>
@@ -107,20 +100,41 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
 - **Lariss Pavilion** - highborne music
 - **Shalzaru's Lair** - unique naga cave music ("From The Depths")
+- **The Writhing Deep** - silithid hive music (silithus cataclysm music)
+</details>
+
+<details>
+<summary><strong>Tanaris </strong></summary>
+  
+- **The Gaping Chasm** - silithid hive music (silithus cataclysm music)
+- **The Noxious Lair** - silithid hive music (silithus cataclysm music)
 </details>
 
 <details>
 <summary><strong>Searing Gorge </strong></summary>
   
+- **Main Zone** - added burning steppes music from cataclysm
 - **Grimesilt Dig Site** - Dark iron digsite music (Northrend dwarf/iron dwarf DARK variant)
+- **Firewatch Ridge** - Twilight's Hammer tracks
+</details>
 
+<details>
+<summary><strong>Blackrock Mountain </strong></summary>
+  
+- **Main Zone** - added burning steppes music from cataclysm
 </details>
 
 <details>
 <summary><strong>Burning Steppes </strong></summary>
   
+- **Main Zone** - added burning steppes music from cataclysm
 - **Ruins of Thaurissan** - Dark iron city music (darkironforge_2-5)
+</details>
 
+<details>
+<summary><strong>Un'Goro Crater </strong></summary>
+  
+- **The Slithering Scar** - silithid hive music (silithus cataclysm music)
 </details>
 
 <details>
@@ -128,26 +142,38 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
   
 - **Ruins of Andorhal** - ghostly tracks and intro track haunted02
 - **Uther's Tomb** - ghostly tracks
-
+- **Sorrow Hill Crypt** - ghostly tracks
 </details>
 
 <details>
 <summary><strong>Eastern Plaguelands </strong></summary>
   
 - **Light's Hope Chapel** - arathi memorial music
-
+- **Tyr's Hand** - added WC3 human music (same as Hearthglen and Scarlet Enclave in turtle wow)
+- Undead strongholds; **Plaguewood**, **The Noxious Glade**, **The Fungal Vale** and **Forlorn Summit** - added "cursed" intro tracks from cataclysm
 </details>
 
 <details>
 <summary><strong>Azshara </strong></summary>
 
 - **Temple of Zin-Malor** - highborne music
+- **Shadowsong Shrine** - highborne music
 </details>
 
 <details>
 <summary><strong>Winterspring </strong></summary>
 
 - **The Ruins of Kel'Theril** - highborne music
+</details>
+
+<details>
+<summary><strong>Silithus </strong></summary>
+
+- **Main Zone** - added desert music from Zereth Mortis
+- **Cenarion Hold** - AQ gate opening music (ahnqirajintro1)
+- Silithid hives; **Hive'Ashi**, **Hive'Zora** and **Hive Regal** - silithus cataclysm music
+- **Southwind Village** - added dark night elf music from the ruins of Auberdine and Darnassus
+- Twilight outposts; **Twilight's Run**, **Staghelm Point**, **Twilight Outpost** and **Twilight Base Camp** - Twilight's Hammer tracks
 </details>
 
 ## Modified Dungeons
@@ -161,7 +187,6 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Athenaeum** (Library) - moved battle04 music from Arcanist Doan's chamber to Intro music for the subzone
 - **Crusader's Chapel** (Cathedral) - sacred02 intro music
 - Added intro music to Cathedral and Library
-
 </details>
 
 <details>
@@ -173,12 +198,12 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Echomok Cavern** - Added Halls of lightning music (ul_lightningbattlewalk)
 - **Hall of the Crafters** - Added Legion titan music (preserver_h1)
 - **Khaz'goroth's Seat** - Added Legion titan music (preserver_h2/3end)
-
 </details>
 
 <details>
 <summary><strong>Blackrock Depths </strong></summary>
   
+- **Main Zone** - Added blackrock zone music from cata and Hateforge Quarry music.
 - **Shadowforge City** - Added the main version of darkironforge_1
 </details>
 
@@ -190,7 +215,6 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **The Hall of Lights** - Added cata SM music. Moved battle03 boss room music to main hall intro music.
 - **The Hoard** - Moved battle04 boss room music to main hall intro music.
 - **The Crimson Throne** - Added ebon hold assault music. 
-
 </details>
 
 <details>
@@ -198,7 +222,6 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
   
 - **Main Zone** - Added ghostly and cata scholomance music. Added intro music; haunted02
 - **The Reliquary** - Added intro music; shadow_death_h
-
 </details>
 
 <details>
