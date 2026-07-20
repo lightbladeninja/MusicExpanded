@@ -31,6 +31,11 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Royal Quarter** - Sylvanas music
 </details>
 
+<summary><strong>Stormwind City </strong></summary>
+
+- **Cathedral of Light** - custom music from the canceled turtle wow Scarlet Citadel raid
+</details>
+
 <details>
 <summary><strong>Silverpine Forest </strong></summary>
 
@@ -96,6 +101,16 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 </details>
 
 <details>
+<summary><strong>Stranglethorn Vale </strong></summary>
+  
+- **Southern Savage Coast** - added coast intro music (bloodsail twow music)
+- **Bloodsail Compound** - bloodsail music (twow custom)
+- **Wild Shore** - bloodsail music (twow custom) and coast intro music
+- **Ruins of Aboraz** - WC3 undead music
+- **Ruins of Jubuwal** - WC3 undead music
+</details>
+
+<details>
 <summary><strong>Feralas </strong></summary>
 
 - **Lariss Pavilion** - highborne music
@@ -108,6 +123,8 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
   
 - **The Gaping Chasm** - silithid hive music (silithus cataclysm music)
 - **The Noxious Lair** - silithid hive music (silithus cataclysm music)
+- Tanaris coastal regions; **Southbreak Shore**, **Land's End Beach**, **Wavestrider Beach** and **Zalashji's Den** - coast music: cata tanaris and twow bloodsail
+- **Lost Rigger Cove** - bloodsail music (twow custom)
 </details>
 
 <details>
@@ -151,6 +168,7 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Light's Hope Chapel** - arathi memorial music
 - **Tyr's Hand** - added WC3 human music (same as Hearthglen and Scarlet Enclave in turtle wow)
 - Undead strongholds; **Plaguewood**, **The Noxious Glade**, **The Fungal Vale** and **Forlorn Summit** - added "cursed" intro tracks from cataclysm
+- **Zul'Mashar** and **Mazra'Alor** - Zul'Drak music from wotlk
 </details>
 
 <details>
@@ -215,6 +233,7 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **The Hall of Lights** - Added cata SM music. Moved battle03 boss room music to main hall intro music.
 - **The Hoard** - Moved battle04 boss room music to main hall intro music.
 - **The Crimson Throne** - Added ebon hold assault music. 
+- **The Slaughter House** - Added *different* ebon hold assault music.
 </details>
 
 <details>

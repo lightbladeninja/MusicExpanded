@@ -1,6 +1,10 @@
 MusicExpanded_Registry = MusicExpanded_Registry or {}
 
 MusicExpanded_Registry.Files = {
+    -- === Silence ===
+    ["silence.mp3"]                     = "silence\\silence.mp3",
+    ["silence_sacred.mp3"]              = "silence\\silence_sacred.mp3",
+
     -- === Mystery ===
     ["mystery_1.mp3"]                   = "mystery\\mystery_1.mp3",
     ["mystery_5.mp3"]                   = "mystery\\mystery_5.mp3",
@@ -109,6 +113,11 @@ MusicExpanded_Registry.Files = {
     -- === Light's Hope Chapel ===
     ["arathi_memorial_h.mp3"]            = "chapel\\arathi_memorial_h.mp3",
 
+    --- === Cathedral of Light ===
+    ["bellsofdawn_calm.mp3"]             = "chapel\\cathedral\\bellsofdawn_calm.mp3",
+    ["lightbringsushope_calm.mp3"]       = "chapel\\cathedral\\lightbringsushope_calm.mp3",
+    ["childrenofthelight_calm.mp3"]      = "chapel\\cathedral\\childrenofthelight_calm.mp3",
+
     -- === Scarlet Monastery ===
     ["haunted_1.mp3"]                   = "scarlet\\haunted_1.mp3",
     ["haunted_3.mp3"]                   = "scarlet\\haunted_3.mp3",
@@ -123,6 +132,11 @@ MusicExpanded_Registry.Files = {
     ["scarletmonastery_h3.mp3"]         = "scarlet\\scarletmonastery_h3.mp3",
     ["eh_assault_6.mp3"]                = "scarlet\\eh_assault_6.mp3",
     ["eh_assault_7.mp3"]                = "scarlet\\eh_assault_7.mp3",
+
+    --- === Stratholme Undead ===
+    ["eh_assault_1.mp3"]                 = "undead\\stratholme\\eh_assault_1.mp3",
+    ["eh_assault_3.mp3"]                 = "undead\\stratholme\\eh_assault_3.mp3",
+    ["eh_assault_4.mp3"]                 = "undead\\stratholme\\eh_assault_4.mp3",
 
     -- === Battle Music ===
     ["battle01.mp3"]                     = "battle\\battle01.mp3",
@@ -204,5 +218,27 @@ MusicExpanded_Registry.Files = {
     ["ruinsofauberdine_3.mp3"]           = "undead\\nightelf\\ruinsofauberdine_3.mp3",
     ["ruinsofauberdine_4.mp3"]           = "undead\\nightelf\\ruinsofauberdine_4.mp3",
     ["ruinsofauberdine_5.mp3"]           = "undead\\nightelf\\ruinsofauberdine_5.mp3",
+
+    --- === WC3 Undead Music ===
+    ["WC3Undead_1.mp3"]                  = "undead\\zanzil\\WC3Undead_1.mp3",
+    ["WC3Undead_3.mp3"]                  = "undead\\zanzil\\WC3Undead_3.mp3",
+    ["WC3Undead_4.mp3"]                  = "undead\\zanzil\\WC3Undead_4.mp3",
+
+    --- === Zuldrak ===
+    ["zuldrak_intro4.mp3"]                = "troll\\zul_mashar\\zuldrak_intro4.mp3",
+    ["zuldrak_intro6.mp3"]                = "troll\\zul_mashar\\zuldrak_intro6.mp3",
+    ["zuldrak_day2.mp3"]                  = "troll\\zul_mashar\\zuldrak_day2.mp3",
+    ["zuldrak_day3.mp3"]                  = "troll\\zul_mashar\\zuldrak_day3.mp3",
+    ["zuldrak_night2.mp3"]                = "troll\\zul_mashar\\zuldrak_night2.mp3",
+    ["zuldrak_night4.mp3"]                = "troll\\zul_mashar\\zuldrak_night4.mp3",
+
+    -- === Bloodsail / Tanaris ===
+    ["bloodsail_day1.mp3"]                = "beach\\pirate\\bloodsail_day1.mp3",
+    ["bloodsail_day2.mp3"]                = "beach\\pirate\\bloodsail_day2.mp3",
+    ["bloodsail_night2.mp3"]              = "beach\\pirate\\bloodsail_night2.mp3",
+    ["bloodsail_day3.mp3"]                = "beach\\tanaris\\bloodsail_day3.mp3",
+    ["bloodsail_day4.mp3"]                = "beach\\tanaris\\bloodsail_day4.mp3",
+    ["tanaris_1.mp3"]                     = "beach\\tanaris\\tanaris_1.mp3",
+    ["tanaris_10.mp3"]                    = "beach\\tanaris\\tanaris_10.mp3",
 }
 
