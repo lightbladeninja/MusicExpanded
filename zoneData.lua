@@ -183,8 +183,34 @@ local blackrockDwarf = {
     { file = "nightvolcanic01.mp3", duration = 71 },
     { file = "nightvolcanic02.mp3", duration = 64 },
 }
-            
 
+local zuldrak = {
+    { file = "zuldrak_intro4.mp3", duration = 125 },
+    { file = "zuldrak_intro6.mp3", duration = 125 },
+    { file = "zuldrak_day2.mp3", duration = 90 },
+    { file = "zuldrak_day3.mp3", duration = 101 },
+    { file = "zuldrak_night2.mp3", duration = 90 },
+    { file = "zuldrak_night4.mp3", duration = 92 },
+}
+
+local beach = {
+    { file = "bloodsail_day3.mp3", duration = 109 },
+    { file = "bloodsail_day4.mp3", duration = 83 },
+    { file = "tanaris_1.mp3", duration = 87 },
+    { file = "tanaris_10.mp3", duration = 84 },
+}
+
+local bloodsail = {
+    { file = "bloodsail_day1.mp3", duration = 95 },
+    { file = "bloodsail_day2.mp3", duration = 78 },
+    { file = "bloodsail_night2.mp3", duration = 153 },
+}
+
+local undeadWC3 = {
+    { file = "WC3Undead_1.mp3", duration = 304 },
+    { file = "WC3Undead_3.mp3", duration = 291 },
+    { file = "WC3Undead_4.mp3", duration = 270 },
+}
 
 MusicExpanded_Data.Zones = {
 
@@ -228,6 +254,22 @@ MusicExpanded_Data.Zones = {
                     { file = "sylvanas_freewill_h.mp3", duration = 172 }
                 },
                 tracks = {}
+            }
+        }
+    },
+    ["Stormwind City"] = {
+        intro = {},
+        tracks = {},
+        subzones = {
+            ["Cathedral of Light"] = {
+                intro = {
+                    { file = "silence_sacred.mp3", duration = 18 }
+                },
+                tracks = {
+                    { file = "bellsofdawn_calm.mp3", duration = 94 },
+                    { file = "childrenofthelight_calm.mp3", duration = 92 },
+                    { file = "lightbringsushope_calm.mp3", duration = 98 }
+                }
             }
         }
     },
@@ -386,6 +428,32 @@ MusicExpanded_Data.Zones = {
             }
         }
     },
+    ["Stranglethorn Vale"] = {
+        tracks = {},
+        subzones = {
+            ["Southern Savage Coast"] = {
+                intro = {
+                    { file = "bloodsail_day3.mp3", duration = 109 },
+                },
+                tracks = {}
+            },
+            ["Bloodsail Compound"] = {
+                tracks = bloodsail
+            },
+            ["Wild Shore"] = {
+                intro = {
+                    { file = "bloodsail_day3.mp3", duration = 109 },
+                },
+                tracks = bloodsail
+            },
+            ["Ruins of Aboraz"] = {
+                tracks = undeadWC3
+            },
+            ["Ruins of Jubuwal"] = {
+                tracks = undeadWC3
+            },
+        }
+    },
     ["Feralas"] = {
         tracks = {},
         subzones = {
@@ -411,6 +479,21 @@ MusicExpanded_Data.Zones = {
             },
             ["The Gaping Chasm"] = {
                 tracks = silithid
+            },
+            ["Southbreak Shore"] = {
+                tracks = beach
+            },
+            ["Land's End Beach"] = {
+                tracks = beach
+            },
+            ["Wavestrider Beach"] = {
+                tracks = beach
+            },
+            ["Zalashji's Den"] = {
+                tracks = beach
+            },
+            ["Lost Rigger Cove"] = {
+                tracks = bloodsail
             },
         }
     },
@@ -535,6 +618,14 @@ MusicExpanded_Data.Zones = {
             ["Forlorn Summit"] = {
                 intro = undeadStronghold,
                 tracks = {}
+            },
+            ["Zul'Mashar"] = {
+                intro = {},
+                tracks = zuldrak
+            },
+            ["Mazra'Alor"] = {
+                intro = {},
+                tracks = zuldrak
             }
         }
     },
@@ -788,31 +879,39 @@ MusicExpanded_Data.Zones = {
         tracks = {},
         subzones = {
             ["Crusaders' Square"] = {
-                tracks = scarletMonastery,
-                intro = scarletIntro
+                intro = scarletIntro,
+                tracks = scarletMonastery
             },
             ["The Scarlet Bastion"] = {
-                tracks = scarletMonastery,
-                intro = {}
+                intro = {},
+                tracks = scarletMonastery
             },
             ["The Hall of Lights"] = {
-                tracks = scarletMonastery,
                 intro = { 
                     { file = "battle04.mp3", duration = 36 }
-                }
+                },
+                tracks = scarletMonastery
             },
             ["The Hoard"] = {
-                tracks = scarletMonastery,
                 intro = {
                     { file = "battle03.mp3", duration = 27 }
-                }
+                },
+                tracks = scarletMonastery
             },
             ["The Crimson Throne"] = {
+                intro = {},
                 tracks = {
                     { file = "eh_assault_6.mp3", duration = 93 },
                     { file = "eh_assault_7.mp3", duration = 95 }
                 },
-                intro = {}
+            },
+            ["The Slaughter House"] = {
+                intro = {},
+                tracks = {
+                    { file = "eh_assault_1.mp3", duration = 64 },
+                    { file = "eh_assault_3.mp3", duration = 65 },
+                    { file = "eh_assault_4.mp3", duration = 67 }
+                },
             },
         },
     },

@@ -1,7 +1,7 @@
 MusicExpanded = MusicExpanded or {}
 local m = MusicExpanded
 
-local silenceFile = "Interface\\AddOns\\MusicExpanded\\music\\silence.mp3"
+local silenceFile = "Interface\\AddOns\\MusicExpanded\\music\\silence\\silence.mp3"
 local MUSIC_ROOT = "Interface\\AddOns\\MusicExpanded\\music\\"
 
 MusicExpandedDB = MusicExpandedDB or {}
