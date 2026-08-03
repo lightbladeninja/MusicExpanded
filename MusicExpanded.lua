@@ -138,7 +138,7 @@ local function ZoneMusicTrigger(source) -- Change behavior based on the source o
     local musicData = GetZoneMusicData(zone, subzone)
 
     if musicData and musicData.tracks and table.getn(musicData.tracks) > 0 then -- If music data is valid, continue
-        if source == "zoneChanged" and CompareZoneData(m.previousTrack, musicData) then
+        if (source == "subzoneChanged" or source == "zoneChanged") and CompareZoneData(m.previousTrack, musicData) then
             return -- Zone change triggered music, but the previous track is still valid for this zone, so don't interrupt it.
         end
     
@@ -155,7 +155,7 @@ local function ZoneMusicTrigger(source) -- Change behavior based on the source o
             m.nextTrackTime = GetTime() + duration + math.random(180, 300)
             m.nextsilenceTime = GetTime() + duration
         end
-    elseif source == "zoneChanged" then
+    elseif source == "subzoneChanged" or source == "zoneChanged" then
         StopMusic()
         m.nextTrackTime = GetTime()
     end
@@ -255,7 +255,7 @@ end
 
 
 -- Intro Music
-local function CheckForIntroMusic()
+local function CheckForIntroMusic(source)
     
     local zoneEntry = MusicExpanded_Data.Zones[m.currentZone]
     if not zoneEntry then
@@ -280,8 +280,14 @@ local function CheckForIntroMusic()
         return false
     end
 
-    local cooldownKey = m.currentZone .. "_" .. (m.currentSubzone or "zone")
     m.introCooldowns = m.introCooldowns or {}
+    local cooldownKey
+
+    if source == "zoneChanged" then
+        cooldownKey = m.currentZone
+    else
+        cooldownKey = m.currentZone .. "_" .. (m.currentSubzone or "zone")
+    end
 
     if m.introCooldowns[cooldownKey] then
         if GetTime() < m.introCooldowns[cooldownKey] then
@@ -293,7 +299,7 @@ local function CheckForIntroMusic()
 
     PlayCustomTrack(chosen.file)
 
-    m.introCooldowns[cooldownKey] = GetTime() + 600
+    m.introCooldowns[cooldownKey] = GetTime() + (chosen.cooldown or 600)
     m.introTrackEndTime = GetTime() + chosen.duration - 2.5
     m.inCustomArea = true
 
@@ -301,19 +307,31 @@ local function CheckForIntroMusic()
 end
 
 
--- Zonechange trigger
+-- subzonechange trigger
+local subzoneFrame = CreateFrame("Frame")
+
+subzoneFrame:RegisterEvent("ZONE_CHANGED") -- Subzone change
+subzoneFrame:RegisterEvent("ZONE_CHANGED_INDOORS") -- Subzone change in dungeon
+
+subzoneFrame:SetScript("OnEvent", function(self, event)
+    m.currentZone = GetZoneText() or ""
+    m.currentSubzone = GetSubZoneText() or ""
+
+    CheckForIntroMusic("subzoneChanged")
+    ZoneMusicTrigger("subzoneChanged")
+end)
+
+-- Zone
 local zoneFrame = CreateFrame("Frame")
 
 zoneFrame:RegisterEvent("PLAYER_ENTERING_WORLD") -- Login or reload
 zoneFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA") -- Zone change
-zoneFrame:RegisterEvent("ZONE_CHANGED") -- Subzone change
-zoneFrame:RegisterEvent("ZONE_CHANGED_INDOORS") -- Subzone change in dungeon
 
 zoneFrame:SetScript("OnEvent", function(self, event)
     m.currentZone = GetZoneText() or ""
     m.currentSubzone = GetSubZoneText() or ""
 
-    CheckForIntroMusic()
+    CheckForIntroMusic("zoneChanged")
     ZoneMusicTrigger("zoneChanged")
 end)
 

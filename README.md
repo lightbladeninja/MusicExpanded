@@ -15,6 +15,12 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 ## Modified Zones
 
 <details>
+<summary><strong>Thalassian Highlands </strong></summary>
+
+- **Ruins of Nashal'aran** - Vashj'ir naga music
+</details>
+
+<details>
 <summary><strong>Tirisfal Glades </strong></summary>
 
 - **Deathknell** — expanded with ghostly tracks
@@ -31,6 +37,7 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 - **Royal Quarter** - Sylvanas music
 </details>
 
+<details>
 <summary><strong>Stormwind City </strong></summary>
 
 - **Cathedral of Light** - custom music from the canceled turtle wow Scarlet Citadel raid
@@ -46,16 +53,12 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 <details>
 <summary><strong>Darkshore </strong></summary>
 
-- **Main zone** (most of Darkshore) — expanded with "Night Warrior" & "Forsaken Flame" tracks
-- **Tower of Althalaxx** & **The Master's Glaive** — "Mystery" tracks and more intense "Forsaken Flame" variants
-- **Cliffspring Falls** — unique naga cave music ("From The Depths")
+- **Main zone and unlisted subzones** - expanded with "Night Warrior" & "Forsaken Flame" tracks
+- **Tower of Althalaxx** & **The Master's Glaive** - "Mystery" tracks and more intense "Forsaken Flame" variants
+- **Cliffspring Falls** - Nazjatar naga cave music ("From The Depths")
 - **Remtravel's Excavation** - dwarf digsite music (Northrend dwarf/iron dwarf)
 - **Ameth'Aran** - ghostly music
-
-**Excluded subzones (uses default game music):**
-- **Auberdine**
-- **Ruins of Mathystra**
-- **Grove of the Ancients**
+- **Ruins of Mathystra** - TBC naga music
 </details>
 
 <details>
@@ -68,6 +71,13 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 <summary><strong>The Barrens </strong></summary>
 
 - **Bael Modan** - dwarf digsite music
+- **Anchor's Edge** - changed to mostly vanilla jungle, with "Anchor's Fall" (Stormwind Harbor theme) and one bloodsail track with coastal ambience
+</details>
+
+<details>
+<summary><strong>Ashenvale </strong></summary>
+
+- **The Zoram Strand** - TBC naga music
 </details>
 
 <details>
@@ -87,27 +97,71 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 </details>
 
 <details>
-<summary><strong>Badlands </strong></summary>
-  
-- **Hammertoe's Digsite** - Dark iron digsite music (Northrend dwarf/iron dwarf DARK variant)
-- **Angor Digsite** -       Dark iron digsite music 
-- **The Maker's Terrace** - Dark iron digsite music 
+<summary><strong>Hillsbrad Foothills </strong></summary>
+
+- **Eastern Strand** - TBC naga music
+</details>
+
+<details>
+<summary><strong>Balor </strong></summary>
+
+- **Bilgerat Compound** - gloomy selection of Bloodsail pirate music
+</details>
+
+<details>
+<summary><strong>Arathi Highlands </strong></summary>
+
+- **Main zone and unlisted subzones** - cataclysm Arathi soundtrack and a selection of BFA horde Arathi warfront tracks
+- **Boulderfist Hall** - added TBC ogre music, removed one of the Ogrimmar tracks
+- **The Drowned Reef** - Vashj'ir naga music
+- **Hammerfall** and **Go'Shek Farm** - added some arathi horde warfront tracks (calm variants) and one barrendry track (The Barrens)
+- **Refuge Pointe**, **Dabyrie's Farmstead**, **Livingstone Croft** and **Gallant Square** - alliance arathi warfront tracks (calm variants)
+- **The Tower of Arathor** - mystery tracks
+
+*Excluded subzones:*
+- **Boulderfist Outpost**
+- **Drywhisker Gorge**
+- **Witherbark Village**
+- **Wildtusk Village**
+- **Ruins of Zul'Rasaz**
+- **Faldir's Cove**
+- **The Sanctum**
+- **Stromgarde Keep**
 </details>
 
 <details>
 <summary><strong>Desolace </strong></summary>
   
 - **Valley of Bones** - Terokkar Bone Wastes music
+- **Ranazjar Isle** - TBC naga music
+</details>
+
+<details>
+<summary><strong>Grim Reaches </strong></summary>
+  
+- **Groldan's Excavation** - dark iron digsite music (Northrend dwarf/iron dwarf DARK variant)
+- **The Grim Hollow** - Nazmir evil swamp music
+- **Tomb of Ancestors** - Mystery tracks
+</details>
+
+<details>
+<summary><strong>Badlands </strong></summary>
+  
+- **Hammertoe's Digsite**, **Angor Digsite** and **The Maker's Terrace** - Dark iron digsite music (Northrend dwarf/iron dwarf DARK variant)
 </details>
 
 <details>
 <summary><strong>Stranglethorn Vale </strong></summary>
   
-- **Southern Savage Coast** - added coast intro music (bloodsail twow music)
-- **Bloodsail Compound** - bloodsail music (twow custom)
-- **Wild Shore** - bloodsail music (twow custom) and coast intro music
-- **Ruins of Aboraz** - WC3 undead music
-- **Ruins of Jubuwal** - WC3 undead music
+- **Bloodsail Compound** and **Wild Shore** - bloodsail music (twow custom)
+- **Ruins of Aboraz** and **Ruins of Jubuwal**- WC3 undead music
+- **Nek'mani Wellspring** - TBC naga music
+</details>
+
+<details>
+<summary><strong>Gilneas </strong></summary>
+
+- **Brol'ok Mound** - added TBC ogre music, removed one of the Ogrimmar tracks
 </details>
 
 <details>
@@ -115,6 +169,7 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
 - **Lariss Pavilion** - highborne music
 - **Shalzaru's Lair** - unique naga cave music ("From The Depths")
+- **Ruins of Solarsal** - TBC naga music
 - **The Writhing Deep** - silithid hive music (silithus cataclysm music)
 </details>
 
@@ -123,14 +178,14 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
   
 - **The Gaping Chasm** - silithid hive music (silithus cataclysm music)
 - **The Noxious Lair** - silithid hive music (silithus cataclysm music)
-- Tanaris coastal regions; **Southbreak Shore**, **Land's End Beach**, **Wavestrider Beach** and **Zalashji's Den** - coast music: cata tanaris and twow bloodsail
+- Tanaris coastal regions; **Southbreak Shore**, **Land's End Beach**, **Wavestrider Beach**, **South Seas** and **Zalashji's Den** - coast music: cata tanaris and twow bloodsail
 - **Lost Rigger Cove** - bloodsail music (twow custom)
 </details>
 
 <details>
 <summary><strong>Searing Gorge </strong></summary>
   
-- **Main Zone** - added burning steppes music from cataclysm
+- **Main zone and unlisted subzones** - added burning steppes music from cataclysm
 - **Grimesilt Dig Site** - Dark iron digsite music (Northrend dwarf/iron dwarf DARK variant)
 - **Firewatch Ridge** - Twilight's Hammer tracks
 </details>
@@ -138,14 +193,47 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 <details>
 <summary><strong>Blackrock Mountain </strong></summary>
   
-- **Main Zone** - added burning steppes music from cataclysm
+- **Main zone and unlisted subzones** - added burning steppes music from cataclysm
+
+*Excluded subzones:*
+- **The Grinding Quarry**
+- **The Masonary**
 </details>
 
 <details>
 <summary><strong>Burning Steppes </strong></summary>
   
-- **Main Zone** - added burning steppes music from cataclysm
+- **Main zone and unlisted subzones** - added burning steppes music from cataclysm
 - **Ruins of Thaurissan** - Dark iron city music (darkironforge_2-5)
+
+*Excluded subzones:*
+- **Blackrock Stronghold**
+- **Karfang Hold**
+- **Dreadmaul Rock**
+</details>
+
+<details>
+<summary><strong>Blasted Lands </strong></summary>
+  
+- **Dreadmaul Post** - added TBC ogre music, removed one of the Ogrimmar tracks
+- **The Dark Portal** - added intro music from the Hellfire Peninsula side of the portal
+</details>
+
+<details>
+<summary><strong>Lapidis Isle </strong></summary>
+
+- **Bright Coast** - bloodsail pirate music (twow custom)  
+- Beach subzones; **Crown Island** and **Shank's Reef** - replaced some default zone music with bloodsail coastal music
+</details>
+
+<details>
+<summary><strong>Gillijim's Isle </strong></summary>
+  
+- Beach subzones; **The Silver Coast**, **The Silver Sandbar** and **Gillijim Strand** - replaced some default zone music with bloodsail coastal music
+- Bloodsail pirate camps; **The Southsea Sandbar** and **Distillery Island** - bloodsail pirate music (twow custom)
+- Naga areas; **Deeptide Sanctum** and **The Broken Reef** - TBC naga music
+- **Faelon's Folly** - ghostly tracks
+
 </details>
 
 <details>
@@ -155,11 +243,17 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 </details>
 
 <details>
+<summary><strong>Moonwhisper Coast </strong></summary>
+
+- **Ruins of Nendis** - TBC naga music
+</details>
+
+<details>
 <summary><strong>Western Plaguelands </strong></summary>
   
 - **Ruins of Andorhal** - ghostly tracks and intro track haunted02
 - **Uther's Tomb** - ghostly tracks
-- **Sorrow Hill Crypt** - ghostly tracks
+- **Crypt** (Sorrow Hill) - ghostly tracks
 </details>
 
 <details>
@@ -174,8 +268,9 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 <details>
 <summary><strong>Azshara </strong></summary>
 
-- **Temple of Zin-Malor** - highborne music
-- **Shadowsong Shrine** - highborne music
+- **Temple of Zin-Malor** and **Shadowsong Shrine** - highborne music
+- Naga areas; **Ruins of Eldarath**, **The Ruined Reaches** and **Southridge Beach** - TBC naga music
+- **Rethress Sanctum** - added intro music from Throne of the Tides (cata)
 </details>
 
 <details>
@@ -195,6 +290,16 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 </details>
 
 ## Modified Dungeons
+
+
+<details>
+<summary><strong>Blackfathom Deeps </strong></summary>
+  
+- **Main zone and unlisted subzones** - dark Nazjatar and calm Throne of the Tides music
+- **The Forgotten Pool** - Nazjatar naga cave music ("From The Depths")
+- Twilight areas; **Moonshrine Ruins** and **Moonshrine Sanctum** - Twilight's Hammer tracks
+- **Aku'mai's Lair** - Calm variants of Shrine of the Storms and Crucible of Storms (BFA)
+</details>
 
 <details>
 <summary><strong>Scarlet Monastery </strong></summary>
@@ -255,5 +360,5 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
 ## TODO
 
-- Test 1.18.1 turtle wow content (there are "ghost" changes to these zones but currently untested)
 - Add a log for music played {zone, subzone, track} displayable ingame through a button or chat command. Maybe a toggle for seeing "currently playing:X" messages.
+- More complex music selection, preventing two tracks from playing back and forth

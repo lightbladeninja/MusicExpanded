@@ -9,6 +9,18 @@ local cultMusic = {
     { file = "mystery_7.mp3", duration = 83 }
 }
 
+local darkshore = {
+    { file = "nightwarrior_a.mp3", duration = 88 },
+    { file = "nightwarrior_c.mp3", duration = 102 },
+    { file = "forsakenflame_f.mp3", duration = 79 },
+    { file = "forsakenflame_d.mp3", duration = 154 },
+    { file = "forsakenflame_b.mp3", duration = 158 },
+    { file = "nightforest01.mp3", duration = 53 },
+    { file = "nightforest02.mp3", duration = 42 },
+    { file = "nightforest03.mp3", duration = 59 },
+    { file = "nightforest04.mp3", duration = 53 }
+}
+
 local nagaCave = {
     { file = "fromthedepths_1_a.mp3", duration = 95 },
     { file = "fromthedepths_1_c.mp3", duration = 68 },
@@ -16,6 +28,31 @@ local nagaCave = {
     { file = "fromthedepths_1_e.mp3", duration = 75 }
 }
 
+local nagaBlackfathom = {
+    { file = "nazjatarrise_a.mp3", duration = 131 },
+    { file = "nazjatarrise_c.mp3", duration = 135 },
+    { file = "nazjatarrise_d.mp3", duration = 99 },
+    { file = "nazjatarrise_e.mp3", duration = 96 },
+    { file = "nazjatarrise_g.mp3", duration = 88 },
+    { file = "vashjirnagathrone_1.mp3", duration = 43 },
+    { file = "vashjirnagathrone_2.mp3", duration = 89 },
+    { file = "vashjirnagathrone_4.mp3", duration = 96 },
+}
+
+local nagaLand = {
+    { file = "naga_1.mp3", duration = 103 },
+    { file = "naga_2.mp3", duration = 74 },
+    { file = "naga_3.mp3", duration = 149 },
+    { file = "naga_5.mp3", duration = 198 },
+    { file = "nagaincursion_h.mp3", duration = 154 }
+}
+
+local nagaWater = {
+    { file = "vashjirnaga_1.mp3", duration = 87 },
+    { file = "vashjirnaga_2.mp3", duration = 97 },
+    { file = "vashjirnaga_3.mp3", duration = 96 },
+    { file = "vashjirnaga_5.mp3", duration = 127 }
+}
 
 local dwarfDigsite = {
     { file = "dwarf_b_night2.mp3", duration = 95 },
@@ -71,7 +108,18 @@ local haunted = {
 }
 
 local spookyIntro = {
-    { file = "haunted02.mp3", duration = 60 },
+    { file = "haunted02.mp3", duration = 52 },
+}
+
+local voidEvil = {
+    { file = "nazmirvoid_a.mp3", duration = 84 },
+    { file = "nazmirvoid_c.mp3", duration = 83 },
+}
+
+local swampEvil = {
+    { file = "nazmirswamp_c.mp3", duration = 102 },
+    { file = "nazmirswamp_e.mp3", duration = 97 },
+    { file = "bloodsacrifice_a.mp3", duration = 99 }
 }
 
 local mysteryEvil = {
@@ -105,10 +153,21 @@ local scarletStronghold = {
 }
 
 local orcIntro = {
-    { file = "orcintro_1.mp3", duration = 11 - 0.5},
-    { file = "orcintro_2.mp3", duration = 17 - 0.5},
-    { file = "orcintro_3.mp3", duration = 11 - 0.5},
-    { file = "orcintro_4.mp3", duration = 13 - 0.5},
+    { file = "orcintro_1.mp3", duration = 11 - 0.5 },
+    { file = "orcintro_2.mp3", duration = 17 - 0.5 },
+    { file = "orcintro_3.mp3", duration = 11 - 0.5 },
+    { file = "orcintro_4.mp3", duration = 13 - 0.5 },
+}
+
+local ogre = {
+    { file = "orgrimmarzone_2.mp3", duration = 62 },
+    { file = "ogre_1.mp3", duration = 75 },
+    { file = "ogre_2.mp3", duration = 72 }
+}
+
+local ogreIntro = {
+    { file = "ogreintro_1.mp3", duration = 28 },
+    { file = "ogreintro_2.mp3", duration = 25 },
 }
 
 local silithus = {
@@ -134,8 +193,6 @@ local silithid = {
 
 local twilightCalm = {
     { file = "twilights_blade_f.mp3", duration = 77 },
-    { file = "twilights_blade_g.mp3", duration = 75 },
-    { file = "twilights_blade_i.mp3", duration = 76 },
     { file = "twilighthighlands_1.mp3", duration = 68 },
     { file = "twilighthighlands_2.mp3", duration = 67 },
     { file = "twilighthighlands_4.mp3", duration = 78 },
@@ -146,10 +203,23 @@ local twilightCalm = {
     { file = "twilightvale_5.mp3", duration = 46 },
 }
 
+local oldGod = {
+    { file = "kthir_a.mp3", duration = 131 },
+    { file = "kthir_b.mp3", duration = 131 },
+    { file = "crucibleofstorms_a.mp3", duration = 84 },
+    { file = "crucibleofstorms_b.mp3", duration = 86 }
+}
+
 local undeadStronghold = {
     { file = "cursed_6.mp3", duration = 79 },
     { file = "cursed_7.mp3", duration = 78 },
     { file = "cursed_8.mp3", duration = 79 },
+}
+
+local undeadCursed = {
+    { file = "cursedland04.mp3", duration = 79 },
+    { file = "cursedland05.mp3", duration = 82 },
+    { file = "cursedland06.mp3", duration = 74 },
 }
 
 local undeadNightelf = {
@@ -200,10 +270,34 @@ local beach = {
     { file = "tanaris_10.mp3", duration = 84 },
 }
 
+local lapidisBeach = {
+    { file = "bloodsail_day3.mp3", duration = 109 },
+    { file = "bloodsail_day4.mp3", duration = 83 },
+    { file = "GilijimAttack.mp3", duration = 78 },
+    { file = "GilijimWalking.mp3", duration = 118 },
+    { file = "GillijimMoment.mp3", duration = 129 },
+    { file = "LapidisTrollWalking.mp3", duration = 118 }
+}
+
 local bloodsail = {
     { file = "bloodsail_day1.mp3", duration = 95 },
     { file = "bloodsail_day2.mp3", duration = 78 },
     { file = "bloodsail_night2.mp3", duration = 153 },
+}
+
+local bloodsailBeach = {
+    { file = "bloodsail_day1.mp3", duration = 95 },
+    { file = "bloodsail_day2.mp3", duration = 78 },
+    { file = "bloodsail_night2.mp3", duration = 153 },
+    { file = "bloodsail_day3.mp3", duration = 109 },
+    { file = "bloodsail_day4.mp3", duration = 83 },
+}
+
+local pirateGloom = {
+    { file = "bloodsail_day2.mp3", duration = 78 },
+    { file = "bloodsail_night1.mp3", duration = 70 },
+    { file = "bloodsail_night2.mp3", duration = 153 },
+    { file = "bloodsail_night3.mp3", duration = 95 },
 }
 
 local undeadWC3 = {
@@ -212,8 +306,48 @@ local undeadWC3 = {
     { file = "WC3Undead_4.mp3", duration = 270 },
 }
 
+local arathiHighlands = {
+    { file = "warfrontsbattle_l.mp3", duration = 90 },
+    { file = "warfrontsbattle_p.mp3", duration = 92 },
+    { file = "arathihighlands_a_day1.mp3", duration = 67 },
+    { file = "arathihighlands_b_day1.mp3", duration = 69 },
+    { file = "arathihighlands_c_day1.mp3", duration = 89 },
+}
+
+local arathiOrc = {
+    { file = "orgrimmarzone_1.mp3", duration = 68 },
+    { file = "orgrimmarzone_2.mp3", duration = 62 },
+    { file = "warfrontsbattle_o.mp3", duration = 85 },
+    { file = "daybarrendry03.mp3", duration = 55 },
+}
+
+local arathiHuman = {
+    { file = "classicbattle_c.mp3", duration = 102 },
+    { file = "classicbattle_d.mp3", duration = 87 },
+    { file = "classicbattle_e.mp3", duration = 92 },
+    { file = "classicbattle_f.mp3", duration = 102 },
+}
+
+local kultiran = {
+    { file = "Anchors_fall.mp3", duration = 131 },
+    { file = "bloodsail_day4.mp3", duration = 83 },
+    { file = "nightjungle03.mp3", duration = 89 },
+    { file = "dayjungle02.mp3", duration = 98 },
+    { file = "nightjungle02.mp3", duration = 53 }
+}
+
+
 MusicExpanded_Data.Zones = {
 
+    ["Thalassian Highlands"] = {
+        tracks = {},
+        subzones = {
+            ["Ruins of Nashal'aran"] = {
+                intro = {},
+                tracks = nagaWater
+            },
+        }
+    },
     ["Tirisfal Glades"] = {
         tracks = {},
         subzones = {
@@ -277,32 +411,28 @@ MusicExpanded_Data.Zones = {
         tracks = {},
         subzones = {
             ["The Sepulcher"] = {
-                tracks = haunted,
-                intro = {}
+                intro = {},
+                tracks = haunted
             }
         }
     },
     ["Darkshore"] = {
-        tracks = {
-            { file = "nightwarrior_a.mp3", duration = 88 },
-            { file = "nightwarrior_c.mp3", duration = 102 },
-            { file = "forsakenflame_f.mp3", duration = 79 },
-            { file = "forsakenflame_d.mp3", duration = 154 },
-            { file = "forsakenflame_b.mp3", duration = 158 },
-            { file = "nightforest01.mp3", duration = 53 },
-            { file = "nightforest02.mp3", duration = 42 },
-            { file = "nightforest03.mp3", duration = 59 },
-            { file = "nightforest04.mp3", duration = 53 }
-        },
+        tracks = darkshore,
         subzones = {
             ["Auberdine"] = {
-                tracks = {}
+                intro = {
+                    { file = "silence_angelic01.mp3", duration = 47 }
+                },
+                tracks = darkshore
             },
             ["Ruins of Mathystra"] = {
-                tracks = {}
+                tracks = nagaLand
             },
             ["Grove of the Ancients"] = {
-                tracks = {}
+                intro = {
+                    { file = "silence_gloomy01.mp3", duration = 36 }
+                },
+                tracks = darkshore
             },
             ["Ameth'Aran"] = {
                 tracks = haunted,
@@ -327,7 +457,11 @@ MusicExpanded_Data.Zones = {
         subzones = {
             ["Ironband's Excavation Site"] = {
                 tracks = dwarfDigsite
-            }
+            },
+            ["Mo'grosh Stronghold"] = {
+                intro = {},
+                tracks = {} -- tentative
+            },
         }
     },
     ["The Barrens"] = {
@@ -335,6 +469,21 @@ MusicExpanded_Data.Zones = {
         subzones = {
             ["Bael Modan"] = {
                 tracks = dwarfDigsite
+            },
+            ["Anchor's Edge"] = {
+                intro = {
+                    { file = "silence_battle03.mp3", duration = 27 - 1 }
+                },
+                tracks = kultiran
+            }
+        }
+    },
+    ["Ashenvale"] = {
+        intro = {},
+        tracks = {},
+        subzones = {
+            ["The Zoram Strand"] = {
+                tracks = nagaLand
             }
         }
     },
@@ -381,17 +530,127 @@ MusicExpanded_Data.Zones = {
             },
         }
     },
-    ["Grim Reaches"] = {
+    ["Hillsbrad Foothills"] = {
         tracks = {},
         subzones = {
-            ["Darkbeard Digsite"] = {
-                tracks = darkironDigsite
-            },
-            ["The Grim Batol Memorial"] = {
-                tracks = haunted,
-                intro = {}
+            ["Eastern Strand"] = {
+                tracks = nagaLand
             },
         }
+    },
+    ["Balor"] = {
+        tracks = {},
+        subzones = {
+            ["Bilgerat Compound"] = {
+                tracks = pirateGloom
+            },
+        }
+    },
+    ["Arathi Highlands"] = {
+        tracks = arathiHighlands,
+        subzones = {
+            ["Boulderfist Hall"] = { -- Ogre music?
+                intro = {},
+                tracks = ogre
+            },
+            ["Boulderfist Outpost"] = { -- Self contained cave
+                intro = {},
+                tracks = {}
+            },
+            ["Drywhisker Gorge"] = { 
+                intro = {},
+                tracks = {} -- No zonemusic unless it fits the cave aswell
+            },
+            ["Witherbark Village"] = { 
+                intro = {},
+                tracks = {} -- No zonemusic unless it fits the cave aswell
+            },
+            ["Wildtusk Village"] = { 
+                intro = {},
+                tracks = {}
+            },
+            ["Ruins of Zul'Rasaz"] = { 
+                intro = {},
+                tracks = {}
+            },
+            ["Faldir's Cove"] = { -- Pirate?
+                intro = {},
+                tracks = {}
+            },
+            ["The Drowned Reef"] = {
+                intro = {},
+                tracks = nagaWater
+            },
+            ["Hammerfall"] = {
+                intro = {},
+                tracks = arathiOrc
+            },
+            ["Go'Shek Farm"] = {
+                intro = {
+                    { file = "silence_battle03.mp3", duration = 27 }
+                },
+                tracks = arathiOrc
+            },
+            ["Dabyrie's Farmstead"] = {
+                intro = {
+                    { file = "silence_battle03.mp3", duration = 27 }
+                },
+                tracks = arathiHuman
+            },
+            ["Refuge Pointe"] = {
+                intro = {
+                    { file = "silence_stormwind03moment.mp3", duration = 69 }
+                },
+                tracks = arathiHuman
+            },
+            ["Livingstone Croft"] = {
+                intro = {},
+                tracks = arathiHuman
+            },
+            ["Gallant Square"] = {
+                intro = {},
+                tracks = arathiHuman
+            },
+            ["The Sanctum"] = { -- Stromgarde trollbane
+                intro = {},
+                tracks = {}
+            },
+            ["Stromgarde Keep"] = { -- Do not override
+                intro = {
+                    { file = "silence_stormwind01moment.mp3", duration = 54 }
+                },
+                tracks = {}
+            },
+            ["The Tower of Arathor"] = {
+                intro = {},
+                tracks = mysteryEvil
+            },
+            ["Northfold Manor"] = {
+                intro = {
+                    { file = "silence_gloomy01.mp3", duration = 36 }
+                },
+                tracks = arathiHighlands
+            },
+        }
+    },
+    ["Grim Reaches"] = {
+        intro = {
+            { file = "silence_Grim_Intro.mp3", duration = 128, cooldown = 3600 }
+        },
+        tracks = {},
+        subzones = {
+            ["Groldan's Excavation"] = {
+                tracks = darkironDigsite
+            },
+            ["The Grim Hollow"] = {
+                intro = {},
+                tracks = swampEvil
+            }
+        }
+    },
+    ["Tomb of Ancestors"] = { -- Grim Hollow Crypt
+        intro = {},
+        tracks = mysteryEvil
     },
     ["Northwind"] = {
         tracks = {},
@@ -411,7 +670,11 @@ MusicExpanded_Data.Zones = {
                     { file = "bonewalk_3.mp3", duration = 56 },
                     { file = "bonewalk_4.mp3", duration = 189 },
                 }
-            }
+            },
+            ["Ranazjar Isle"] = {
+                intro = {},
+                tracks = nagaLand
+            },
         }
     },
     ["Badlands"] = {
@@ -431,26 +694,39 @@ MusicExpanded_Data.Zones = {
     ["Stranglethorn Vale"] = {
         tracks = {},
         subzones = {
+            ["The Vile Reef"] = {
+                intro = {},
+                tracks = {}
+            },
             ["Southern Savage Coast"] = {
-                intro = {
-                    { file = "bloodsail_day3.mp3", duration = 109 },
-                },
+                intro = {},
                 tracks = {}
             },
             ["Bloodsail Compound"] = {
-                tracks = bloodsail
+                intro = {},
+                tracks = bloodsailBeach
             },
             ["Wild Shore"] = {
-                intro = {
-                    { file = "bloodsail_day3.mp3", duration = 109 },
-                },
-                tracks = bloodsail
+                intro = {},
+                tracks = bloodsailBeach
             },
             ["Ruins of Aboraz"] = {
                 tracks = undeadWC3
             },
             ["Ruins of Jubuwal"] = {
                 tracks = undeadWC3
+            },
+            ["Nek'mani Wellspring"] = {
+                tracks = nagaLand
+            },
+        }
+    },
+    ["Gilneas"] = {
+        tracks = {},
+        subzones = {
+            ["Brol'ok Mound"] = {
+                intro = {},
+                tracks = ogre
             },
         }
     },
@@ -465,6 +741,9 @@ MusicExpanded_Data.Zones = {
             },
             ["Shalzaru's Lair"] = {
                 tracks = nagaCave
+            },
+            ["Ruins of Solarsal"] = {
+                tracks = nagaLand
             },
             ["The Writhing Deep"] = {
                 tracks = silithid
@@ -486,6 +765,9 @@ MusicExpanded_Data.Zones = {
             ["Land's End Beach"] = {
                 tracks = beach
             },
+            ["South Seas"] = {
+                tracks = beach
+            },
             ["Wavestrider Beach"] = {
                 tracks = beach
             },
@@ -493,7 +775,7 @@ MusicExpanded_Data.Zones = {
                 tracks = beach
             },
             ["Lost Rigger Cove"] = {
-                tracks = bloodsail
+                tracks = bloodsailBeach
             },
         }
     },
@@ -545,11 +827,84 @@ MusicExpanded_Data.Zones = {
             }
         }
     },
+    ["Blasted Lands"] = {
+        intro = {},
+        tracks = {},
+        subzones = {
+            ["Dreadmaul Post"] = {
+                intro = {},
+                tracks = ogre
+            },
+            ["The Dark Portal"] = {
+                intro = {
+                    { file = "he_stairsintro.mp3", duration = 18 }
+                },
+                tracks = {}
+            }
+        }
+    },
+    ["Lapidis Isle"] = {
+        tracks = {},
+        subzones = {
+            ["Bright Coast"] = {
+                intro = {},
+                tracks = bloodsailBeach
+            },
+            ["Crown Island"] = {
+                intro = {},
+                tracks = lapidisBeach
+            },
+            ["Shank's Reef"] = {
+                intro = {},
+                tracks = lapidisBeach
+            },
+        }
+    },
+    ["Gillijim's Isle"] = {
+        tracks = {},
+        subzones = {
+            ["The Southsea Sandbar"] = {
+                intro = {},
+                tracks = bloodsailBeach
+            },
+            ["Distillery Island"] = {
+                tracks = bloodsailBeach
+            },
+            ["Kazon Island"] = { -- has a cave
+                intro = {},
+                tracks = {}
+            },
+            ["Faelon's Folly"] = {
+                intro = {},
+                tracks = haunted
+            },
+            ["The Silver Coast"] = {
+                intro = {},
+                tracks = lapidisBeach
+            },
+            ["The Silver Sandbar"] = {
+                intro = {},
+                tracks = lapidisBeach
+            },
+            ["Gillijim Strand"] = {
+                intro = {},
+                tracks = lapidisBeach
+            },
+            ["Deeptide Sanctum"] = {
+                intro = {},
+                tracks = nagaLand
+            },
+            ["The Broken Reef"] = {
+                intro = {},
+                tracks = nagaLand
+            },
+        }
+    },
     ["Azshara"] = {
         tracks = {},
         subzones = {
             ["Ruins of Eldarath"] = {
-                tracks = {}
+                tracks = nagaLand
             },
             ["Temple of Zin-Malor"] = {
                 tracks = highborne,
@@ -563,6 +918,27 @@ MusicExpanded_Data.Zones = {
                     { file = "ruinsofzinazshari_a.mp3", duration = 167 },
                 }
             },
+            ["The Ruined Reaches"] = {
+                tracks = nagaLand
+            },
+            ["Rethress Sanctum"] = {
+                intro = {
+                    { file = "vashjirnagathrone_1.mp3", duration = 43 }
+                },
+                tracks = {}
+            },
+            ["Southridge Beach"] = {
+                tracks = nagaLand
+            },
+            ["The Shattered Strand"] = {
+                tracks = {}
+            },
+            ["Bay of Storms"] = {
+                tracks = {}
+            },
+            ["Hetaera's Clutch"] = {
+                tracks = {}
+            },
         }
     },
     ["Un'Goro Crater"] = {
@@ -570,6 +946,14 @@ MusicExpanded_Data.Zones = {
         subzones = {
             ["The Slithering Scar"] = {
                 tracks = silithid
+            },
+        }
+    },
+    ["Moonwhisper Coast"] = {
+        tracks = {},
+        subzones = {
+            ["Ruins of Nendis"] = {
+                tracks = nagaLand
             },
         }
     },
@@ -716,17 +1100,37 @@ MusicExpanded_Data.Zones = {
 
     --============================================================  Dungeons  ============================================================
 
-    ["Blackfathom Depths"] = {
+    ["Blackfathom Deeps"] = {
         intro = {},
-        tracks = {},
-        subzones = { -- Shrine of the storms music and Kthir, near Akumai
+        tracks = nagaBlackfathom,
+        subzones = { 
             [""] = {
-                intro = {}, -- Naga music?
-                tracks = {}
-            },
-            ["The Grand Vestibule"] = { -- Twilight heavy music?
                 intro = {},
-                tracks = {}
+                tracks = nagaBlackfathom
+            },
+            ["The Pool of Ask'ar"] = {
+                intro = {
+                    { file = "warriorterrace.mp3", duration = 53 - 1 }
+                },
+                tracks = nagaBlackfathom
+            },
+            ["The Forgotten Pool"] = {
+                intro = {},
+                tracks = nagaCave
+            },
+            ["Moonshrine Ruins"] = {
+                intro = {},
+                tracks = twilightCalm
+            },
+            ["Moonshrine Sanctum"] = { -- Twilight heavy music?
+                intro = {
+                    { file = "battle03.mp3", duration = 27 - 1 }
+                },
+                tracks = twilightCalm
+            },
+            ["Aku'mai's Lair"] = { -- Shrine of the storms music and Kthir, near Akumai
+                intro = {},
+                tracks = oldGod
             },
         }
     },
