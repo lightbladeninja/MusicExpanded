@@ -1,6 +1,8 @@
 MusicExpanded_Registry = MusicExpanded_Registry or {}
 
-MusicExpanded_Registry.Files = {
+MusicExpanded_Registry.AddonRoot = "Interface\\AddOns\\MusicExpanded\\music\\"
+
+MusicExpanded_Registry.AddonFiles = {
     -- === Silence ===
     ["silence.mp3"]                     = "silence\\silence.mp3",
     ["silence_sacred.mp3"]              = "silence\\silence_sacred.mp3",
@@ -11,17 +13,10 @@ MusicExpanded_Registry.Files = {
     ["silence_stormwind03moment.mp3"]   = "silence\\silence_stormwind03moment.mp3",
     ["silence_Grim_Intro.mp3"]          = "silence\\silence_Grim_Intro.mp3",
 
-    -- === Mystery ===
-    ["mystery_1.mp3"]                   = "mystery\\mystery_1.mp3",
-    ["mystery_5.mp3"]                   = "mystery\\mystery_5.mp3",
-    ["mystery_6.mp3"]                   = "mystery\\mystery_6.mp3",
-    ["mystery_7.mp3"]                   = "mystery\\mystery_7.mp3",
-    ["mystery_8.mp3"]                   = "mystery\\mystery_8.mp3",
-    ["mystery_9.mp3"]                   = "mystery\\mystery_9.mp3",
-    ["mystery_10.mp3"]                  = "mystery\\mystery_10.mp3",
-
-    -- == Demon ==
-    ["he_stairsintro.mp3"]                = "demon\\dark_portal\\he_stairsintro.mp3",
+    --- === Cathedral of Light ===
+    ["bellsofdawn_calm.mp3"]             = "chapel\\cathedral\\bellsofdawn_calm.mp3",
+    ["lightbringsushope_calm.mp3"]       = "chapel\\cathedral\\lightbringsushope_calm.mp3",
+    ["childrenofthelight_calm.mp3"]      = "chapel\\cathedral\\childrenofthelight_calm.mp3",
 
     -- == Evil Swamp ==
     ["nazmirswamp_c.mp3"]            = "evil_swamp\\nazmirswamp_c.mp3",
@@ -74,10 +69,6 @@ MusicExpanded_Registry.Files = {
     ["forsakenflame_f.mp3"]           = "darkshore\\forsakenflame_f.mp3",
     ["forsakenflame_d.mp3"]           = "darkshore\\forsakenflame_d.mp3",
     ["forsakenflame_b.mp3"]           = "darkshore\\forsakenflame_b.mp3",
-    ["nightforest01.mp3"]             = "darkshore\\nightforest01.mp3",
-    ["nightforest02.mp3"]             = "darkshore\\nightforest02.mp3",
-    ["nightforest03.mp3"]             = "darkshore\\nightforest03.mp3",
-    ["nightforest04.mp3"]             = "darkshore\\nightforest04.mp3",
 
     -- === Blackrock Spire (Rend Blackhand) ===
     ["protectthethrone_h1.mp3"]       = "blackrock\\blackrock_spire\\event\\protectthethrone_h1.mp3",
@@ -89,10 +80,6 @@ MusicExpanded_Registry.Files = {
     ["burningsteppes_2.mp3"]          = "blackrock\\burningsteppes_2.mp3",
     ["burningsteppes_3.mp3"]          = "blackrock\\burningsteppes_3.mp3",
     ["burningsteppes_4.mp3"]          = "blackrock\\burningsteppes_4.mp3",
-    ["dayvolcanic01.mp3"]             = "blackrock\\dayvolcanic01.mp3",
-    ["dayvolcanic02.mp3"]             = "blackrock\\dayvolcanic02.mp3",
-    ["nightvolcanic01.mp3"]           = "blackrock\\nightvolcanic01.mp3",
-    ["nightvolcanic02.mp3"]           = "blackrock\\nightvolcanic02.mp3",
 
     -- === Dwarven Digsite (Normal) ===
     ["dwarf_b_day2.mp3"]                  = "dwarf\\dwarf_b_day2.mp3",
@@ -109,10 +96,6 @@ MusicExpanded_Registry.Files = {
     ["dwarf_b_uni2.mp3"]                  = "dwarf\\darkiron_digsite\\dwarf_b_uni2.mp3",
     ["dwarf_cdark_uni4.mp3"]              = "dwarf\\darkiron_digsite\\dwarf_cdark_uni4.mp3",
     ["dwarf_ddark_uni5.mp3"]              = "dwarf\\darkiron_digsite\\dwarf_ddark_uni5.mp3",
-
-    -- === Dark Iron City ===
-    ["hateforgequarry_1.mp3"]             = "dwarf\\darkiron_quarry\\hateforgequarry_1.mp3",
-    ["hateforgequarry_2.mp3"]             = "dwarf\\darkiron_quarry\\hateforgequarry_2.mp3",
 
     -- === Dark Iron City ===
     ["darkironforge_1.mp3"]               = "dwarf\\darkiron_city\\darkironforge_1.mp3",
@@ -136,8 +119,6 @@ MusicExpanded_Registry.Files = {
     ["shadow_death_h.mp3"]            = "graveyard\\shadow_death_h.mp3",
     ["shadow_death_a.mp3"]            = "graveyard\\shadow_death_a.mp3",
     ["shadow_death_b.mp3"]            = "graveyard\\shadow_death_b.mp3",
-    ["haunted01.mp3"]                 = "graveyard\\haunted01.mp3",
-    ["haunted02.mp3"]                 = "graveyard\\haunted02.mp3",
     ["haunted_uu02.mp3"]              = "graveyard\\haunted_uu02.mp3",
     ["ghosts_1.mp3"]                  = "graveyard\\ghosts_1.mp3",
     ["ghosts_2.mp3"]                  = "graveyard\\ghosts_2.mp3",
@@ -157,6 +138,12 @@ MusicExpanded_Registry.Files = {
     -- === Light's Hope Chapel ===
     ["arathi_memorial_h.mp3"]            = "chapel\\arathi_memorial_h.mp3",
 
+    -- === Ogre ===
+    ["ogre_1.mp3"]                         = "ogre\\ogre_1.mp3",
+    ["ogre_2.mp3"]                         = "ogre\\ogre_2.mp3",
+    ["ogreintro_1.mp3"]                    = "ogre\\ogreintro_1.mp3",
+    ["ogreintro_2.mp3"]                    = "ogre\\ogreintro_2.mp3",
+
     -- == Arathi Highlands ===
     ["warfrontsbattle_l.mp3"]            = "arathi\\warfrontsbattle_l.mp3",
     ["warfrontsbattle_p.mp3"]            = "arathi\\warfrontsbattle_p.mp3",
@@ -165,9 +152,7 @@ MusicExpanded_Registry.Files = {
     ["arathihighlands_c_day1.mp3"]       = "arathi\\arathihighlands_c_day1.mp3",
 
     -- == Arathi Orc ===
-    ["orgrimmarzone_1.mp3"]              = "arathi\\orc\\orgrimmarzone_1.mp3",
     ["warfrontsbattle_o.mp3"]            = "arathi\\orc\\warfrontsbattle_o.mp3",
-    ["daybarrendry03.mp3"]               = "arathi\\orc\\daybarrendry03.mp3",
 
     -- == Arathi Human ===
     ["classicbattle_c.mp3"]              = "arathi\\human\\classicbattle_c.mp3",
@@ -175,23 +160,9 @@ MusicExpanded_Registry.Files = {
     ["classicbattle_e.mp3"]              = "arathi\\human\\classicbattle_e.mp3",
     ["classicbattle_f.mp3"]              = "arathi\\human\\classicbattle_f.mp3",
 
-    -- == Kultiran ===
-    ["Anchors_fall.mp3"]                 = "human\\kultiran\\Anchors_fall.mp3",
-
-    --- === Cathedral of Light ===
-    ["bellsofdawn_calm.mp3"]             = "chapel\\cathedral\\bellsofdawn_calm.mp3",
-    ["lightbringsushope_calm.mp3"]       = "chapel\\cathedral\\lightbringsushope_calm.mp3",
-    ["childrenofthelight_calm.mp3"]      = "chapel\\cathedral\\childrenofthelight_calm.mp3",
-
     -- === Scarlet Monastery ===
     ["haunted_1.mp3"]                   = "scarlet\\haunted_1.mp3",
     ["haunted_3.mp3"]                   = "scarlet\\haunted_3.mp3",
-    ["cursedland04.mp3"]                = "scarlet\\cursedland04.mp3",
-    ["cursedland05.mp3"]                = "scarlet\\cursedland05.mp3",
-    ["cursedland06.mp3"]                = "scarlet\\cursedland06.mp3",
-    ["sacred01.mp3"]                    = "scarlet\\sacred01.mp3",
-    ["sacred02.mp3"]                    = "scarlet\\sacred02.mp3",
-    ["gloomy02.mp3"]                    = "scarlet\\gloomy02.mp3",
     ["scarletmonastery_h1.mp3"]         = "scarlet\\scarletmonastery_h1.mp3",
     ["scarletmonastery_h2.mp3"]         = "scarlet\\scarletmonastery_h2.mp3",
     ["scarletmonastery_h3.mp3"]         = "scarlet\\scarletmonastery_h3.mp3",
@@ -202,34 +173,6 @@ MusicExpanded_Registry.Files = {
     ["eh_assault_1.mp3"]                 = "undead\\stratholme\\eh_assault_1.mp3",
     ["eh_assault_3.mp3"]                 = "undead\\stratholme\\eh_assault_3.mp3",
     ["eh_assault_4.mp3"]                 = "undead\\stratholme\\eh_assault_4.mp3",
-
-    -- === Battle Music ===
-    ["battle01.mp3"]                     = "battle\\battle01.mp3",
-    ["battle02.mp3"]                     = "battle\\battle02.mp3",
-    ["battle03.mp3"]                     = "battle\\battle03.mp3",
-    ["battle04.mp3"]                     = "battle\\battle04.mp3",
-    ["battle05.mp3"]                     = "battle\\battle05.mp3",
-    ["battle06.mp3"]                     = "battle\\battle06.mp3",
-    ["warriorterrace.mp3"]               = "battle\\warriorterrace.mp3",
-
-    -- === Orc Intro ===
-    ["orcintro_1.mp3"]                      = "orc\\orcintro_1.mp3",
-    ["orcintro_2.mp3"]                      = "orc\\orcintro_2.mp3",
-    ["orcintro_3.mp3"]                      = "orc\\orcintro_3.mp3",
-    ["orcintro_4.mp3"]                      = "orc\\orcintro_4.mp3",
-
-    -- === Ogre ===
-    ["orgrimmarzone_2.mp3"]                = "ogre\\orgrimmarzone_2.mp3",
-    ["ogre_1.mp3"]                         = "ogre\\ogre_1.mp3",
-    ["ogre_2.mp3"]                         = "ogre\\ogre_2.mp3",
-    ["ogreintro_1.mp3"]                    = "ogre\\ogreintro_1.mp3",
-    ["ogreintro_2.mp3"]                    = "ogre\\ogreintro_2.mp3",
-
-    -- === Centaur Necromancer ===
-    ["bonewalk_1.mp3"]                  = "centaur\\necromancer\\bonewalk_1.mp3",
-    ["bonewalk_2.mp3"]                  = "centaur\\necromancer\\bonewalk_2.mp3",
-    ["bonewalk_3.mp3"]                  = "centaur\\necromancer\\bonewalk_3.mp3",
-    ["bonewalk_4.mp3"]                  = "centaur\\necromancer\\bonewalk_4.mp3",
 
     -- === Scholomance ===
     ["scholomance_1.mp3"]           = "scholomance\\scholomance_1.mp3",
@@ -243,22 +186,15 @@ MusicExpanded_Registry.Files = {
     ["scholomance_12.mp3"]          = "scholomance\\scholomance_12.mp3",
 
     -- === Silithus ===
-    ["daydesert01.mp3"]                  = "desert\\daydesert01.mp3",
-    ["daydesert02.mp3"]                  = "desert\\daydesert02.mp3",
-    ["daydesert03.mp3"]                  = "desert\\daydesert03.mp3",
-    ["nightdesert01.mp3"]                = "desert\\nightdesert01.mp3",
-    ["nightdesert02.mp3"]                = "desert\\nightdesert02.mp3",
-    ["nightdesert03.mp3"]                = "desert\\nightdesert03.mp3",
-    ["ahnqirajintro1.mp3"]               = "desert\\silithus\\ahnqirajintro1.mp3",
-    ["zereth_mortis_barren_a.mp3"]       = "desert\\silithus\\zereth_mortis_barren_a.mp3",
-    ["zereth_mortis_barren_b.mp3"]       = "desert\\silithus\\zereth_mortis_barren_b.mp3",
-    ["zereth_mortis_barren_c.mp3"]       = "desert\\silithus\\zereth_mortis_barren_c.mp3",
-    ["silithus_1.mp3"]                   = "desert\\silithus\\silithus_1.mp3",
-    ["silithus_2.mp3"]                   = "desert\\silithus\\silithus_2.mp3",
-    ["silithus_3.mp3"]                   = "desert\\silithus\\silithus_3.mp3",
-    ["silithus_4.mp3"]                   = "desert\\silithus\\silithus_4.mp3",
-    ["silithus_5.mp3"]                   = "desert\\silithus\\silithus_5.mp3",
-    ["silithus_6.mp3"]                   = "desert\\silithus\\silithus_6.mp3",
+    ["zereth_mortis_barren_a.mp3"]       = "silithus\\zereth_mortis_barren_a.mp3",
+    ["zereth_mortis_barren_b.mp3"]       = "silithus\\zereth_mortis_barren_b.mp3",
+    ["zereth_mortis_barren_c.mp3"]       = "silithus\\zereth_mortis_barren_c.mp3",
+    ["silithus_1.mp3"]                   = "silithus\\silithus_1.mp3",
+    ["silithus_2.mp3"]                   = "silithus\\silithus_2.mp3",
+    ["silithus_3.mp3"]                   = "silithus\\silithus_3.mp3",
+    ["silithus_4.mp3"]                   = "silithus\\silithus_4.mp3",
+    ["silithus_5.mp3"]                   = "silithus\\silithus_5.mp3",
+    ["silithus_6.mp3"]                   = "silithus\\silithus_6.mp3",
 
     -- === Twilight Hammer ===
     ["twilightshammer_1.mp3"]          = "twilight\\calm\\twilightshammer_1.mp3",
@@ -284,12 +220,6 @@ MusicExpanded_Registry.Files = {
     ["cursed_7.mp3"]                     = "undead\\stronghold\\cursed_7.mp3",
     ["cursed_8.mp3"]                     = "undead\\stronghold\\cursed_8.mp3",
 
-    -- === Tyr's Hand ===
-    ["Human1.mp3"]                      = "scarlet\\tyrs_hand\\Human1.mp3",
-    ["Human2.mp3"]                      = "scarlet\\tyrs_hand\\Human2.mp3",
-    ["Human3.mp3"]                      = "scarlet\\tyrs_hand\\Human3.mp3",
-    ["HumanX1.mp3"]                     = "scarlet\\tyrs_hand\\HumanX1.mp3",
-
     --- === Undead Nightelf ===
     ["darnassusintro_h.mp3"]             = "undead\\nightelf\\darnassusintro_h.mp3",
     ["ruinsofauberdine_1.mp3"]           = "undead\\nightelf\\ruinsofauberdine_1.mp3",
@@ -299,9 +229,9 @@ MusicExpanded_Registry.Files = {
     ["ruinsofauberdine_5.mp3"]           = "undead\\nightelf\\ruinsofauberdine_5.mp3",
 
     --- === WC3 Undead Music ===
-    ["WC3Undead_1.mp3"]                  = "undead\\zanzil\\WC3Undead_1.mp3",
-    ["WC3Undead_3.mp3"]                  = "undead\\zanzil\\WC3Undead_3.mp3",
-    ["WC3Undead_4.mp3"]                  = "undead\\zanzil\\WC3Undead_4.mp3",
+    ["wc3undead_1.mp3"]                  = "undead\\zanzil\\WC3Undead_1.mp3",
+    ["wc3undead_3.mp3"]                  = "undead\\zanzil\\WC3Undead_3.mp3",
+    ["wc3undead_4.mp3"]                  = "undead\\zanzil\\WC3Undead_4.mp3",
 
     --- === Zuldrak ===
     ["zuldrak_intro4.mp3"]                = "troll\\zul_mashar\\zuldrak_intro4.mp3",
@@ -311,32 +241,15 @@ MusicExpanded_Registry.Files = {
     ["zuldrak_night2.mp3"]                = "troll\\zul_mashar\\zuldrak_night2.mp3",
     ["zuldrak_night4.mp3"]                = "troll\\zul_mashar\\zuldrak_night4.mp3",
 
-    -- == Jungle ===
-    ["dayjungle01.mp3"]                 = "jungle\\dayjungle01.mp3",
-    ["dayjungle02.mp3"]                 = "jungle\\dayjungle02.mp3",
-    ["dayjungle03.mp3"]                 = "jungle\\dayjungle03.mp3",
-    ["nightjungle01.mp3"]               = "jungle\\nightjungle01.mp3",
-    ["nightjungle02.mp3"]               = "jungle\\nightjungle02.mp3",
-    ["nightjungle03.mp3"]               = "jungle\\nightjungle03.mp3",
+    -- === Tanaris ===
+    ["tanaris_1.mp3"]                     = "tanaris\\tanaris_1.mp3",
+    ["tanaris_10.mp3"]                    = "tanaris\\tanaris_10.mp3",
 
-    -- === Bloodsail / Tanaris ===
-    ["bloodsail_day1.mp3"]                = "beach\\pirate\\bloodsail_day1.mp3",
-    ["bloodsail_day2.mp3"]                = "beach\\pirate\\bloodsail_day2.mp3",
-    ["bloodsail_night1.mp3"]              = "beach\\pirate\\bloodsail_night1.mp3",
-    ["bloodsail_night2.mp3"]              = "beach\\pirate\\bloodsail_night2.mp3",
-    ["bloodsail_night3.mp3"]              = "beach\\pirate\\bloodsail_night3.mp3",
-    ["bloodsail_day3.mp3"]                = "beach\\tanaris\\bloodsail_day3.mp3",
-    ["bloodsail_day4.mp3"]                = "beach\\tanaris\\bloodsail_day4.mp3",
-    ["tanaris_1.mp3"]                     = "beach\\tanaris\\tanaris_1.mp3",
-    ["tanaris_10.mp3"]                    = "beach\\tanaris\\tanaris_10.mp3",
-
-    -- == Lapidis/Gilijim's Isle ===
-    ["GilijimAttack.mp3"]          = "lapidis_isle\\jungle\\GilijimAttack.mp3",
-    ["GilijimWalking.mp3"]         = "lapidis_isle\\jungle\\GilijimWalking.mp3",
-    ["GillijimMoment.mp3"]         = "lapidis_isle\\jungle\\GillijimMoment.mp3",
-    ["LapidisTrollWalking.mp3"]    = "lapidis_isle\\jungle\\LapidisTrollWalking.mp3",
-    ["LapidisTrollFight.mp3"]      = "lapidis_isle\\troll\\LapidisTrollFight.mp3",
-    ["LapidisTrollMoment.mp3"]     = "lapidis_isle\\troll\\LapidisTrollMoment.mp3",
+    -- === Orc Intro ===
+    ["orcintro_1.mp3"]                      = "orc\\orcintro_1.mp3",
+    ["orcintro_2.mp3"]                      = "orc\\orcintro_2.mp3",
+    ["orcintro_3.mp3"]                      = "orc\\orcintro_3.mp3",
+    ["orcintro_4.mp3"]                      = "orc\\orcintro_4.mp3",
 
     -- === Arathi Highlands ===
     ["warfrontsbattle_l.mp3"]            = "arathi\\warfrontsbattle_l.mp3",
@@ -348,3 +261,128 @@ MusicExpanded_Registry.Files = {
     
 }
 
+
+MusicExpanded_Registry.ClientFiles = {
+
+    --- === Kul Tiran human ===
+    ["anchors_fall.mp3"] =                  "Sound\\Music\\Custom\\Anchors_fall.mp3", -- trackname has to be all lowercase
+
+    -- === Bloodsail ===
+    ["bloodsail_day1.mp3"]                = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_DAY1.mp3",
+    ["bloodsail_day2.mp3"]                = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_DAY2.mp3",
+    ["bloodsail_night1.mp3"]              = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_NIGHT1.mp3",
+    ["bloodsail_night2.mp3"]              = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_NIGHT2.mp3",
+    ["bloodsail_night3.mp3"]              = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_NIGHT3.mp3",
+    ["bloodsail_day3.mp3"]                = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_DAY3.mp3",
+    ["bloodsail_day4.mp3"]                = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_DAY4.mp3",
+
+    -- == Lapidis/Gilijim's Isle ===
+    ["gillijim_attack.mp3"]               = "Sound\\Music\\Custom\\GilijimAttack.mp3",
+    ["gillijim_walking.mp3"]              = "Sound\\Music\\Custom\\GilijimWalking.mp3",
+    ["gillijim_moment.mp3"]               = "Sound\\Music\\Custom\\GillijimMoment.mp3",
+    ["lapidis_troll_walking.mp3"]         = "Sound\\Music\\Custom\\LapidisTrollWalking.mp3",
+    ["lapidis_troll_fight.mp3"]           = "Sound\\Music\\Custom\\LapidisTrollFight.mp3",
+    ["lapidis_troll_moment.mp3"]          = "Sound\\Music\\Custom\\LapidisTrollMoment.mp3",
+
+    -- === Dark Iron City ===
+    ["hateforgequarry_1.mp3"]             = "Sound\\Music\\Custom\\Outside_Quarry_Theme_1.mp3",
+    ["hateforgequarry_2.mp3"]             = "Sound\\Music\\Custom\\Outside_Quarry_Theme_2.mp3",
+
+
+    -- === Tyr's Hand ===
+    ["human1.mp3"]                        = "Sound\\Music\\War3\\Human1.mp3",
+    ["human2.mp3"]                        = "Sound\\Music\\War3\\Human2.mp3",
+    ["human3.mp3"]                        = "Sound\\Music\\War3\\Human3.mp3",
+    ["humanx1.mp3"]                       = "Sound\\Music\\War3\\HumanX1.mp3",
+
+    -- === Battle Music ===
+    ["battle01.mp3"]                      = "Sound\\Music\\Musical Moments\\battle\\battle01.mp3",
+    ["battle02.mp3"]                      = "Sound\\Music\\Musical Moments\\battle\\battle02.mp3",
+    ["battle03.mp3"]                      = "Sound\\Music\\Musical Moments\\battle\\battle03.mp3",
+    ["battle04.mp3"]                      = "Sound\\Music\\Musical Moments\\battle\\battle04.mp3",
+    ["battle05.mp3"]                      = "Sound\\Music\\Musical Moments\\battle\\battle05.mp3",
+    ["battle06.mp3"]                      = "Sound\\Music\\Musical Moments\\battle\\battle06.mp3",
+    ["warriorterrace.mp3"]                = "Sound\\Music\\CityMusic\\Darnassus\\Warrior Terrace.mp3",
+
+    -- === Scarlet Intro ===
+    ["sacred01.mp3"]                      = "Sound\\Music\\Musical Moments\\Sacred\\Sacred01.mp3",
+    ["sacred02.mp3"]                      = "Sound\\Music\\Musical Moments\\Sacred\\sacred02.mp3",
+    ["gloomy01.mp3"]                      = "Sound\\Music\\Musical Moments\\gloomy\\gloomy01.mp3",
+    ["gloomy02.mp3"]                      = "Sound\\Music\\Musical Moments\\gloomy\\gloomy02.mp3",
+
+    -- === Scarlet Monastery ===
+    ["cursedland01.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland04.mp3",
+    ["cursedland02.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland05.mp3",
+    ["cursedland03.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland06.mp3",
+    ["cursedland04.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland04.mp3",
+    ["cursedland05.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland05.mp3",
+    ["cursedland06.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland06.mp3",
+
+    -- === Outland Portal ===
+    ["he_stairsintro.mp3"]                = "Sound\\Music\\ZoneMusic\\HellfirePeninsula\\HE_StairsIntroUni01.mp3",
+
+    -- === Jungle ===
+    ["dayjungle01.mp3"]                   = "Sound\\Music\\ZoneMusic\\Jungle\\DayJungle01.mp3",
+    ["dayjungle02.mp3"]                   = "Sound\\Music\\ZoneMusic\\Jungle\\DayJungle02.mp3",
+    ["dayjungle03.mp3"]                   = "Sound\\Music\\ZoneMusic\\Jungle\\DayJungle03.mp3",
+    ["nightjungle01.mp3"]                 = "Sound\\Music\\ZoneMusic\\Jungle\\NightJungle01.mp3",
+    ["nightjungle02.mp3"]                 = "Sound\\Music\\ZoneMusic\\Jungle\\NightJungle02.mp3",
+    ["nightjungle03.mp3"]                 = "Sound\\Music\\ZoneMusic\\Jungle\\NightJungle03.mp3",
+
+    -- === Darkshore ===
+    ["nightforest01.mp3"]                 = "Sound\\Music\\ZoneMusic\\Forest\\nightforest01.mp3",
+    ["nightforest02.mp3"]                 = "Sound\\Music\\ZoneMusic\\Forest\\nightforest02.mp3",
+    ["nightforest03.mp3"]                 = "Sound\\Music\\ZoneMusic\\Forest\\nightforest03.mp3",
+    ["nightforest04.mp3"]                 = "Sound\\Music\\ZoneMusic\\Forest\\nightforest04.mp3",
+
+    -- === Desert ===
+    ["daydesert01.mp3"]                   = "Sound\\Music\\ZoneMusic\\Desert\\DayDesert01.mp3",
+    ["daydesert02.mp3"]                   = "Sound\\Music\\ZoneMusic\\Desert\\DayDesert02.mp3",
+    ["daydesert03.mp3"]                   = "Sound\\Music\\ZoneMusic\\Desert\\DayDesert03.mp3",
+    ["nightdesert01.mp3"]                 = "Sound\\Music\\ZoneMusic\\Desert\\NightDesert01.mp3",
+    ["nightdesert02.mp3"]                 = "Sound\\Music\\ZoneMusic\\Desert\\NightDesert02.mp3",
+    ["nightdesert03.mp3"]                 = "Sound\\Music\\ZoneMusic\\Desert\\NightDesert03.mp3",
+
+    ["ahnqirajintro1.mp3"]                = "Sound\\Music\\Musical Moments\\mystery\\AhnQirajIntro1.mp3",
+
+    -- === Orc Zone ===
+    ["daybarrendry01.mp3"]                = "Sound\\Music\\ZoneMusic\\BarrenDry\\DayBarrenDry01.mp3",
+    ["daybarrendry02.mp3"]                = "Sound\\Music\\ZoneMusic\\BarrenDry\\DayBarrenDry02.mp3",
+    ["daybarrendry03.mp3"]                = "Sound\\Music\\ZoneMusic\\BarrenDry\\DayBarrenDry03.mp3",
+    ["nightbarrendry01.mp3"]              = "Sound\\Music\\ZoneMusic\\BarrenDry\\NightBarrenDry01.mp3",
+    ["nightbarrendry02.mp3"]              = "Sound\\Music\\ZoneMusic\\BarrenDry\\NightBarrenDry02.mp3",
+    ["nightbarrendry03.mp3"]              = "Sound\\Music\\ZoneMusic\\BarrenDry\\NightBarrenDry03.mp3",
+
+    -- === Volcanic ===
+    ["dayvolcanic01.mp3"]                 = "Sound\\Music\\ZoneMusic\\Volcanic\\DayVolcanic01.mp3",
+    ["dayvolcanic02.mp3"]                 = "Sound\\Music\\ZoneMusic\\Volcanic\\DayVolcanic02.mp3",
+    ["nightvolcanic01.mp3"]               = "Sound\\Music\\ZoneMusic\\Volcanic\\NightVolcanic01.mp3",
+    ["nightvolcanic02.mp3"]               = "Sound\\Music\\ZoneMusic\\Volcanic\\NightVolcanic02.mp3",
+
+    -- === Ogrimmar ===
+    ["orgrimmar_intro-moment.mp3"]         = "Sound\\Music\\CityMusic\\Orgrimmar\\orgrimmar_intro-moment.mp3",
+    ["orgrimmar01-moment.mp3"]            = "Sound\\Music\\CityMusic\\Orgrimmar\\orgrimmar01-moment.mp3",
+    ["orgrimmar02-moment.mp3"]            = "Sound\\Music\\CityMusic\\Orgrimmar\\orgrimmar02-moment.mp3",
+
+    -- === Centaur Necromancer ===
+    ["bonewalk_1.mp3"]                    = "Sound\\Music\\ZoneMusic\\Terokkar\\TF_BoneWalkUni01.mp3",
+    ["bonewalk_2.mp3"]                    = "Sound\\Music\\ZoneMusic\\Terokkar\\TF_BoneWalkUni02.mp3",
+    ["bonewalk_3.mp3"]                    = "Sound\\Music\\ZoneMusic\\Terokkar\\TF_BoneWalkUni03.mp3",
+    ["bonewalk_4.mp3"]                    = "Sound\\Music\\ZoneMusic\\Terokkar\\TF_BoneWalkUni04.mp3",
+
+    -- === Haunted ===
+    ["haunted01.mp3"]                     = "Sound\\Music\\Musical Moments\\haunted\\haunted01.mp3",
+    ["haunted02.mp3"]                     = "Sound\\Music\\Musical Moments\\haunted\\haunted02.mp3",
+
+    -- === Mystery ===
+    ["mystery_1.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery01-zone.mp3",
+    ["mystery_2.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery02-zone.mp3",
+    ["mystery_3.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery03-zone.mp3",
+    ["mystery_4.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery04-zone.mp3",
+    ["mystery_5.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery05-zone.mp3",
+    ["mystery_6.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery06-zone.mp3",
+    ["mystery_7.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery07-zone.mp3",
+    ["mystery_8.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery08-zone.mp3",
+    ["mystery_9.mp3"]                     = "Sound\\Music\\Musical Moments\\mystery\\mystery09-zone.mp3",
+    ["mystery_10.mp3"]                    = "Sound\\Music\\Musical Moments\\mystery\\mystery10-zone.mp3",
+}

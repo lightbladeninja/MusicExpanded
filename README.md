@@ -4,13 +4,17 @@ Extends the default music system with additional tracks for specific zones and s
 
 ## Features
 
-- Custom music player in the background that emulates the music behavior of the base game, with the exception of indoors/outdoors detection. NOTE: The addon does not interact with the Loop Music option in the Interface settings, and it will function as normal in any area without custom music.
+- Custom music player in the background that emulates the music behavior of the base game
 - No UI, fully background addon with basic slash command options /mex
 
 
 ## Video Showcase
 https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 
+## Dependencies
+This version of the addon uses a more advanced addon framework; a backport the modern Blizzard API (Classic). In order to use this addon, you will need to install client mods; VanillaFixes: https://github.com/hannesmann/vanillafixes and ClassicAPI: https://github.com/brues-code/ClassicAPI
+
+If you want to use a version without any dependency, switch branches from "main" to "1.12-lua-old". NOTE: I will not support that branch in the future.
 
 ## Modified Zones
 
@@ -361,4 +365,3 @@ https://www.youtube.com/playlist?list=PLbRGZ0tPcTx0
 ## TODO
 
 - Add a log for music played {zone, subzone, track} displayable ingame through a button or chat command. Maybe a toggle for seeing "currently playing:X" messages.
-- More complex music selection, preventing two tracks from playing back and forth
