@@ -395,6 +395,7 @@ local function CheckForIntroMusic()
     if not introList then
         return false
     end
+    m.customArea = true
     return PlayIntro(introList, key)
 end
 
@@ -692,12 +693,13 @@ function SlashCmdList.MUSICEXPANDED(msg)
         m.eventToken = m.eventToken + 1
         StopMusic()
         print("|cFFFFBF00[MusicExpanded]|r Addon music stopped, default music playing...")
-        DebugPrint("|cFF00FF00[MusicExpanded]|r Music stopped.")
         return
     end
 
     if command == "status" then
-        print("|cFFFFBF00[MusicExpanded]|r: Custom area: " .. tostring(m.customArea))
+        print("|cFFFFBF00[MusicExpanded]|r Zone: " .. tostring(m.currentZone) .. " | Subzone: " .. tostring(m.currentSubzone) .. " | Indoors: " .. tostring(m.isIndoors))
+        print("|cFFFFBF00[MusicExpanded]|r Intro or Zonemusic active: " .. tostring(m.customArea))
+        print("|cFFFFBF00[MusicExpanded]|r Eventmusic active : " .. tostring(m.watchingDialogue))
         return
     end
 

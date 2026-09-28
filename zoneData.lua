@@ -1,6 +1,33 @@
 MusicExpanded_Data = MusicExpanded_Data or {}
 
--- Shared music for Tower of Althalaxx + The Master's Glaive
+local mystery = {
+    { file = "mystery_1.mp3", duration = 60 },
+    { file = "mystery_2.mp3", duration = 60 },
+    { file = "mystery_3.mp3", duration = 60 },
+    { file = "mystery_4.mp3", duration = 60 },
+    { file = "mystery_5.mp3", duration = 81 },
+    { file = "mystery_6.mp3", duration = 60 },
+    { file = "mystery_7.mp3", duration = 83 },
+    { file = "mystery_8.mp3", duration = 83 },
+    { file = "mystery_9.mp3", duration = 82 },
+    { file = "mystery_10.mp3", duration = 82 }
+}
+
+local demonCursed = {
+    { file = "cursedland01.mp3", duration = 54 },
+    { file = "cursedland02.mp3", duration = 58 },
+    { file = "cursedland03.mp3", duration = 64 }
+}
+
+local barrendry = {
+    { file = "daybarrendry01.mp3", duration = 64 },
+    { file = "daybarrendry02.mp3", duration = 64 },
+    { file = "daybarrendry03.mp3", duration = 55 },
+    { file = "nightbarrendry01.mp3", duration = 67 },
+    { file = "nightbarrendry02.mp3", duration = 40 },
+    { file = "nightbarrendry03.mp3", duration = 47 }
+}
+
 local cultMusic = {
     { file = "forsakenflame_e.mp3", duration = 77 },
     { file = "mystery_1.mp3", duration = 60 },
@@ -51,6 +78,17 @@ local nagaWater = {
     { file = "vashjirnaga_2.mp3", duration = 97 },
     { file = "vashjirnaga_3.mp3", duration = 96 },
     { file = "vashjirnaga_5.mp3", duration = 127 }
+}
+
+local balor = {
+    { file = "Balor2.mp3", duration = 209 },
+    { file = "Balor3.mp3", duration = 161 },
+}
+
+local monument = {
+    { file = "westplague_a_day1.mp3", duration = 50 },
+    { file = "westplague_b_day1.mp3", duration = 50 },
+    { file = "westplague_c_day1.mp3", duration = 50 }
 }
 
 local dwarfDigsite = {
@@ -122,7 +160,7 @@ local swampEvil = {
 }
 
 local mysteryEvil = {
-    { file = "mystery_5.mp3", duration = 81 },
+    { file = "mystery_3.mp3", duration = 62 },
     { file = "mystery_8.mp3", duration = 83 },
     { file = "mystery_9.mp3", duration = 82 },
     { file = "mystery_10.mp3", duration = 82 }
@@ -262,6 +300,17 @@ local zuldrak = {
     { file = "zuldrak_night4.mp3", duration = 92 },
 }
 
+local trollStronghold = {
+    { file = "lapidis_troll_fight.mp3", duration = 76 },
+    { file = "ZulGurubVooDoo.mp3", duration = 84 },
+    { file = "lapidis_troll_moment.mp3", duration = 167 }
+}
+
+local trollVillage = {
+    { file = "tavernhorde_1.mp3", duration = 48 },
+    { file = "tavernhorde_2.mp3", duration = 39 }
+}
+
 local beach = {
     { file = "bloodsail_day3.mp3", duration = 109 },
     { file = "bloodsail_day4.mp3", duration = 83 },
@@ -276,6 +325,22 @@ local lapidisBeach = {
     { file = "gillijim_walking.mp3", duration = 118 },
     { file = "gillijim_moment.mp3", duration = 129 },
     { file = "lapidis_troll_walking.mp3", duration = 118 }
+}
+
+local lapidisMain = {
+    { file = "gillijim_attack.mp3", duration = 78 },
+    { file = "gillijim_walking.mp3", duration = 118 },
+    { file = "gillijim_moment.mp3", duration = 129 },
+    { file = "lapidis_troll_walking.mp3", duration = 118 },
+    { file = "lapidis_troll_fight.mp3", duration = 76 },
+    { file = "lapidis_troll_moment.mp3", duration = 168 }
+}
+
+local lapidisPruned = {
+    { file = "gillijim_attack.mp3", duration = 78 },
+    { file = "gillijim_walking.mp3", duration = 118 },
+    { file = "gillijim_moment.mp3", duration = 129 },
+    { file = "lapidis_troll_walking.mp3", duration = 118 },
 }
 
 local bloodsail = {
@@ -313,6 +378,13 @@ local arathiHighlands = {
     { file = "arathihighlands_c_day1.mp3", duration = 89 },
 }
 
+local cataForest = {
+    { file = "dayforest01.mp3", duration = 55 },
+    { file = "dayforest02.mp3", duration = 72 },
+    { file = "dayforest03.mp3", duration = 64 },
+    { file = "westfall_2.mp3", duration = 122 },
+}
+
 local arathiOrc = {
     { file = "orgrimmar01-moment.mp3", duration = 68 },
     { file = "orgrimmar02-moment.mp3", duration = 62 },
@@ -335,6 +407,23 @@ local kultiran = {
     { file = "nightjungle02.mp3", duration = 53 }
 }
 
+local highelfOutpost = {
+    { file = "thalassian4.mp3", duration = 182 },
+    { file = "islelightwalk_2.mp3", duration = 119 },
+    { file = "silvermoonwalknight_1.mp3", duration = 177 }
+}
+
+local nordrassil = {
+    { file = "groveoftheancients_1.mp3", duration = 88 },
+    { file = "cataclysm_night8.mp3", duration = 111 },
+    { file = "nordrassil_1.mp3", duration = 117 }
+}
+
+local moonglade = {
+    { file = "eye_of_ysera_b.mp3", duration = 147 },
+    { file = "eye_of_ysera_d.mp3", duration = 145 },
+    { file = "eye_of_ysera_h.mp3", duration = 203 }
+}
 
 MusicExpanded_Data.Zones = {
 
@@ -351,8 +440,10 @@ MusicExpanded_Data.Zones = {
         tracks = {},
         subzones = {
             ["Bael'dun Digsite"] = {
-                intro = {}, -- silence
-               -- tracks = dwarfDigsite
+                intro = {
+                    { file = "silence_warriorterrace.mp3", duration = 53 }
+                },
+                tracks = dwarfDigsite
             },
         }
     },
@@ -391,11 +482,11 @@ MusicExpanded_Data.Zones = {
         tracks = {},
         subzones = {
             ["Royal Quarter"] = {
-                intro = {
+                intro = {},
+                tracks = {
                     { file = "windrunner_h.mp3", duration = 129 },
                     { file = "sylvanas_freewill_h.mp3", duration = 172 }
-                },
-                tracks = {}
+                }
             }
         }
     },
@@ -411,6 +502,51 @@ MusicExpanded_Data.Zones = {
                     { file = "bellsofdawn_calm.mp3", duration = 94 },
                     { file = "childrenofthelight_calm.mp3", duration = 92 },
                     { file = "lightbringsushope_calm.mp3", duration = 98 }
+                }
+            }
+        }
+    },
+    ["Lakeshire Town Hall"] = {
+        tracks = cataForest
+    },
+    ["Redridge Mountains"] = {
+        tracks = cataForest,
+        subzones = {
+            ["Redwall Keep"] = {
+                tracks = {}
+            },
+            ["Stonewatch Keep"] = {
+                tracks = {}
+            },
+            ["Stonewatch"] = { -- orc music?
+                intro = orcIntro,
+                tracks = cataForest,
+            },
+            ["Stonewatch Keep"] = {
+                tracks = cataForest,
+            },
+            ["Tower of Ilgalar"] = {
+                tracks = cataForest,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Render's Rock"] = {
+                tracks = cataForest,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Rethban Caverns"] = {
+                tracks = cataForest,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Lakeshire"] = {
+                tracks = cataForest,
+                indoors = {
+                    tracks = {}
                 }
             }
         }
@@ -478,9 +614,20 @@ MusicExpanded_Data.Zones = {
             ["Ironband's Excavation Site"] = {
                 tracks = dwarfDigsite
             },
+            ["The Farstrider Lodge"] = {
+                tracks = highelfOutpost
+            },
+            ["Stonewrought Dam"] = {
+                tracks = monument
+            },
+            ["Valley of Kings"] = {
+                tracks = monument,
+                indoors = {
+                    tracks = {}
+                }
+            },
             ["Mo'grosh Stronghold"] = {
-                intro = {},
-                tracks = {} -- tentative
+                tracks = {} -- Keep it, orgrimmar music for alliance
             },
         }
     },
@@ -496,6 +643,17 @@ MusicExpanded_Data.Zones = {
                 },
                 tracks = kultiran
             }
+        }
+    },
+    ["Stonetalon Mountains"] = {
+        tracks = {},
+        subzones = {
+            ["The Talon Den"] = {
+                tracks = {},
+                indoors = {
+                    tracks = {} -- Emerald dream and cataclysm barrow den music?
+                }
+            },
         }
     },
     ["Ashenvale"] = {
@@ -558,17 +716,57 @@ MusicExpanded_Data.Zones = {
         }
     },
     ["Balor"] = {
-        tracks = {},
+        tracks = balor,
         subzones = {
+            [""] = {
+                tracks = balor,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Stormbreaker Point"] = {
+                tracks = {
+                    { file = "Balor2.mp3", duration = 209 },
+                    { file = "Balor3.mp3", duration = 161 },
+                    { file = "daybarrendry03.mp3", duration = 55 }
+                },
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Stormwrought Castle"] = {
+                intro = {
+                    { file = "BalorIntro.mp3", duration = 139 }
+                },
+                tracks = {}
+            },
             ["Bilgerat Compound"] = {
                 tracks = pirateGloom
+            },
+            ["Croaking Plateau"] = {
+                tracks = balor,
+                indoors = {
+                    tracks = mysteryEvil
+                }
+            },
+            ["Windrock Cliffs"] = {
+                tracks = balor,
+                indoors = {
+                    tracks = mysteryEvil
+                }
+            },
+            ["Stormreaver Spire"] = {
+                tracks = balor,
+                indoors = {
+                    tracks = {}
+                }
             },
         }
     },
     ["Arathi Highlands"] = {
         tracks = arathiHighlands,
         subzones = {
-            ["Boulderfist Hall"] = { -- Ogre music?
+            ["Boulderfist Hall"] = {
                 intro = {},
                 tracks = ogre
             },
@@ -680,8 +878,44 @@ MusicExpanded_Data.Zones = {
         }
     },
     ["Desolace"] = {
-        tracks = {},
+        tracks = {}, --Barrendry is default. Listed subzones have non-Barrendry music.
         subzones = {
+            ["Ghost Walker Post"] = {
+                tracks = {}
+            },
+            ["Sar'theris Strand"] = {
+                tracks = {}
+            },
+            ["Thunder Axe Fortress"] = {
+                tracks = {}
+            },
+            ["Bolgan's Hole"] = {
+                tracks = {}
+            },
+            ["Mannoroc Coven"] = {
+                tracks = {}         --demonCursed is already default
+            },
+            ["Sargeron"] = {
+                tracks = {}
+            },
+            ["Nijel's Point"] = {
+                tracks = {}
+            },
+            ["Shadowbreak Ravine"] = {
+                tracks = demonCursed
+            },
+            ["Ethel Rethor"] = {
+                tracks = {}
+            },
+            ["Shadowprey Village"] = {
+                tracks = {}
+            },
+            ["Scrabblescrew's Camp"] = {
+                tracks = {}
+            },
+            ["Kormek's Hut"] = {
+                tracks = {}
+            },
             ["Valley of Bones"] = {
                 tracks = {
                     { file = "bonewalk_1.mp3", duration = 65 },
@@ -738,6 +972,54 @@ MusicExpanded_Data.Zones = {
             ["Nek'mani Wellspring"] = {
                 tracks = nagaLand
             },
+            ["Yojamba Isle"] = {
+                intro = {},
+                tracks = trollStronghold
+            },
+        }
+    },
+    ["The Hinterlands"] = {
+        tracks = cataForest,
+        subzones = {
+            ["Aerie Peak"] = {
+                intro = {
+                    { file = "aeriepeak.mp3", duration = 45 }
+                },
+                tracks = cataForest,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Wildhammer Keep"] = {
+                tracks = cataForest,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Revantusk Village"] = {
+                tracks = trollVillage
+            },
+            ["Shadra'Alor"] = {
+                tracks = {}
+            },
+            ["Jintha'Alor"] = {
+                tracks = {}
+            },
+            ["The Altar of Zul"] = {
+                tracks = {}
+            },
+            ["Seradane"] = {
+                tracks = {}
+            },
+            ["Skulk Rock"] = {
+                tracks = cataForest,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Quel'Danil Lodge"] = {
+                tracks = highelfOutpost,
+            },
         }
     },
     ["Gilneas"] = {
@@ -753,9 +1035,6 @@ MusicExpanded_Data.Zones = {
         tracks = {},
         subzones = {
             ["Lariss Pavilion"] = {
-                intro = {
-                    { file = "ruinsofzinazshari_a.mp3", duration = 167 , cooldown = 3600 },
-                },
                 tracks = highborne
             },
             ["Shalzaru's Lair"] = {
@@ -863,8 +1142,15 @@ MusicExpanded_Data.Zones = {
         }
     },
     ["Lapidis Isle"] = {
-        tracks = {},
+        tracks = lapidisPruned,
         subzones = {
+            [""] = {
+                intro = {},
+                tracks = lapidisPruned,
+                indoors = {
+                    tracks = {}
+                }
+            },
             ["Bright Coast"] = {
                 intro = {},
                 tracks = bloodsailBeach
@@ -877,10 +1163,18 @@ MusicExpanded_Data.Zones = {
                 intro = {},
                 tracks = lapidisBeach
             },
+            ["Zul'Hazu"] = {
+                intro = {},
+                tracks = trollStronghold
+            },
+            ["Gor'dosh Heights"] = {
+                intro = {},
+                tracks = ogre
+            },
         }
     },
     ["Gillijim's Isle"] = {
-        tracks = {},
+        tracks = lapidisPruned,
         subzones = {
             ["The Southsea Sandbar"] = {
                 intro = {},
@@ -889,9 +1183,23 @@ MusicExpanded_Data.Zones = {
             ["Distillery Island"] = {
                 tracks = bloodsailBeach
             },
-            ["Kazon Island"] = { -- has a cave
-                intro = {},
-                tracks = {}
+            ["Kazon Island"] = {
+                tracks = lapidisBeach,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["The Jade Mine"] = {
+                tracks = lapidisPruned,
+                indoors = {
+                    tracks = {}
+                }
+            },
+            ["Deepneck Cove"] = {
+                tracks = lapidisBeach,
+                indoors = {
+                    tracks = undeadCursed
+                }
             },
             ["Faelon's Folly"] = {
                 intro = {},
@@ -910,19 +1218,40 @@ MusicExpanded_Data.Zones = {
                 tracks = lapidisBeach
             },
             ["Deeptide Sanctum"] = {
-                intro = {},
-                tracks = nagaLand
+                tracks = nagaLand,
+                indoors = {
+                    tracks = {}
+                }
             },
             ["The Broken Reef"] = {
                 intro = {},
                 tracks = nagaLand
+            },
+            ["Zul'Razar"] = {
+                intro = {},
+                tracks = trollStronghold
+            },
+            ["Maul'ogg Refuge"] = {
+                tracks = {
+                    { file = "orgrimmar02-moment.mp3", duration = 62 },
+                    { file = "daybarrendry03.mp3", duration = 55 },
+                },
+                indoors = {
+                    tracks = undeadCursed
+                }
+            },
+            [""] = {
+                tracks = lapidisPruned,
+                indoors = {
+                    tracks = undeadCursed
+                }
             },
         }
     },
     ["Azshara"] = {
         tracks = {},
         subzones = {
-            ["Ruins of Eldarath"] = {
+            ["Ruins of Eldarath "] = {
                 tracks = nagaLand
             },
             ["Temple of Zin-Malor"] = {
@@ -930,9 +1259,6 @@ MusicExpanded_Data.Zones = {
             },
             ["Shadowsong Shrine"] = {
                 tracks = highborne,
-                intro = {
-                    { file = "ruinsofzinazshari_a.mp3", duration = 167, cooldown = 3600 },
-                }
             },
             ["The Ruined Reaches"] = {
                 tracks = nagaLand
@@ -954,6 +1280,9 @@ MusicExpanded_Data.Zones = {
             },
             ["Hetaera's Clutch"] = {
                 tracks = {}
+            },
+            ["Thalassian Base Camp"] = {
+                tracks = {} -- Sunfury belf music
             },
         }
     },
@@ -1026,6 +1355,9 @@ MusicExpanded_Data.Zones = {
             ["Mazra'Alor"] = {
                 intro = {},
                 tracks = zuldrak
+            },
+            ["Quel'Lithien Lodge"] = {
+                tracks = {} -- Ghostlands music? Default is nelf darnassus music
             }
         }
     },
@@ -1053,10 +1385,7 @@ MusicExpanded_Data.Zones = {
                 tracks = {}
             },
             ["The Ruins of Kel'Theril"] = {
-                tracks = highborne,
-                intro = {
-                    { file = "ruinsofzinazshari_a.mp3", duration = 167, cooldown = 3600 },
-                }
+                tracks = highborne
             }
         }
     },
@@ -1111,6 +1440,48 @@ MusicExpanded_Data.Zones = {
                 intro = {},
                 tracks = twilightCalm
             },
+        }
+    },
+    ["Hyjal"] = {
+        tracks = {},
+        subzones = {
+            [""] = {
+                intro = {
+                    --{ file = "mus_41_faeriedragon_ue01.mp3", duration = 132 },
+                }
+            },
+            ["Nordanaar"] = {
+                tracks = nordrassil
+            },
+            ["Nordrassil Glade"] = {
+                tracks = nordrassil
+            },
+            ["Bleakhollow Crater"] = {
+                tracks = demonCursed
+            },
+            ["The Ruins of Telennas"] = {
+                tracks = demonCursed
+            },
+            ["Darkhollow Pass"] = {
+                tracks = demonCursed
+            },
+            ["Zul'Hatha"] = {
+                tracks = trollStronghold
+            },
+        }
+    },
+    ["Moonglade"] = {
+        intro = {
+            { file = "silence_magic01-moment.mp3", duration = 63 }
+        },
+        tracks = moonglade,
+        subzones = {
+            ["Stormrage Barrow Dens"] = {
+                tracks = moonglade,
+                indoors = {
+                    tracks = {}
+                }
+            }
         }
     },
 

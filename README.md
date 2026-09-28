@@ -25,6 +25,12 @@ If you want to use a version without any dependency, switch branches from "main"
 </details>
 
 <details>
+<summary><strong>Mulgore </strong></summary>
+
+- **Bael'dun Digsite** - dwarf digsite music
+</details>
+
+<details>
 <summary><strong>Tirisfal Glades </strong></summary>
 
 - **Deathknell** — expanded with ghostly tracks
@@ -69,6 +75,8 @@ If you want to use a version without any dependency, switch branches from "main"
 <summary><strong>Loch Modan </strong></summary>
 
 - **Ironband's Excavation Site** - dwarf digsite music
+- **Stonewrought Dam** and **Valley of Kings** - replaced with cataclysm western plaguelands music
+- **Farstrider Lodge** - replaced with custom twow highelf and TBC blood elf music
 </details>
 
 <details>
@@ -76,6 +84,13 @@ If you want to use a version without any dependency, switch branches from "main"
 
 - **Bael Modan** - dwarf digsite music
 - **Anchor's Edge** - changed to mostly vanilla jungle, with "Anchor's Fall" (Stormwind Harbor theme) and one bloodsail track with coastal ambience
+</details>
+
+<details>
+<summary><strong>Redridge Mountains </strong></summary>
+
+- **Main zone and unlisted subzones** - added the cata version of dayforest
+- **Stonewatch** - added orc intro music and the cata version of dayforest
 </details>
 
 <details>
@@ -109,7 +124,10 @@ If you want to use a version without any dependency, switch branches from "main"
 <details>
 <summary><strong>Balor </strong></summary>
 
+- **Main zone and unlisted subzones** - normalized loudness between the main Balor tracks, removed a redundant track
 - **Bilgerat Compound** - gloomy selection of Bloodsail pirate music
+- **Stormbreaker Point** - replaced Plains zonemusic with one intro DayBarrendry03 and general Balor tracks.
+- **Stormwrought Castle** - added intro music, the unused Balor Intro track
 </details>
 
 <details>
@@ -138,6 +156,7 @@ If you want to use a version without any dependency, switch branches from "main"
   
 - **Valley of Bones** - Terokkar Bone Wastes music
 - **Ranazjar Isle** - TBC naga music
+- **Shadowbreak Ravine** - replaced with demonic cursedland variants
 </details>
 
 <details>
@@ -160,6 +179,14 @@ If you want to use a version without any dependency, switch branches from "main"
 - **Bloodsail Compound** and **Wild Shore** - bloodsail music (twow custom)
 - **Ruins of Aboraz** and **Ruins of Jubuwal**- WC3 undead music
 - **Nek'mani Wellspring** - TBC naga music
+</details>
+
+<details>
+<summary><strong>The Hinterlands </strong></summary>
+
+- **Main zone and unlisted subzones** - added the cata version of dayforest
+- **Revantusk Village** - troll tavern music now plays in the whole village
+- **Quel'Danil Lodge** - replaced with custom twow highelf and TBC blood elf music
 </details>
 
 <details>
@@ -226,6 +253,9 @@ If you want to use a version without any dependency, switch branches from "main"
 <details>
 <summary><strong>Lapidis Isle </strong></summary>
 
+- **Main zone and unlisted subzones** - removed two troll battle tracks, reduced loudness of remaining tracks
+- **Zul'Hazu** - added the two removed troll battle tracks
+- **Gor'dosh Heights** - replaced with TBC and vanilla ogre music
 - **Bright Coast** - bloodsail pirate music (twow custom)  
 - Beach subzones; **Crown Island** and **Shank's Reef** - replaced some default zone music with bloodsail coastal music
 </details>
@@ -233,11 +263,13 @@ If you want to use a version without any dependency, switch branches from "main"
 <details>
 <summary><strong>Gillijim's Isle </strong></summary>
   
+- **Main zone and unlisted subzones** - removed two troll battle tracks, reduced loudness of remaining tracks
+- **Zul'Razar** - added the two removed troll battle tracks
 - Beach subzones; **The Silver Coast**, **The Silver Sandbar** and **Gillijim Strand** - replaced some default zone music with bloodsail coastal music
 - Bloodsail pirate camps; **The Southsea Sandbar** and **Distillery Island** - bloodsail pirate music (twow custom)
 - Naga areas; **Deeptide Sanctum** and **The Broken Reef** - TBC naga music
 - **Faelon's Folly** - ghostly tracks
-
+- **Maul'ogg Refuge** - replaced with orgrimmarmoment2 and daybarrendry03
 </details>
 
 <details>
@@ -293,8 +325,21 @@ If you want to use a version without any dependency, switch branches from "main"
 - Twilight outposts; **Twilight's Run**, **Staghelm Point**, **Twilight Outpost** and **Twilight Base Camp** - Twilight's Hammer tracks
 </details>
 
-## Modified Dungeons
+<details>
+<summary><strong>Hyjal </strong></summary>
 
+- **Nordanaar** and **Nordrassil Glade** - replaced with other tracks from cataclysm Hyjal
+- **Bleakhollow Crater**, **The Ruins of Telennas** and **Darkhollow Pass** - replaced with demonic cursedland variants
+- **Zul'Hatha** - replaced with various turtle wow and vanilla troll music
+</details>
+
+<details>
+<summary><strong>Moonglade </strong></summary>
+
+- **Main zone and unlisted subzones** - replaced with dragonflight emerald dream music
+</details>
+
+## Modified Dungeons
 
 <details>
 <summary><strong>Blackfathom Deeps </strong></summary>

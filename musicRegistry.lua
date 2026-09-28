@@ -12,13 +12,24 @@ MusicExpanded_Registry.AddonFiles = {
     ["silence_stormwind01moment.mp3"]   = "silence\\silence_stormwind01moment.mp3",
     ["silence_stormwind03moment.mp3"]   = "silence\\silence_stormwind03moment.mp3",
     ["silence_Grim_Intro.mp3"]          = "silence\\silence_Grim_Intro.mp3",
+    ["silence_warriorterrace.mp3"]      = "silence\\silence_warriorterrace.mp3",
+    ["silence_magic01-moment.mp3"]      = "silence\\silence_magic01-moment.mp3",
 
     --- === Cathedral of Light ===
     ["bellsofdawn_calm.mp3"]             = "chapel\\cathedral\\bellsofdawn_calm.mp3",
     ["lightbringsushope_calm.mp3"]       = "chapel\\cathedral\\lightbringsushope_calm.mp3",
     ["childrenofthelight_calm.mp3"]      = "chapel\\cathedral\\childrenofthelight_calm.mp3",
 
-    -- == Evil Swamp ==
+    -- === Balor ===
+    ["Balor2.mp3"]                        = "balor\\Balor2.mp3",
+    ["Balor3.mp3"]                        = "balor\\Balor3.mp3",
+
+    -- === Lapidis and Gillijim ===
+    ["gillijim_moment.mp3"]              = "jungle\\lapidis\\GillijimMoment.mp3",
+    ["gillijim_walking.mp3"]             = "jungle\\lapidis\\GillijimWalking.mp3",
+    ["gillijim_attack.mp3"]              = "jungle\\lapidis\\GillijimAttack.mp3",
+
+    -- === Evil Swamp ===
     ["nazmirswamp_c.mp3"]            = "evil_swamp\\nazmirswamp_c.mp3",
     ["nazmirswamp_e.mp3"]            = "evil_swamp\\nazmirswamp_e.mp3",
     ["nazmirswamp_f.mp3"]            = "evil_swamp\\nazmirswamp_f.mp3",
@@ -242,14 +253,20 @@ MusicExpanded_Registry.AddonFiles = {
     ["zuldrak_night4.mp3"]                = "troll\\zul_mashar\\zuldrak_night4.mp3",
 
     -- === Tanaris ===
-    ["tanaris_1.mp3"]                     = "tanaris\\tanaris_1.mp3",
-    ["tanaris_10.mp3"]                    = "tanaris\\tanaris_10.mp3",
+    ["tanaris_1.mp3"]                   = "tanaris\\tanaris_1.mp3",
+    ["tanaris_10.mp3"]                  = "tanaris\\tanaris_10.mp3",
 
     -- === Orc Intro ===
     ["orcintro_1.mp3"]                      = "orc\\orcintro_1.mp3",
     ["orcintro_2.mp3"]                      = "orc\\orcintro_2.mp3",
     ["orcintro_3.mp3"]                      = "orc\\orcintro_3.mp3",
     ["orcintro_4.mp3"]                      = "orc\\orcintro_4.mp3",
+
+    -- === Centaur ===
+    ["ohnahran_centaur_1_h.mp3"]        = "centaur\\ohnahran_centaur_1_h.mp3",
+    ["ohnahran_centaur_2_h.mp3"]        = "centaur\\ohnahran_centaur_2_h.mp3",
+    ["ohnahran_centaur_3_h.mp3"]        = "centaur\\ohnahran_centaur_3_h.mp3",
+    ["ohnahran_centaur_4_h.mp3"]        = "centaur\\ohnahran_centaur_4_h.mp3",
 
     -- === Arathi Highlands ===
     ["warfrontsbattle_l.mp3"]            = "arathi\\warfrontsbattle_l.mp3",
@@ -258,14 +275,48 @@ MusicExpanded_Registry.AddonFiles = {
     ["arathihighlands_a_day1.mp3"]       = "arathi\\arathihighlands_a_day1.mp3",
     ["arathihighlands_b_day1.mp3"]       = "arathi\\arathihighlands_b_day1.mp3",
     ["arathihighlands_c_day1.mp3"]       = "arathi\\arathihighlands_c_day1.mp3",
-    
+
+    -- === Redridge ===
+    ["westfall_1.mp3"]                   = "forest\\redridge\\westfall_1.mp3",
+    ["westfall_2.mp3"]                   = "forest\\redridge\\westfall_2.mp3",
+
+    -- === Stonewrought Dam ===
+    ["westplague_a_day1.mp3"]            = "forest\\westplague_a_day1.mp3",
+    ["westplague_b_day1.mp3"]            = "forest\\westplague_b_day1.mp3",
+    ["westplague_c_day1.mp3"]            = "forest\\westplague_c_day1.mp3",
+
+    -- === Hinterlands ===
+    ["aeriepeak.mp3"]                    = "forest\\aeriepeak.mp3",
+
+    -- === High Elf ===
+    ["islelightwalk_2.mp3"]                 = "elf\\highelf\\islelightwalk_2.mp3", 
+
+    -- === Hyjal ===
+    ["cataclysm_night8.mp3"]             = "forest\\hyjal\\cataclysm_night8.mp3",
+    ["groveoftheancients_1.mp3"]         = "forest\\hyjal\\groveoftheancients_1.mp3",
+    ["nordrassil_1.mp3"]                 = "forest\\hyjal\\nordrassil_1.mp3",
+
+    -- === Moonglade ===
+    ["eye_of_ysera_b.mp3"]               = "forest\\moonglade\\eye_of_ysera_b.mp3",
+    ["eye_of_ysera_d.mp3"]               = "forest\\moonglade\\eye_of_ysera_d.mp3",
+    ["eye_of_ysera_h.mp3"]               = "forest\\moonglade\\eye_of_ysera_h.mp3",
 }
 
 
 MusicExpanded_Registry.ClientFiles = {
 
     --- === Kul Tiran human ===
-    ["anchors_fall.mp3"] =                  "Sound\\Music\\Custom\\Anchors_fall.mp3", -- trackname has to be all lowercase
+    ["anchors_fall.mp3"]                  = "Sound\\Music\\Custom\\Anchors_fall.mp3", -- trackname has to be all lowercase
+
+    --- === High Elf ===
+    ["thalassian4.mp3"]                   = "Sound\\Music\\Custom\\thalassian4.mp3", 
+    ["silvermoonwalknight_1.mp3"]         = "Sound\\Music\\ZoneMusic\\Eversong\\ES_SilvermoonWalkNight01.mp3",
+
+    -- === Hyjal ===
+    ["mus_41_faeriedragon_ue01.mp3"]      = "Sound\\Music\\Cataclysm\\mus_41_faeriedragon_ue01.mp3", 
+
+    --- === Balor ===
+    ["BalorIntro.mp3"]                    = "Sound\\Music\\Custom\\BalorIntro.mp3",
 
     -- === Bloodsail ===
     ["bloodsail_day1.mp3"]                = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_DAY1.mp3",
@@ -277,9 +328,6 @@ MusicExpanded_Registry.ClientFiles = {
     ["bloodsail_day4.mp3"]                = "Sound\\Music\\Custom\\Bloodsail_Buccaneers_camp_DAY4.mp3",
 
     -- == Lapidis/Gilijim's Isle ===
-    ["gillijim_attack.mp3"]               = "Sound\\Music\\Custom\\GilijimAttack.mp3",
-    ["gillijim_walking.mp3"]              = "Sound\\Music\\Custom\\GilijimWalking.mp3",
-    ["gillijim_moment.mp3"]               = "Sound\\Music\\Custom\\GillijimMoment.mp3",
     ["lapidis_troll_walking.mp3"]         = "Sound\\Music\\Custom\\LapidisTrollWalking.mp3",
     ["lapidis_troll_fight.mp3"]           = "Sound\\Music\\Custom\\LapidisTrollFight.mp3",
     ["lapidis_troll_moment.mp3"]          = "Sound\\Music\\Custom\\LapidisTrollMoment.mp3",
@@ -311,9 +359,9 @@ MusicExpanded_Registry.ClientFiles = {
     ["gloomy02.mp3"]                      = "Sound\\Music\\Musical Moments\\gloomy\\gloomy02.mp3",
 
     -- === Scarlet Monastery ===
-    ["cursedland01.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland04.mp3",
-    ["cursedland02.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland05.mp3",
-    ["cursedland03.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland06.mp3",
+    ["cursedland01.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland01.mp3",
+    ["cursedland02.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland02.mp3",
+    ["cursedland03.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland03.mp3",
     ["cursedland04.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland04.mp3",
     ["cursedland05.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland05.mp3",
     ["cursedland06.mp3"]                  = "Sound\\Music\\ZoneMusic\\CursedLand\\cursedland06.mp3",
@@ -328,6 +376,11 @@ MusicExpanded_Registry.ClientFiles = {
     ["nightjungle01.mp3"]                 = "Sound\\Music\\ZoneMusic\\Jungle\\NightJungle01.mp3",
     ["nightjungle02.mp3"]                 = "Sound\\Music\\ZoneMusic\\Jungle\\NightJungle02.mp3",
     ["nightjungle03.mp3"]                 = "Sound\\Music\\ZoneMusic\\Jungle\\NightJungle03.mp3",
+
+    -- === Elwynn Forest ===
+    ["dayforest01.mp3"]                   = "Sound\\Music\\ZoneMusic\\Forest\\DayForest01.mp3",
+    ["dayforest02.mp3"]                   = "Sound\\Music\\ZoneMusic\\Forest\\DayForest02.mp3",
+    ["dayforest03.mp3"]                   = "Sound\\Music\\ZoneMusic\\Forest\\DayForest03.mp3",
 
     -- === Darkshore ===
     ["nightforest01.mp3"]                 = "Sound\\Music\\ZoneMusic\\Forest\\nightforest01.mp3",
@@ -345,6 +398,9 @@ MusicExpanded_Registry.ClientFiles = {
 
     ["ahnqirajintro1.mp3"]                = "Sound\\Music\\Musical Moments\\mystery\\AhnQirajIntro1.mp3",
 
+    --- === ZulGurub ===
+    ["ZulGurubVooDoo.mp3"]                = "Sound\\Music\\Musical Moments\\ZulGurubVooDoo.mp3",
+
     -- === Orc Zone ===
     ["daybarrendry01.mp3"]                = "Sound\\Music\\ZoneMusic\\BarrenDry\\DayBarrenDry01.mp3",
     ["daybarrendry02.mp3"]                = "Sound\\Music\\ZoneMusic\\BarrenDry\\DayBarrenDry02.mp3",
@@ -359,8 +415,12 @@ MusicExpanded_Registry.ClientFiles = {
     ["nightvolcanic01.mp3"]               = "Sound\\Music\\ZoneMusic\\Volcanic\\NightVolcanic01.mp3",
     ["nightvolcanic02.mp3"]               = "Sound\\Music\\ZoneMusic\\Volcanic\\NightVolcanic02.mp3",
 
+    -- === Troll Village ===
+    ["tavernhorde_1.mp3"]                 = "Sound\\Music\\ZoneMusic\\TavernHorde\\TavernHorde01.mp3",
+    ["tavernhorde_2.mp3"]                 = "Sound\\Music\\ZoneMusic\\TavernHorde\\TavernHorde02.mp3",
+
     -- === Ogrimmar ===
-    ["orgrimmar_intro-moment.mp3"]         = "Sound\\Music\\CityMusic\\Orgrimmar\\orgrimmar_intro-moment.mp3",
+    ["orgrimmar_intro-moment.mp3"]        = "Sound\\Music\\CityMusic\\Orgrimmar\\orgrimmar_intro-moment.mp3",
     ["orgrimmar01-moment.mp3"]            = "Sound\\Music\\CityMusic\\Orgrimmar\\orgrimmar01-moment.mp3",
     ["orgrimmar02-moment.mp3"]            = "Sound\\Music\\CityMusic\\Orgrimmar\\orgrimmar02-moment.mp3",
 
